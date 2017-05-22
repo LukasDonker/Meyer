@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<script src="ckeditor.js"></script>
+<script>
+    
+function passText(text)
+{
+    CKEDITOR.instances.editor1.setData(text);    
+}
+
+function readText()
+{
+    return CKEDITOR.instances.editor1.getData();
+}
+
+function reactOnResize()
+{
+    setTimeout(reactOnResizeExecute,50);
+}
+ 
+function reactOnResizeExecute()
+{
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    try
+    {
+        CKEDITOR.instances.editor1.resize(""+width,""+height);
+    }
+    catch (exc)
+    {
+        reactOnResize();
+    }
+}
+
+function startup()
+{
+    try
+    {
+        reactOnResize();
+    }
+    catch (t) {}
+    var url = document.location.href;
+    var index = url.indexOf("?");
+    var bufferId = url.substring(index+1);
+    var text = window.parent.RISCNicEditBuffer[bufferId];
+    if (text != null)
+        passText(text);
+    else
+        passText("");
+}
+
+function reactOnUnload()
+{
+    var text = readText();
+    var url = document.location.href;
+    var index = url.indexOf("?");
+    var bufferId = url.substring(index+1);
+    window.parent.RISCNicEditBuffer[bufferId] = text;
+}
+
+</script>
+</head>
+<body style="border:0;margin:0;padding:0;overflow:hidden" onresize="reactOnResize();" onload="startup();" onunload="reactOnUnload();">
+    <form>
+        <textarea name="editor1" id="editor1" rows="20" cols="80" >
+        </textarea>
+        <script>
+            CKEDITOR.replace('editor1');
+//CKEDITOR.config.toolbar = [
+//	{ name: 'document', groups: [ 'mode', 'document', 'doctools' ], items: [ 'Source', '-', 'Save', 'NewPage', 'Preview', 'Print', '-', 'Templates' ] },
+//	{ name: 'clipboard', groups: [ 'clipboard', 'undo' ], items: [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ] },
+//	{ name: 'editing', groups: [ 'find', 'selection', 'spellchecker' ], items: [ 'Find', 'Replace', '-', 'SelectAll', '-', 'Scayt' ] },
+//	{ name: 'forms', items: [ 'Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton', 'HiddenField' ] },
+//	'/',
+//	{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ], items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'CopyFormatting', 'RemoveFormat' ] },
+//	{ name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ], items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl', 'Language' ] },
+//	{ name: 'links', items: [ 'Link', 'Unlink', 'Anchor' ] },
+//	{ name: 'insert', items: [ 'Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak', 'Iframe' ] },
+//	'/',
+//	{ name: 'styles', items: [ 'Styles', 'Format', 'Font', 'FontSize' ] },
+//	{ name: 'colors', items: [ 'TextColor', 'BGColor' ] },
+//	{ name: 'tools', items: [ 'Maximize', 'ShowBlocks' ] },
+//	{ name: 'others', items: [ '-' ] },
+//	{ name: 'about', items: [ 'About' ] }
+//];
+CKEDITOR.editorConfig = function( config ) {
+	config.toolbarGroups = [
+		{ name: 'clipboard', groups: [ 'clipboard', 'undo' ] },
+		{ name: 'editing', groups: [ 'find', 'selection', 'spellchecker', 'editing' ] },
+		{ name: 'links', groups: [ 'links' ] },
+		{ name: 'insert', groups: [ 'insert' ] },
+		{ name: 'forms', groups: [ 'forms' ] },
+		{ name: 'tools', groups: [ 'tools' ] },
+		{ name: 'document', groups: [ 'mode', 'document', 'doctools' ] },
+		{ name: 'others', groups: [ 'others' ] },
+		{ name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ] },
+		{ name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi', 'paragraph' ] },
+		{ name: 'styles', groups: [ 'styles' ] },
+		{ name: 'colors', groups: [ 'colors' ] },
+		{ name: 'about', groups: [ 'about' ] }
+	];
+	config.removeButtons = 'Subscript,Superscript,Anchor,Strike,About';
+};
+        </script>
+    </form>
+</body>
+</html>
