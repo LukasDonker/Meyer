@@ -1,0 +1,177 @@
+<style extends="defaultfx" >
+
+    <tag name="button" variant="default" extendsparenttag="true">
+        <set attribute="rounding" value="0"/>
+    </tag>
+
+    <tag name="buttonmenu" variant="default" extendsparenttag="true">
+        <set attribute="rounding" value="0"/>
+    </tag>
+
+    <tag name="buttonpopup" variant="default" extendsparenttag="true">
+        <set attribute="rounding" value="0"/>
+    </tag>
+
+    <tag name="autocomplete" variant="default" extendsparenttag="true">
+        <set attribute="rounding" value="0"/>
+    </tag>
+    
+    <tag name="calendarfield" variant="default" extendsparenttag="true">
+        <set attribute="rounding" value="0"/>
+    </tag>
+    
+    <tag name="colorfield" variant="default" extendsparenttag="true">
+        <set attribute="rounding" value="0"/>
+    </tag>
+    
+    <tag name="combobox" variant="default" extendsparenttag="true">
+        <set attribute="rounding" value="0"/>
+    </tag>
+    
+    <tag name="combofield" variant="default" extendsparenttag="true">
+        <set attribute="rounding" value="0"/>
+    </tag>
+    
+    <tag name="field" variant="default" extendsparenttag="true">
+        <set attribute="rounding" value="0"/>
+    </tag>
+    
+    <tag name="filedownloadbutton" variant="default" extendsparenttag="true">
+        <set attribute="rounding" value="0"/>
+    </tag>
+    
+    <tag name="fileuploadbutton" variant="default" extendsparenttag="true">
+        <set attribute="rounding" value="0"/>
+    </tag>
+    
+    <tag name="fileuploadbuttonasynchronous" variant="default" extendsparenttag="true">
+        <set attribute="rounding" value="0"/>
+    </tag>
+    
+    <tag name="foldablepane" variant="default" extendsparenttag="true">
+        <set attribute="image" value="/eclntjsfserver/images/metro_up.png"/>
+        <set attribute="imageto" value="/eclntjsfserver/images/metro_down.png"/>
+    </tag>
+    
+    <tag name="foldablepane" variant="cclight" extendsparenttag="true">
+        <set attribute="image" value="/eclntjsfserver/images/metro_up_dark.png"/>
+        <set attribute="imageto" value="/eclntjsfserver/images/metro_down_dark.png"/>
+    </tag>
+    <tag name="pane" variant="foldable_cclight_outerpane" extendsparenttag="true">
+        <set attribute="rounding" value="0"/>
+    </tag>
+    <tag name="animateicon" variant="foldable_cclight_title" extendsparenttag="true">
+        <set attribute="foreground" value="#000000"/>
+    </tag>
+    
+    <tag name="foldableverticalpane" variant="default" extendsparenttag="true">
+        <set attribute="image" value="/eclntjsfserver/images/metro_left.png"/>
+        <set attribute="imageto" value="/eclntjsfserver/images/metro_right.png"/>
+    </tag>
+    
+    <tag name="formattedfield" variant="default" extendsparenttag="true">
+        <set attribute="rounding" value="0"/>
+    </tag>
+    
+    <tag name="gridcol" variant="default" extendsparenttag="true">
+        <set attribute="foreground" value="#FFFFFF"/>
+        <set attribute="font" value="weight:bold"/>
+    </tag>
+    
+    <tag name="longtextfield" variant="default" extendsparenttag="true">
+        <set attribute="rounding" value="0"/>
+    </tag>
+    
+    <tag name="outlookbar" variant="default" extendsparenttag="true">
+        <set attribute="foregrounddefault" value="#FFFFFF"/>
+        <set attribute="foregroundselected" value="#FFFFFF"/>
+    </tag>
+
+    <tag name="password" variant="default" extendsparenttag="true">
+        <set attribute="rounding" value="0"/>
+    </tag>
+    
+    <tag name="tabbedline" variant="default" extendsparenttag="true">
+        <set attribute="fxstyleseq" value="cc_tabbedlinepane"/>
+        <set attribute="foregrounddefault" value="#FFFFFF"/>
+        <set attribute="foregroundselected" value="#FFFFFF"/>
+        <set attribute="font" value="size:12"/>
+        <set attribute="fontselected" value="size:12;weight:bold"/>
+    </tag>
+    
+    <tag name="tabbedlinecontainer" variant="default" >
+        <set attribute="fxstyleseq" value="cc_tabbedpane"/>
+        <set attribute="rounding" value="0"/>
+        <set attribute="fxstyleseqtabs" value="cc_buttontabbedline"/>
+        <set attribute="fxstyleseqinner" value="cc_pane"/>
+        <set attribute="border" value="#00000030" />
+        <set attribute="padding" value="10" />
+        <set attribute="distanceleftwidth" value="0" />
+        <set attribute="distancerightwidth" value="0" />
+        <set attribute="tabbedlinewidth" value="100%" />
+    </tag>
+    
+    <tag name="textarea" variant="default" extendsparenttag="true">
+        <set attribute="rounding" value="0"/>
+    </tag>
+    
+    <tag name="pane" variant="foldable_outerpane" extendsparenttag="true">
+        <set attribute="rounding" value="0"/>
+    </tag>
+    <tag name="pane" variant="foldable_ccstyle_outerpane" extendsparenttag="true">
+        <set attribute="rounding" value="0"/>
+    </tag>
+    
+    <tag name="pane" variant="foldablevertical_outerpane" extendsparenttag="true">
+        <set attribute="rounding" value="0"/>
+    </tag>
+    
+    <tag name="pane" variant="WP_WORKPAGECONTAINER" extendsparenttag="true">
+        <set attribute="rounding" value="0"/>
+    </tag>
+    
+    <tag name="pane" variant="WP_WORKPAGECONTAINERMINIICON" extendsparenttag="true">
+        <set attribute="fxstyleseq" value="cc_pane_wp_workpagecontainerminiicon"/>
+        <set attribute="rounding" value="8"/>
+    </tag>
+    
+    <tag name="pane" variant="WP_WORKPAGECONTAINERMINIICON_SELECTED" extendsparenttag="true">
+        <set attribute="fxstyleseq" value="cc_pane_wp_workpagecontainerminiicon_selected"/>
+        <set attribute="rounding" value="0"/>
+    </tag>
+    
+    <tag name="pane" variant="WP_WORKPAGECONTAINERMINIICON" extendsparenttag="true">
+        <set attribute="rounding" value="0"/>
+    </tag>
+    
+    <tag name="outlookbar" variant="WP_OUTLOOKBAR" extendstag="outlookbar" extendsvariant="default">
+    </tag>
+    
+    <tag name="pane" variant="WP_WORKPAGECONTAINER_ICONSELECTORRIGHT" extendsparenttag="true">
+        <set attribute="background" value="#00000000"/>
+        <set attribute="rounding" value="0"/>
+    </tag>
+    
+    <tag name="t:tabbedline" variant="WP_WORKPAGESELECTOR" extendsparenttag="true">
+        <set attribute="foregrounddefault" value="#FFFFFF"/>
+        <set attribute="foregroundselected" value="#FFFFFF"/>
+        <set attribute="font" value="size:16"/>
+        <set attribute="fontselected" value="size:16;weight:bold"/>
+        <set attribute="fxstyleseq" value="cc_tabbedlineworkpageselector"/>
+    </tag>
+    
+    <tag name="rowbodypane" variant="default">
+        <set attribute="background" value="#ffffff"/>
+        <set attribute="padding" value="20"/>
+        <set attribute="fxstyleseq" value="cc_scrollpane_rowbodypane"/>
+    </tag>
+
+    <tag name="spinner" variant="default" extendsparenttag="true">
+        <set attribute="rounding" value="0"/>
+    </tag>
+    
+    <tag name="tabbedpane" variant="default" extendsparenttag="true">
+        <set attribute="rounding" value="0"/>
+    </tag>
+    
+</style>

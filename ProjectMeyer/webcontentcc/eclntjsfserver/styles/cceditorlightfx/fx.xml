@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ccStyleExtension>
+
+    <styleValue>
+        <name>styleSequence</name>
+        <value>defaultfx;ccmetrofx</value>
+    </styleValue>    
+    
+    <imageInfo>
+        <from>/eclntjsfserver/images/cross.png</from>
+        <to>/eclntjsfserver/images/cross.png</to>
+    </imageInfo>
+    <imageInfo>
+        <from>/eclntjsfserver/images/window_close.png</from>
+        <to>/editor/images/icons/systemClose.png</to>
+    </imageInfo>
+    <imageInfo>
+        <from>/eclntjsfserver/images/magnifier.png</from>
+        <to>/eclntjsfserver/images/magnifier_metro.png</to>
+    </imageInfo>
+    
+    <imageInfo>
+        <from>/editor/images/icons/wp_right.png</from>
+        <to>/eclntjsfserver/images/metro_right.png</to>
+    </imageInfo>
+    <imageInfo>
+        <from>/editor/images/icons/wp_left.png</from>
+        <to>/eclntjsfserver/images/metro_left.png</to>
+    </imageInfo>
+    <imageInfo>
+        <from>/editor/images/icons/disk.png</from>
+        <to>/editor/images/icons/disk_metrodark.png</to>
+    </imageInfo>
+    <imageInfo>
+        <from>/editor/images/icons/arrow_refresh.png</from>
+        <to>/editor/images/icons/arrow_refresh_metrodark.png</to>
+    </imageInfo>
+    <imageInfo>
+        <from>/editor/images/icons/server_reload.png</from>
+        <to>/editor/images/icons/server_reload_metrodark.png</to>
+    </imageInfo>
+    <imageInfo>
+        <from>/editor/images/icons/server_hotdeploy.png</from>
+        <to>/editor/images/icons/server_hotdeploy_metrodark.png</to>
+    </imageInfo>
+    <imageInfo>
+        <from>/editor/images/icons/world.png</from>
+        <to>/editor/images/icons/rocket_metrodark.png</to>
+    </imageInfo>
+    <imageInfo>
+        <from>/editor/images/icons/undo.png</from>
+        <to>/editor/images/icons/undo_metrodark.png</to>
+    </imageInfo>
+    <imageInfo>
+        <from>/editor/images/icons/magnifierdark.png</from>
+        <to>/editor/images/icons/magnifierdark_metrodark.png</to>
+    </imageInfo>
+    
+    
+</ccStyleExtension>

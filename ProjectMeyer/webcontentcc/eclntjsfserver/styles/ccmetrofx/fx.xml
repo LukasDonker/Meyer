@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ccStyleExtension>
+
+    <styleValue>
+        <name>styleSequence</name>
+        <value>defaultfx</value>
+    </styleValue>    
+    
+    <styleValue>
+        <name>gridselectioncolor1</name>
+        <value>#e67e2240</value>
+    </styleValue>    
+    <styleValue>
+        <name>gridselectioncolor2</name>
+        <value>#e67e2240</value>
+    </styleValue>    
+    
+    <styleValue>
+        <name>tabbedLineForegroundDefault</name>
+        <value>#FFFFFF</value>
+    </styleValue>    
+    <styleValue>
+        <name>tabbedLineForegroundSelected</name>
+        <value>#FFFFFF</value>
+    </styleValue>    
+    <styleValue>
+        <name>tabbedLineFontDefault</name>
+        <value>size:14;weight:normal</value>
+    </styleValue>    
+    <styleValue>
+        <name>tabbedLineFontSelected</name>
+        <value>size:14;weight:bold</value>
+    </styleValue>    
+    
+    <styleValue>
+        <name>focusbgpaint</name>
+        <value>border(1,1,100%-2,100%-2,#ff960090,1);border(2,2,100%-4,100%-4,#ff960060,1);border(3,3,100%-6,100%-6,#ff960030,1)</value>
+    </styleValue>    
+    
+    <imageInfo>
+        <from>/eclntjsfserver/images/window_close.png</from>
+        <to>/eclntjsfserver/images/window_close_metro.png</to>
+    </imageInfo>
+    <imageInfo>
+        <from>/eclntjsfserver/images/window_popup.png</from>
+        <to>/eclntjsfserver/images/window_popup_metro.png</to>
+    </imageInfo>
+    <imageInfo>
+        <from>/eclntjsfserver/images/cross.png</from>
+        <to>/eclntjsfserver/images/cross_metro.png</to>
+    </imageInfo>
+    <imageInfo>
+        <from>/eclntjsfserver/images/okpopup_ok.png</from>
+        <to>/eclntjsfserver/images/okpopup_ok_metro.png</to>
+    </imageInfo>
+    <imageInfo>
+        <from>/eclntjsfserver/images/yesnopopup_yes.png</from>
+        <to>/eclntjsfserver/images/yesnopopup_yes_metro.png</to>
+    </imageInfo>
+    <imageInfo>
+        <from>/eclntjsfserver/images/yesnopopup_no.png</from>
+        <to>/eclntjsfserver/images/yesnopopup_no_metro.png</to>
+    </imageInfo>
+    <imageInfo>
+        <from>/eclntjsfserver/images/favorite_default.png</from>
+        <to>/eclntjsfserver/images/favorite_default_metro.png</to>
+    </imageInfo>
+    <imageInfo>
+        <from>/images/icons/functions.png</from>
+        <to>/images/icons/functions_metro.png</to>
+    </imageInfo>
+    <imageInfo>
+        <from>/images/icons/magnifier.png</from>
+        <to>/images/icons/magnifier_metro.png</to>
+    </imageInfo>
+    <imageInfo>
+        <from>/images/icons/mailinbox.png</from>
+        <to>/images/icons/mailinbox_metro.png</to>
+    </imageInfo>
+    <imageInfo>
+        <from>/images/icons/reload.png</from>
+        <to>/images/icons/reload_metro.png</to>
+    </imageInfo>
+    <imageInfo>
+        <from>/images/icons/wrench.png</from>
+        <to>/images/icons/wrench_metro.png</to>
+    </imageInfo>
+    <imageInfo>
+        <from>/images/icons/close_all.png</from>
+        <to>/images/icons/close_all_metro.png</to>
+    </imageInfo>
+    <imageInfo>
+        <from>/images/workplaceicons/coins.png</from>
+        <to>/images/workplaceicons/coins_metro.png</to>
+    </imageInfo>
+    <imageInfo>
+        <from>/images/workplaceicons/emoticon_happy.png</from>
+        <to>/images/workplaceicons/emoticon_happy_metro.png</to>
+    </imageInfo>
+    <imageInfo>
+        <from>/eclntjsfserver/images/tabbedline_lefticon.png</from>
+        <to>/eclntjsfserver/images/tabbedline_lefticon_metro.png</to>
+    </imageInfo>
+    <imageInfo>
+        <from>/eclntjsfserver/images/tabbedline_righticon.png</from>
+        <to>/eclntjsfserver/images/tabbedline_righticon_metro.png</to>
+    </imageInfo>
+    <imageInfo>
+        <from>/eclntjsfserver/images/tabbedline_icon.png</from>
+        <to>/eclntjsfserver/images/tabbedline_icon_metro.png</to>
+    </imageInfo>
+    
+    
+</ccStyleExtension>
