@@ -9,7 +9,7 @@ import javax.faces.event.ActionEvent;
 
 @CCGenClass (expressionBase="#{d.landingpageUI}")
 
-public class landingpageUI
+public class LandingPageUI
     extends WorkpageDispatchedPageBean 
     implements Serializable
 {
@@ -32,7 +32,7 @@ public class landingpageUI
     // constructors & initialization
     // ------------------------------------------------------------------------
 
-    public landingpageUI(IWorkpageDispatcher workpageDispatcher)
+    public LandingPageUI(IWorkpageDispatcher workpageDispatcher)
     {
         super(workpageDispatcher);        
     }
