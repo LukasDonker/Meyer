@@ -10,14 +10,14 @@
 <!-- ========== CONTENT BEGIN ========== -->
 <f:view>
 <h:form>
-<f:subview id="webcontent_landingpageg_sv">
+<f:subview id="managedbeans_LandingPageg_sv">
 <t:rowtitlebar id="g_1" text="Meyer Zukunft" />
 <t:rowheader id="g_2" />
 <t:rowbodypane id="g_3" >
 <t:rowdistance id="g_4" height="40%" />
 <t:row id="g_5" >
-<t:coldistance id="g_6" width="25%" />
-<t:pane id="g_7" background="#ffffff" border="left:5;right:5;top:5;bottom:5;color:#33607f" padding="left:5;right:5;top:5;bottom:5" width="50%" >
+<t:coldistance id="g_6" width="50%" />
+<t:pane id="g_7" background="#ffffff" border="left:5;right:5;top:5;bottom:5;color:#33607f" padding="left:5;right:5;top:5;bottom:5" width="400" >
 <t:rowtitlebar id="g_8" text="Anmeldung" />
 <t:row id="g_9" >
 <t:pane id="g_10" padding="left:10;right:10;top:10;bottom:10" width="100%" >
@@ -42,8 +42,9 @@
 </t:row>
 </t:pane>
 </t:row>
+<t:rowdistance id="g_23" height="50%" />
 </t:rowbodypane>
-<t:rowstatusbar id="g_23" />
+<t:rowstatusbar id="g_24" />
 <t:pageaddons id="g_pa"/>
 </f:subview>
 </h:form>
