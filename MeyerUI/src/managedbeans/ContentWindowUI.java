@@ -57,7 +57,7 @@ public abstract class ContentWindowUI extends WorkpageDispatchedBean implements 
 
 	public void setAutofill(String value) {
 		if (value == null || value.isEmpty()) {
-			value = "GZ, Name, TAN, ID";
+			value = "GZ, Name, TAN, ID, ...";
 		}
 		m_autofillValue = value;
 	}

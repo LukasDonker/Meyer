@@ -13,18 +13,12 @@ var m_config = null;
 var m_lastTimeResized = 0;
 var m_lastHeight = -1;
 var m_lastWidth = -1;
-function passConfig(config,withAnimation)
+function passConfig(config)
 {
     var b = document.body;
     var width = window.innerWidth;
     var height = window.innerHeight;
     m_config = config;
-    if (withAnimation == false)
-    {
-        if (m_config.options == null)
-            m_config.options = new Object();
-        m_config.options.animation = false;
-    }
     var outer = document.getElementById("OUTER");
     outer.style.width = width + "px";
     outer.style.height = height + "px";
@@ -76,11 +70,7 @@ function startup()
     m_bufferId = url.substring(index+1);
     var configString = window.parent.RISCChartJsBuffer[m_bufferId];
     var config = JSON.parse(configString);
-    var rendered = window.parent.RISCChartJsBuffer["rendered_" + m_bufferId];
-    var withAnimation = true;
-    if (rendered == true) withAnimation = false;
-    passConfig(config,withAnimation);
-    window.parent.RISCChartJsBuffer["rendered_" + m_bufferId] = true;
+    passConfig(config);
 }
 function reactOnResize()
 {
@@ -91,7 +81,7 @@ function reactOnResize()
     var now = (new Date()).getTime();
     if (now - m_lastTimeResized > 500)
     {
-        passConfig(m_config,false);
+        passConfig(m_config);
         m_lastTimeResized = now;
         m_lastWidth = width;
         m_lastHeight = height;

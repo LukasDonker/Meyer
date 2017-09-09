@@ -54,7 +54,7 @@
 	
 	
 	<build>
-		<finalName>MilleniumFalcon</finalName>
+		<finalName>MeyerUI</finalName>
 		<sourceDirectory>src</sourceDirectory>
 		<outputDirectory>webcontentbuild/WEB-INF/classes</outputDirectory>
 		<resources>
@@ -106,9 +106,6 @@
 				<configuration>
 				<webXml>webcontent/WEB-INF/web.xml</webXml>
 					<webResources>
-					<!-- 	<resource>
-							<directory>webcontentcc</directory>
-						</resource> -->
 						<resource>
 					       <directory>webcontent</directory>	
 						</resource>

@@ -10,12 +10,12 @@
         webhostport="localhost:50000">
 
     <deploycopyinfo
-            fromdir="${project}/webcontentbuild"
+            fromdir="${project}/webcontent"
             todir="${projectdeploy}">
     </deploycopyinfo>
 
-    <deploycopyinfo
-            fromdir="${project}/webcontent"
+<deploycopyinfo
+            fromdir="${project}/webcontentbuild"
             todir="${projectdeploy}">
     </deploycopyinfo>
 </project>
