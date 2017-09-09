@@ -1,0 +1,179 @@
+<style extends="defaultrisc">
+
+	<!-- ButtonDefault -->
+	<tag name="button" variant="defaultButton">
+		<set attribute="background" value="linear-gradient(to bottom, #fcfcfc,#dddddd)" />
+		<set attribute="foreground" value="#000000" />
+	</tag>
+	<!-- ButtonSuccess -->
+	<tag name="button" variant="successButton">
+		<set attribute="background" value="linear-gradient(to bottom, #20B200,#499C5E)" />
+		<set attribute="foreground" value="#ffffff" />
+	</tag>
+	<!-- DangerButton -->
+	<tag name="button" variant="dangerButton">
+		<set attribute="background" value="linear-gradient(to bottom, #d9534f,#C31D22)" />
+		<set attribute="foreground" value="#ffffff" />
+	</tag>
+	<tag name="button" variant="warningButton">
+		<set attribute="background" value="linear-gradient(to bottom, #FF9F00,#eea236)" />
+		<set attribute="foreground" value="#ffffff" />
+	</tag>
+	<!-- InitializeButton -->
+	<tag name="button" variant="primaryButton">
+		<set attribute="background" value="linear-gradient(to bottom, #03519d,#2e6da4)" />
+		<set attribute="foreground" value="#ffffff" />
+	</tag>
+	<tag name="button" variant="infoButton">
+        <set attribute="background" value="linear-gradient(to bottom, #5bc0de,#46b8da)" />
+        <set attribute="foreground" value="#ffffff" />
+    </tag>
+    <tag name="button" variant="NavigationButton">
+        <set attribute="background" value="#0081FF" />
+        <set attribute="foreground" value="#FFFFFF" />
+        <set attribute="height" value="35" />
+        <set attribute="font" value="size:16;weight:bold" />
+        <set attribute="border" value="right:1;color:#309e9d" />
+        <set attribute="border-radius" value="0px" />
+    </tag>
+    <tag name="adaptivetoolbar" variant="Navigation">
+        <set attribute="background" value="#03519d" />
+        <set attribute="width" value="50" />
+        <set attribute="border" value="left:0;right:0;top:0;bottom:0" />
+    </tag>
+    <tag name="pane" variant="Navigation">
+        <set attribute="background" value="#0081FF" />
+        <set attribute="width" value="100%" />
+    </tag>
+	<!-- Fixgrid links und rechts keine Border -->
+	<tag name="fixgrid" variant="sideNoBorder">
+		<set attribute="border" value="left:null;right:null" />
+	</tag>
+	<tag name="fixgrid" variant="bootstrapTable">
+		<set attribute="border" value="left:null;right:null" />
+		<set attribute="drawoddevenrows" value="true" />
+		<set attribute="borderheight" value="1" />
+        <set attribute="borderwidth" value="0" />
+	</tag>
+	<tag name="fixgrid" variant="transparentTable">
+		<set attribute="border" value="left:null;right:null" />
+		<set attribute="background" value="00" />
+	</tag>
+	<!-- Borderless -->
+	<tag name="fixgrid" variant="borderless">
+		<set attribute="background" value="#FFFFFF00" />
+		<set attribute="multiselect" value="false" />
+		<set attribute="border" value="left:null!;right:null!;top:null!;bottom:null!" />
+		<set attribute="bordercolor" value="null!" />
+		<set attribute="borderheight" value="0" />
+		<set attribute="borderwidth" value="0" />
+		<set attribute="emptycolor" value="null!" />
+		<set attribute="suppressheadline" value="true" />
+		<set attribute="selectioncolor1" value="null!" />
+		<set attribute="selectioncolor2" value="null!" />
+		<set attribute="showemptyrows" value="false" />
+		<set attribute="cellselection" value="false" />
+		<set attribute="flushcolumnupdates" value="false" />
+		<set attribute="flusharea" value="false" />
+		<set attribute="focusable" value="false" />
+		<set attribute="focusdrawborder" value="false" />
+		<set attribute="enabled" value="false" />
+	</tag>
+	<tag name="fixgrid" variant="verticalBorder">
+		<set attribute="border" value="left:null;right:null" />
+		<set attribute="drawoddevenrows" value="true" />
+		<set attribute="borderheight" value="0" />
+	</tag>
+	<tag name="fixgrid" variant="horizontalBorder">
+		<set attribute="border" value="left:null;right:null" />
+		<set attribute="drawoddevenrows" value="true" />
+		<set attribute="borderwidth" value="0" />
+	</tag>
+	<tag name="fixgrid" variant="horizontalAroundBorder">
+		<set attribute="drawoddevenrows" value="true" />
+		<set attribute="borderwidth" value="0" />
+	</tag>
+	<tag name="fixgrid" variant="verticalAroundBorder">
+		<set attribute="drawoddevenrows" value="true" />
+		<set attribute="borderheight" value="0" />
+	</tag>
+	 <tag name="foldablepane" variant="default">
+        <set attribute="titlepadding" value="0"/>
+    </tag>
+	<!-- Komplett befülltes Panel ohne Lücken zwischen den Rändern -->
+	<tag name="foldablepane" variant="filledPane">
+		<set attribute="titlepadding" value="0" />
+		<set attribute="background" value="00" />
+		<set attribute="innerpadding" value="0" />
+	</tag>
+	<!-- Gridcol mit anderer Hintergrundfarbe sowie andere Textfarbe -->
+	<tag name="gridcol" variant="defaultBootstrapColumnColor">
+		<set attribute="background" value="#f9f9f9" />
+		<set attribute="foreground" value="#0f0e0e" />
+	</tag>
+	<!-- Komplett befülltes Panel ohne Lücken zwischen den Rändern -->
+	<tag name="tabbedpane" variant="filledTabbedPane">
+		<set attribute="innerpadding" value="0" />
+	</tag>
+	<!-- Komplett befülltes Panel ohne Lücken zwischen den Rändern -->
+	<tag name="foldablepane" variant="filledDefaultPane">
+		<set attribute="titlepadding" value="0" />
+		<set attribute="innerpadding" value="0" />
+		<set attribute="background" value="00" />
+		<set attribute="headerbgpaint" value="rectangle(0,0,100%,100%,#FF9F00,#FF9F00,vertical)" />
+		<set attribute="foreground" value="#000000" />
+	</tag>
+
+	<!-- Komplett befülltes Panel ohne Lücken zwischen den Rändern -->
+	<tag name="foldablepane" variant="filledGreyPane">
+		<set attribute="titlepadding" value="0" />
+		<set attribute="innerpadding" value="0" />
+		<set attribute="background" value="00" />
+		<set attribute="headerbgpaint" value="rectangle(0,0,100%,100%,#FF9F00,#FF9F00,vertical)" />
+		<set attribute="foreground" value="#000000" />
+	</tag>
+	<!-- Suchfeld mit Awesomefonticon (Lupe) -->
+	<tag name="field" variant="borderlessAwesomeSearch">
+		<set attribute="border" value="left:null;right:null;top:null;bottom:null" />
+		<set attribute="textimage" value="/awesomefont(f002,#000000,15)" />
+	</tag>
+	<!-- successIcon -->
+	<tag name="icon" variant="successIcon">
+		<set attribute="background" value="linear-gradient(to bottom, #5cb85c,#499C5E)" />
+	</tag>
+	<!-- dangerIcon -->
+	<tag name="icon" variant="dangerIcon">
+		<set attribute="background" value="linear-gradient(to bottom, #d9534f,#C31D22)" />
+	</tag>
+	<tag name="tiledarea" variant="default">
+		<set attribute="titlepadding" value="0" />
+		<set attribute="innerpadding" value="0" />
+		<set attribute="borderwidth" value="0" />
+		<set attribute="border" value="left:null;right:null;top:null;bottom:null" />
+	</tag>
+	
+	<tag name="rowbodypane" variant="default">
+        <set attribute="fxstyleseq" value="cc_rowbodypane"/>
+        <set attribute="padding" value="0"/>
+    </tag>
+    
+    <tag name="rowbodypane" variant="cleanandcrispbodypane">
+        <set attribute="background" value="#03519d"/>
+        <set attribute="fxstyleseq" value="cc_rowbodypane"/>
+        <set attribute="padding" value="0"/>
+    </tag>
+    
+    <tag name="rowtitlebar" variant="cleanandcrispbar">
+        <set attribute="background" value="#03519d"/>
+        <set attribute="fxstyleseq" value="cc_pane_titlebar"/>
+        <set attribute="fxstyleseqlabel" value="cc_label_titlebar"/>
+        <set attribute="coldistance" value="5"/>
+    </tag>
+    
+    <tag name="pane" variant="cleanandcrisppane">
+            <set attribute="background" value="#03519d"/>
+    </tag>
+    
+    
+    
+</style>
