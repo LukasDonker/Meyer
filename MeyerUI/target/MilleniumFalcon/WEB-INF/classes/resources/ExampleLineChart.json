@@ -1,0 +1,61 @@
+{
+    "type": "line",
+    "data": 
+    {
+        "labels" : ["Januar","Februar","M\u00e4rz","April","Mai","Juni","Juli","August","September","Oktober","November","Dezember"],
+        "datasets" : 
+        [
+            {
+                "label": "Wert 1",
+                "fill": true,
+                "backgroundColor": "rgba(255,0,0,0.3)",
+                "pointRadius": 10,
+                "data" : [2000,6000,10000,12000,13000,15000,20000,22000,23000,26000,30000,35000]
+            },
+            {
+                "label": "Wert 2",
+                "fill": true,
+                "backgroundColor": "rgba(0,255,0,0.3)",
+                "pointRadius": 10,
+                "data" : [1000,3000,5000,7000,9000,11000,13000,15000,17000,19000,21000,23000]
+            },
+            {
+                "label": "Wert 3",
+                "fill": true,
+                "backgroundColor": "rgba(0,0,255,0.3)",
+                "pointRadius": 10,
+                "data" : [500,1000,2000,3500,6000,12000,20000,30000,33000,35000,40000,42000]
+            }
+        ]
+    },
+    "options": 
+    {
+        "responsive": true,
+        "title":
+        {
+            "display": true,
+            "text": "Beispieldiagramm 2"
+        },
+        "scales": 
+        {
+            "xAxes": 
+            [{
+                "display": true,
+                "scaleLabel": 
+                {
+                    "display": true,
+                    "labelString": "Monat"
+                }
+            }],
+            "yAxes": 
+            [{
+                "display": true,
+                "scaleLabel": 
+                {
+                    "display": true,
+                    "labelString": "Wert in Euro"
+                }
+            }]
+        }
+    }
+}

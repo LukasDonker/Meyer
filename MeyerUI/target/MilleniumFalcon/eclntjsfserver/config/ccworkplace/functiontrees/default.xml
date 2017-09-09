@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<workplaceFunctionTreeInfoNode>
+    <text>Extern Functions</text>
+    <folderOpened>false</folderOpened>
+    <subNodes>
+        <text>Antragstellung</text>
+        <folderOpened>false</folderOpened>
+        <embeddedTreeName>antragstellung</embeddedTreeName>
+    </subNodes>
+    <subNodes>
+        <text>Begutachtungsprozess</text>
+        <folderOpened>false</folderOpened>
+        <embeddedTreeName>begutachtungsprozess</embeddedTreeName>
+    </subNodes>
+</workplaceFunctionTreeInfoNode>

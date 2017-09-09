@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ccStyleExtension>
+
+    <styleValue>
+        <name>gridScrollBarWidth</name>
+        <value>13</value>
+    </styleValue>    
+    <styleValue>
+        <name>gridMouseWheelSteps</name>
+        <value>1</value>
+    </styleValue>    
+    
+    <styleValue>
+        <name>tabbedLineForegroundDefault</name>
+        <value>#000000</value>
+    </styleValue>    
+    <styleValue>
+        <name>tabbedLineForegroundSelected</name>
+        <value>#000000</value>
+    </styleValue>    
+    <styleValue>
+        <name>gridselectioncolor1</name>
+        <value>#FFC00020</value>
+    </styleValue>    
+    <styleValue>
+        <name>gridselectioncolor2</name>
+        <value>#FFC00040</value>
+    </styleValue>    
+
+    <styleValue>
+        <name>userhintWidth</name>
+        <value>200</value>
+    </styleValue>    
+    
+    <styleValue>
+        <name>tooltipfont</name>
+        <value>size:11</value>
+    </styleValue>    
+    
+    <!-- 
+        Focus/rollover/mousepressed/keypressed/highlight management
+        Global => focusbgpaint
+        Style dependent => focusbgpaint:<fxstyleseq> 
+    -->    
+    
+    <styleValue>
+        <name>focusbgpaint</name>
+        <value>border(1,1,100%-2,100%-2,#ff960060,1);border(2,2,100%-4,100%-4,#ff960040,1);border(3,3,100%-6,100%-6,#ff960020,1)</value>
+    </styleValue>    
+    <styleValue>
+        <name>focusbgpaint:cc_flexgridpane</name>
+        <value>border(0,0,100%,100%,#c0404060,1)</value>
+    </styleValue>    
+
+    <styleValue>
+        <name>rolloverbgpaint</name>
+        <value>background(#00000008);border(1,1,100%-2,100%-2,#ff960040,1)</value>
+    </styleValue>    
+
+    <styleValue>
+        <name>mousepressedbgpaint</name>
+        <value>background(#FFC00030);border(1,1,100%-2,100%-2,#ff9600,1)</value>
+    </styleValue>    
+
+    <styleValue>
+        <name>keypressedbgpaint</name>
+        <value>background(#FFC00030);border(1,1,100%-2,100%-2,#ff9600,1)</value>
+    </styleValue>    
+
+    <styleValue>
+        <name>highlightbgpaint</name>
+        <value>rectangle(0,0,100%,100%,#FFFFC0)</value>
+    </styleValue>    
+
+
+    <styleValue>
+        <name>dragdropcrosscolor</name>
+        <value>#FF0000</value>
+    </styleValue>    
+    <styleValue>
+        <name>disabledbackground</name>
+        <value>#00000018</value>
+    </styleValue>
+    
+    <!--
+        simpleStyleManagement for CC_Tabbedline
+        If set to true then there is no separate style for the first/last/only
+        button of the tabbedline - but onle one style for a default tab and
+        one style for a selected tab
+        
+        Format: "simpleStyleManagement:<style sequence>"
+     -->
+    
+    <styleValue>
+        <name>simpleStyleManagement:cc_buttontabbedline</name>
+        <value>true</value>
+    </styleValue>    
+    <styleValue>
+        <name>simpleStyleManagement:cc_buttontabbedlinevertical</name>
+        <value>true</value>
+    </styleValue>    
+    <styleValue>
+        <name>simpleStyleManagement:cc_buttontabbedline_wp_workpageselector</name>
+        <value>true</value>
+    </styleValue>    
+
+    <styleValue>
+        <name>textimagepadding</name>
+        <value>-fx-padding: 3 3 3 18</value>
+    </styleValue>    
+    <styleValue>
+        <name>textimagepadding:cc_combobox</name>
+        <value>-fx-padding: 0 0 0 18</value>
+    </styleValue>    
+    <styleValue>
+        <name>textimagepadding:cc_autocomplete</name>
+        <value>-fx-padding: 0 0 0 18</value>
+    </styleValue>    
+
+    
+    <!--
+        BGPAINT commands for the error() and mandatory() commands 
+     -->
+
+    <styleValue>
+        <name>bgpaint_error</name>
+        <value>rectangle(0,0,100%,5,#FF000040,#FFFFFF40,vertical);image(100%-2,2,/eclntjsfserver/images/deco_error.png,righttop)</value>
+    </styleValue>    
+    <styleValue>
+        <name>bgpaint_errorcombo</name>
+        <value>rectangle(0,0,100%,5,#FF000040,#FFFFFF40,vertical);image(100%-20,2,/eclntjsfserver/images/deco_error.png,righttop)</value>
+    </styleValue>    
+    <styleValue>
+        <name>bgpaint_mandatory</name>
+        <value>rectangle(0,0,100%,5,#00004040,#FFFFFF40,vertical);image(100%-2,2,/eclntjsfserver/images/deco_mandatory.png,righttop)</value>
+    </styleValue>    
+    <styleValue>
+        <name>bgpaint_mandatorycombo</name>
+        <value>rectangle(0,0,100%,5,#0000FF40,#FFFFFF40,vertical);image(100%-20,2,/eclntjsfserver/images/deco_mandatory.png,righttop)</value>
+    </styleValue>    
+
+    <!--
+        Blocking of screen when client communicates to server.
+        
+        blockingImage => name of server side image to be shown
+        blockingType => 
+     -->
+    <!-- 
+    <styleValue><name>blockingShadingStyle</name><value>ccblocking</value></styleValue>
+    <styleValue><name>blockingText</name><value>Just communicating to server...</value></styleValue>
+    <styleValue><name>blockingText_de</name><value>Serverkommunikation...</value></styleValue>
+    -->    
+     
+    <!--
+        Client dialogs - background painting
+     -->
+    <styleValue><name>fxstyleseq_okdialog</name><value>cc_pane</value></styleValue>    
+    <styleValue><name>fxstyleseq_yesnodialog</name><value>cc_pane</value></styleValue>    
+    <styleValue><name>fxstyleseq_downloadinfodialog</name><value>cc_pane</value></styleValue>    
+    <styleValue><name>fxstyleseq_uploadinfodialog</name><value>cc_pane</value></styleValue>    
+    <styleValue><name>fxstyleseq_colorchooserdialog</name><value>cc_pane</value></styleValue>    
+    <styleValue><name>bgpaint_okdialog</name><value>roundedrectangle(2,2,100%-4,100%-4,30,30,#ffffe0);roundedborder(2,2,100%-4,100%-4,30,30,#808080,1)</value></styleValue>    
+    <styleValue><name>bgpaint_yesnodialog</name><value>roundedrectangle(2,2,100%-4,100%-4,30,30,#ffffe0);roundedborder(2,2,100%-4,100%-4,30,30,#808080,1)</value></styleValue>    
+    <styleValue><name>bgpaint_downloadinfodialog</name><value>roundedrectangle(2,2,100%-4,100%-4,30,30,#ffffe0);roundedborder(2,2,100%-4,100%-4,30,30,#808080,1)</value></styleValue>    
+    <styleValue><name>bgpaint_uploadinfodialog</name><value>roundedrectangle(2,2,100%-4,100%-4,30,30,#ffffe0);roundedborder(2,2,100%-4,100%-4,30,30,#808080,1)</value></styleValue>    
+    <styleValue><name>bgpaint_colorchooserdialog</name><value>roundedrectangle(2,2,100%-4,100%-4,30,30,#ffffe0);roundedborder(2,2,100%-4,100%-4,30,30,#808080,1)</value></styleValue>    
+
+    <!--
+        Client print info dialog 
+     -->
+    <styleValue><name>hide_infodialog</name><value>false</value></styleValue>    
+    <styleValue><name>fxstyleseq_infodialog</name><value>cc_pane</value></styleValue>    
+    <styleValue><name>bgpaint_infodialog</name><value>roundedrectangle(2,2,100%-4,100%-4,30,30,#ffffe0);roundedborder(2,2,100%-4,100%-4,30,30,#808080,1)</value></styleValue>
+       
+    <!--
+        Default styles for components that are used in client side dialogs
+        (e.g. OK dialog for resetting input in formatted fiedl, ...) 
+     -->    
+    <styleValue><name>defaultstyle_cc_button</name><value>cc_button</value></styleValue>    
+    <styleValue><name>defaultrounding_cc_button</name><value>5</value></styleValue>    
+    <styleValue><name>defaultstyle_cc_label</name><value>cc_label</value></styleValue>    
+    <styleValue><name>defaultstyle_cc_progressbar</name><value>cc_progressbar</value></styleValue>    
+    <styleValue><name>defaultstyle_cc_textpane</name><value>cc_textpane</value></styleValue>    
+    <styleValue><name>defaultstyle_cc_field</name><value>cc_field</value></styleValue>    
+    <styleValue><name>defaultrounding_cc_field</name><value>5</value></styleValue>    
+    <styleValue><name>defaultstyle_cc_textarea</name><value>cc_textarea</value></styleValue>    
+    <styleValue><name>defaultrounding_cc_textarea</name><value>5</value></styleValue>    
+    <styleValue><name>defaultstyle_cc_link</name><value>cc_link</value></styleValue>    
+    
+    <!-- 
+        sound: true/false
+        Definition if there is any audio output by the client or not. 
+     -->
+     
+    <styleValue>
+        <name>sound</name><value>true</value>
+    </styleValue>    
+
+    <!--  TABBEDLINE icons -->
+    <styleValue><name>tabbedLineLeftIcon</name><value>/eclntjsfserver/images/tabbedline_lefticon.png</value></styleValue>
+    <styleValue><name>tabbedLineRightIcon</name><value>/eclntjsfserver/images/tabbedline_righticon.png</value></styleValue>
+    <styleValue><name>tabbedLineMenuIcon</name><value>/eclntjsfserver/images/tabbedline_icon.png</value></styleValue>
+
+    <!--
+        Context menu right alignment. Correction value.
+     -->
+    <styleValue><name>contextMenuWidthCorrection</name><value>24</value></styleValue>
+
+    <!--
+        PDF processing 
+     -->
+    <styleValue><name>pdfprintimagescale</name><value>7</value></styleValue>    
+
+    <!--
+        Media-player
+        The images are loaded from the classloader of the client! 
+     -->
+    <styleValue><name>mediaplayer_button_fxstyleseq</name><value>cc_button</value></styleValue>    
+    <styleValue><name>mediaplayer_imageplay</name><value>org/eclnt/client/resources/control_play.png</value></styleValue>    
+    <styleValue><name>mediaplayer_imagepause</name><value>org/eclnt/client/resources/control_pause.png</value></styleValue>    
+    <styleValue><name>mediaplayer_imagestop</name><value>org/eclnt/client/resources/control_stop.png</value></styleValue>    
+    
+    <!--
+        Blocking pane (shown if client communicated to server)
+        You may append localization information, the sequence that is used for accessing 
+        the right style is:
+        1. blockingPaneStyleClass_<language>_<country>
+        2. blockingPaneStyleClass_<language>
+        3. blockingPaneStyleClass
+        Example:
+	    <styleValue><name>blockingPaneStyleClass_de</name><value>cc_blockpane_de</value></styleValue>
+	    <styleValue><name>blockingPaneStyleClass_en</name><value>cc_blockpane_en</value></styleValue>
+     -->
+    <styleValue><name>blockingPaneStyleClass</name><value>cc_blockpane</value></styleValue>
+    
+    <styleValue><name>smartlabelfragment_sup</name><value>-fx-font-size:9;-fx-label-padding: 0 0 3 0</value></styleValue>
+    <styleValue><name>smartlabelfragment_sub</name><value>-fx-font-size:9;-fx-label-padding: 3 0 0 0</value></styleValue>
+    
+    <!--
+        Drag/drop processing 
+        <styleValue><name>colordragover</name><value>FFFF0030</value></styleValue> 
+        <styleValue><name>colordragovermarked</name><value>FFFF0060</value></styleValue> 
+        <styleValue><name>roundingdragover</name><value>0</value></styleValue> 
+     -->
+    
+    <!--
+        Paintarea processing 
+        <styleValue><name>paintarea_animationduration</name><value>200</value></styleValue> 
+     -->
+        
+</ccStyleExtension>

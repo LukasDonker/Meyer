@@ -1,0 +1,37 @@
+{
+    "type": "pie",
+    "data": 
+    {
+        "datasets": 
+        [{
+            "data": 
+            [
+                1,
+                2,
+                3,
+                4,
+                5
+            ],
+            "backgroundColor": 
+            [
+                "#F7464A",
+                "#46BFBD",
+                "#FDB45C",
+                "#949FB1",
+                "#4D5360"
+            ]
+        }],
+        "labels": 
+        [
+            "Wert 1",
+            "Wert 2",
+            "Wert 3",
+            "Wert 4",
+            "Wert 5"
+        ]
+    },
+    "options": 
+    {
+        "responsive": true
+    }
+}

@@ -1,0 +1,661 @@
+/*
+ */
+.root
+{
+	/* -cc-metro-titlebackground: #006ac1; */
+    -cc-metro-titlebackground: #2980b9;
+    -cc-metro-tabbedpaneheadline: #16a085;
+    -cc-metro-gridheader: #7f8c8d;
+    -cc-metro-button-text: #000000;
+    -cc-metro-combo: #ecf0f1;
+    -cc-button: #dddddd;
+    -cc-dark2: #16a085; 
+}
+
+/* -----------------------------------------------------------------------------
+   OUTLOOKBAR
+   ----------------------------------------------------------------------------- */ 
+   
+.cc_buttonoutlookbar_sp
+{
+    -fx-background-color: -cc-metro-titlebackground;
+}
+.cc_buttonoutlookbar
+{
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-border-color: #FFFFFF30;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 8 8 8 8;
+    -fx-font-weight: normal;
+    -fx-font-size: 16px;
+    -fx-alignment: baseline-left;
+    -fx-text-fill: #FFFFFF;
+}   
+.cc_buttonoutlookbar_selected_sp
+{
+    -fx-background-color: -cc-metro-titlebackground;
+}
+.cc_buttonoutlookbar_selected
+{
+    -fx-skin: "com.sun.javafx.scene.control.skin.ButtonSkin";
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-border-color: #FFFFFF30;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 8 8 8 8;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-alignment: baseline-left;
+    -fx-text-fill: #FFFFFF;
+}
+
+.cc_buttonoutlookbar_wp_outlookbaritem_sp
+{
+    -fx-background-color: -cc-metro-titlebackground;
+}
+.cc_buttonoutlookbar_wp_outlookbaritem
+{
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-border-color: #FFFFFF30;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 8 8 8 8;
+    -fx-font-weight: normal;
+    -fx-font-size: 16px;
+    -fx-alignment: baseline-left;
+    -fx-text-fill: #FFFFFF;
+}   
+.cc_buttonoutlookbar_selected_wp_outlookbaritem_sp
+{
+    -fx-background-color: -cc-metro-titlebackground;
+}
+.cc_buttonoutlookbar_selected_wp_outlookbaritem
+{
+    -fx-skin: "com.sun.javafx.scene.control.skin.ButtonSkin";
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-border-color: #FFFFFF30;
+    -fx-border-width: 0 0 1 0;
+    -fx-padding: 8 8 8 8;
+    -fx-font-weight: bold;
+    -fx-font-size: 16px;
+    -fx-alignment: baseline-left;
+    -fx-text-fill: #FFFFFF;
+}
+
+/********** WP_WORKPAGESELECTOR *********/
+.cc_buttontabbedline_wp_workpageselector_sp
+{
+    -fx-background-color: -cc-metro-tabbedpaneheadline;
+    -fx-background-insets: 0 0 0 0;
+    -fx-background-radius: 0 0 0 0;
+}
+.cc_buttontabbedline_wp_workpageselector
+{
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-padding: 5 4 5 4;
+    -fx-border-color: #FFFFFF30;
+    -fx-border-width: 0 1 0 0;
+    -fx-border-insets: 0 0 0 0;
+    -fx-border-radius: 0 0 0 0;
+    -fx-font-size: 16px;
+    -fx-font-weight: normal;
+}
+.cc_buttontabbedline_wp_workpageselector_selected_sp
+{
+    -fx-background-color: -cc-metro-tabbedpaneheadline;
+    -fx-background-insets: 0 0 0 0;
+    -fx-background-radius: 0 0 0 0;
+}
+.cc_buttontabbedline_wp_workpageselector_selected
+{
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-padding: 5 4 5 4;
+    -fx-border-color: #FFFFFF30;
+    -fx-border-width: 0 1 0 0;
+    -fx-border-insets: 0 0 0 0;
+    -fx-border-radius: 0 0 0 0;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.cc_tabbedlineworkpageselector_sp
+{
+    -fx-background-color: -cc-metro-tabbedpaneheadline;
+}
+.cc_tabbedlineworkpageselector
+{
+    -fx-background-color: transparent;
+}
+
+/* -----------------------------------------------------------------------------
+    TABBEDLINE
+   ----------------------------------------------------------------------------- */
+   
+.cc_buttontabbedline_sp
+{
+    -fx-background-color: -cc-metro-tabbedpaneheadline;
+    -fx-background-insets: 0 1 0 0;
+    -fx-background-radius: 0 0 0 0;
+}
+.cc_buttontabbedline
+{
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-padding: 5 10 5 10;
+    -fx-border-color: #FFFFFF30;
+    -fx-border-width: 0 1 0 0;
+    -fx-border-insets: 0 0 0 0;
+    -fx-border-radius: 0 0 0 0;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: normal;
+}
+
+.cc_buttontabbedline_selected_sp
+{
+    -fx-background-color: -cc-metro-tabbedpaneheadline;
+    -fx-background-insets: 0 0 0 0;
+    -fx-background-radius: 0 0 0 0;
+}
+.cc_buttontabbedline_selected
+{
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-padding: 5 10 5 10;
+    -fx-border-color: #FFFFFF30;
+    -fx-border-width: 0 1 0 0;
+    -fx-border-insets: 0 1 0 0;
+    -fx-border-radius: 0 0 0 0;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+}
+   
+.cc_buttontabbedline_pane_sp
+{
+    -fx-background-color: -cc-metro-tabbedpaneheadline;
+}
+.cc_buttontabbedlinepane
+{
+    -fx-background-color: transparent;
+}
+
+.cc_tabbedlinepane_sp
+{
+    -fx-background-color: -cc-metro-tabbedpaneheadline;
+}
+.cc_tabbedlinepane
+{
+    -fx-background-color: transparent;
+}
+
+
+/*
+  ---------- bottom tabs ----------
+*/
+.cc_buttontabbedline_bottom_sp
+{
+    -fx-background-color: -cc-metro-tabbedpaneheadline;
+    -fx-background-insets: 0 1 0 0;
+    -fx-background-radius: 0 0 0 0;
+}
+.cc_buttontabbedline_bottom
+{
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-padding: 5 10 5 10;
+    -fx-border-color: #FFFFFF30;
+    -fx-border-width: 0 1 0 0;
+    -fx-border-insets: 0 1 0 0;
+    -fx-border-radius: 0 0 0 0;
+    -fx-font-weight: normal;
+}
+.cc_buttontabbedline_bottom_selected_sp
+{
+    -fx-background-color: -cc-metro-tabbedpaneheadline;
+    -fx-background-insets: 0 1 0 0;
+    -fx-background-radius: 0 0 0 0;
+}
+.cc_buttontabbedline_bottom_selected
+{
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-padding: 5 10 5 10;
+    -fx-border-color: #FFFFFF30;
+    -fx-border-width: 0 1 0 0;
+    -fx-border-insets: 0 1 0 0;
+    -fx-border-radius: 0 0 0 0;
+    -fx-font-weight: bold;
+}
+
+.cc_buttontabbedline_bottom_pane_sp
+{
+    -fx-background-color: -cc-metro-tabbedpaneheadline;
+}
+.cc_buttontabbedlinepane_bottom
+{
+    -fx-background-color: transparent;
+}
+
+/*
+  ---------- vertical tabs - left ----------
+ */
+.cc_buttontabbedline_left_sp
+{
+    -fx-background-color: -cc-metro-tabbedpaneheadline;
+    -fx-background-insets: 0 0 1 0;
+    -fx-background-radius: 0 0 0 0;
+}
+.cc_buttontabbedline_left
+{
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-padding: 5 10 5 10;
+    -fx-border-color: #FFFFFF30;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-insets: 0 0 1 0;
+    -fx-border-radius: 0 0 0 0;
+    -fx-font-weight: normal;
+}
+.cc_buttontabbedline_left_selected_sp
+{
+    -fx-background-color: -cc-metro-tabbedpaneheadline;
+    -fx-background-insets: 0 0 1 0;
+    -fx-background-radius: 0 0 0 0;
+}
+.cc_buttontabbedline_left_selected
+{
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-padding: 5 10 5 10;
+    -fx-border-color: #FFFFFF30;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-insets: 0 0 1 0;
+    -fx-border-radius: 0 0 0 0;
+    -fx-font-weight: bold;
+}
+
+.cc_buttontabbedline_left_pane_sp
+{
+    -fx-background-color: -cc-metro-tabbedpaneheadline;
+}
+.cc_buttontabbedlinepane_left
+{
+    -fx-background-color: transparent;
+}
+
+/*
+  ---------- vertical tabs - right ----------
+ */
+.cc_buttontabbedline_right_sp
+{
+    -fx-background-color: -cc-metro-tabbedpaneheadline;
+    -fx-background-insets: 0 0 1 0;
+    -fx-background-radius: 0 0 0 0;
+}
+.cc_buttontabbedline_right
+{
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-padding: 5 10 5 10;
+    -fx-border-color: #FFFFFF30;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-insets: 0 0 1 0;
+    -fx-border-radius: 0 0 0 0;
+    -fx-font-weight: normal;
+}
+.cc_buttontabbedline_right_selected_sp
+{
+    -fx-background-color: -cc-metro-tabbedpaneheadline;
+    -fx-background-insets: 0 0 1 0;
+    -fx-background-radius: 0 0 0 0;
+}
+.cc_buttontabbedline_right_selected
+{
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-padding: 5 10 5 10;
+    -fx-border-color: #FFFFFF30;
+    -fx-border-width: 0 0 1 0;
+    -fx-border-insets: 0 0 1 0;
+    -fx-border-radius: 0 0 0 0;
+    -fx-font-weight: bold;
+}
+
+.cc_buttontabbedline_right_pane_sp
+{
+    -fx-background-color: -cc-metro-tabbedpaneheadline;
+}
+.cc_buttontabbedlinepane_right
+{
+    -fx-background-color: transparent;
+}
+
+/* -----------------------------------------------------------------------------
+    TITLEBAR
+   ----------------------------------------------------------------------------- */
+   
+.cc_pane_titlebar_sp 
+{
+    -fx-background-color: -cc-metro-titlebackground;
+    -fx-padding: 0 10 0 0;
+    -fx-border-color: #FFFFFF30;
+    -fx-border-width: 0 0 0 0;
+}
+.cc_pane_titlebar
+{
+}   
+.cc_label_titlebar_sp 
+{
+}
+.cc_label_titlebar
+{
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-padding: 8;
+    -fx-text-fill: #FFFFFF;
+}   
+
+/* -----------------------------------------------------------------------------
+    GRIDHEADERLABEL
+   ----------------------------------------------------------------------------- */
+   
+.cc_gridheader_sp 
+{
+    -fx-background-color: -cc-metro-gridheader;
+}
+.cc_gridheader
+{
+}   
+
+.cc_gridheader_label_sp 
+{
+    -fx-font-weight: bold;
+}
+.cc_gridheader_label
+{
+    -fx-padding: 2 2 2 2;
+    -fx-text-fill: #FFFFFF;
+}   
+
+/* -----------------------------------------------------------------------------
+    FOLDABLEPANE
+   ----------------------------------------------------------------------------- */
+   
+.cc_foldable_pane_outerpane_sp
+{
+    -fx-border-width: 1;
+    -fx-border-color: #00000030;
+}
+.cc_foldable_pane_headerpane_sp
+{
+    -fx-background-color: -cc-metro-tabbedpaneheadline;
+    -fx-padding: 0;
+    -fx-background-radius: 0 0 0 0;
+}
+.cc_foldable_button_title_sp
+{
+}
+.cc_foldable_button_title
+{
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+}
+.cc_foldable_button_title-disabled_sp
+{
+}
+.cc_foldable_button_title-disabled
+{
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+}
+.cc_foldable_button_icon_sp
+{
+}
+.cc_foldable_button_icon
+{
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+}
+.cc_foldable_button_icon-disabled_sp 
+{
+}
+.cc_foldable_button_icon-disabled
+{
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+}
+
+/* -----------------------------------------------------------------------------
+    FOLDABLEVERTICALPANE
+   ----------------------------------------------------------------------------- */
+   
+.cc_foldablevertical_pane_outerpane_sp
+{
+    -fx-border-width: 1 1 1 1;
+    -fx-border-color: #00000030;
+}
+.cc_foldablevertical_pane_headerpane_sp
+{
+    -fx-background-color: -cc-metro-tabbedpaneheadline;
+    -fx-padding: 2;
+    -fx-background-radius: 0 0 0 0;
+}
+.cc_foldablevertical_link_title_sp
+{
+}
+.cc_foldablevertical_link_title
+{
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+}
+.cc_foldablevertical_icon_sp
+{
+}
+.cc_foldablevertical_icon
+{
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-font-weight: bold;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 14px;
+}
+.cc_foldablevertical_pane_innerpane_sp
+{
+    -fx-padding: 10;
+}
+
+/* -----------------------------------------------------------------------------
+   BUTTON
+   ----------------------------------------------------------------------------- */ 
+    
+.cc_button_sp 
+{
+    -fx-background-color: -cc-button;
+}
+.cc_button
+{
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-border-color: #a0a0a0;
+    -fx-border-width: 1;
+    -fx-padding: 3 10 4 10;
+}   
+.cc_button-disabled_sp 
+{
+    -fx-background-color: -cc-button;
+}
+.cc_button-disabled
+{
+    -fx-background-color: transparent;
+    -fx-border-color: #a0a0a0;
+    -fx-border-width: 1;
+    -fx-padding: 3 10 4 10;
+}   
+
+/* ----------------------------------------------------------------------------
+    BUTTONMENU
+   ---------------------------------------------------------------------------- */
+
+.cc_button_buttonandmenu_sp 
+{
+    -fx-background-color: -cc-button;
+}
+.cc_button_buttonandmenu
+{
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-border-color: #a0a0a0;
+    -fx-border-width: 1;
+    -fx-padding: 3 25 4 10;
+    -fx-background-image: url("fximages/buttonmenuicon.png");
+    -fx-background-position: right;
+    -fx-background-repeat: no-repeat;
+}
+.cc_button_buttonandmenu-disabled_sp 
+{
+    -fx-background-color: -cc-button;
+}
+.cc_button_buttonandmenu-disabled
+{
+    -fx-cursor: hand;
+    -fx-background-color: transparent;
+    -fx-border-color: #a0a0a0;
+    -fx-border-width: 1;
+    -fx-padding: 3 25 4 10;
+    -fx-background-image: url("fximages/buttonmenuicon.png");
+    -fx-background-position: right;
+    -fx-background-repeat: no-repeat;
+}
+
+/* ----------------------------------------------------------------------------
+    COMBOBOX
+   ---------------------------------------------------------------------------- */
+
+.combo-box-base .arrow-button 
+{
+	/*
+    -fx-background-color: -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 0, 1, 2;
+    */
+    -fx-background-color: -cc-metro-combo;
+    -fx-background-insets: 0;
+    -fx-background-radius: 0 0 0 0, 0 0 0 0, 0 0 0 0;
+    -fx-padding: 0.5em 0.416667em 0.5em 0.416667em; /* 6 5 6 5  */
+}
+
+
+/* ----------------------------------------------------------------------------
+    COMBOFIELD
+   ---------------------------------------------------------------------------- */
+
+.cc_combofield_icon
+{
+    -fx-border-width: 0;
+    /*
+    -fx-background-color: -fx-outer-border, -fx-inner-border, -fx-body-color;
+    -fx-background-insets: 1, 2, 3;
+    -fx-background-radius: 0 0 0 0, 0 0 0 0, 0 0 0 0;
+    */
+    -fx-background-color: -cc-metro-combo;
+    -fx-background-insets: 1;
+    -fx-background-image: url("fximages/combofieldicon.png");
+    -fx-background-position: center;
+    -fx-background-repeat: no-repeat;
+}
+
+/* -----------------------------------------------------------------------------
+    PICKLIST
+   ----------------------------------------------------------------------------- */
+
+.cc_buttonpicklist_sp 
+{
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
+.cc_buttonpicklist
+{
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}   
+.cc_buttonpicklist-disabled_sp 
+{
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}
+.cc_buttonpicklist-disabled
+{
+    -fx-border-radius: 0;
+    -fx-background-radius: 0;
+}   
+
+/* -----------------------------------------------------------------------------
+    FILELIST, TABLEVIEW
+   ----------------------------------------------------------------------------- */
+
+.cc_filelist_tableview .column-header
+{
+    -fx-background-color: -cc-metro-gridheader;
+}
+.cc_filelist_tableview .column-header .label
+{
+    -fx-text-fill: #FFFFFF;
+}
+
+/* -----------------------------------------------------------------------------
+    MENU
+   ----------------------------------------------------------------------------- */
+   
+/*   
+.menu 
+{
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 3 8 3 8
+}
+.menu-item 
+{
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 4 5 4 5
+}
+.menu-item .label 
+{
+    -fx-text-fill: #000000;
+}
+.menu-item 
+{
+    -fx-background-color: #FFFFFF;
+    -fx-padding: 4 5 4 5
+}
+.context-menu 
+{
+    -fx-background-color: #FFFFFF;
+    -fx-background-insets: 0;
+    -fx-padding: 4 1 8 1;
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.2) , 12, 0.0 , 0 , 8 );
+}
+*/
+
+
+.scroll-bar > .thumb {
+    -fx-background-color: -fx-outer-border, -fx-inner-border, -fx-body-color; 
+    /*-fx-background-insets: 1, 2, 3;*/
+    -fx-background-insets: 0, 1, 2;
+    /*-fx-background-radius: 0.416667em, 0.333333em, 0.25em; *//* 5, 4,3 */
+    -fx-background-radius: 0,0,0;
+}
+

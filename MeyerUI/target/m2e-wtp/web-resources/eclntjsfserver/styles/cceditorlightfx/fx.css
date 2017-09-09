@@ -1,0 +1,46 @@
+.root
+{
+    /*
+    -cc-metro-titlebackground: #2980b9;
+    -cc-metro-tabbedpaneheadline: #16a085;
+    -cc-metro-gridheader: #7f8c8d;
+    -cc-metro-button-text: #000000;
+    -cc-metro-combo: #ecf0f1;
+    -cc-button: #dddddd;
+    */
+    /*
+    -cc-metro-titlebackground: #5c5c42;
+    -cc-metro-tabbedpaneheadline: #99987a;
+    */
+    -cc-metro-titlebackground: #435555;
+    -cc-metro-tabbedpaneheadline: #768888; 
+    
+}
+
+.cc_label_titlebar
+{
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 3;
+    -fx-text-fill: #FFFFFF;
+}   
+
+.cc_pagecontainer_sp 
+{
+    -fx-background-color: #FFFFFF;
+}
+.cc_pagecontainer
+{
+}
+
+.cc_scrollpane_sp 
+{
+    -fx-background-color: transparent;
+}
+.cc_scrollpane
+{
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-padding: 0;
+    -fx-background-insets: 0;
+}   

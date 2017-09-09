@@ -1,0 +1,21 @@
+<project
+        copywebapp="true"
+        javaclassdirectory="${project}/webcontentbuild/WEB-INF/classes"
+        javasourcedirectory="${project}/src"
+        reloadwebapp="true"
+        webappaddonsdirectory="${project}/webcontent"
+        webcontentdeploydirectory="C:/Java/CaptainCasa/EnterpriseClient/server/tomcat/webapps/MeyerUI"
+        webcontentdirectory="${project}/webcontent"
+        webcontextroot="MeyerUI"
+        webhostport="localhost:50000">
+
+    <deploycopyinfo
+            fromdir="${project}/webcontentbuild"
+            todir="${projectdeploy}">
+    </deploycopyinfo>
+
+    <deploycopyinfo
+            fromdir="${project}/webcontent"
+            todir="${projectdeploy}">
+    </deploycopyinfo>
+</project>
