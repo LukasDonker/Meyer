@@ -21,4 +21,9 @@ defaultvalue (optional): default value that is returned if a property could not
 be resolved (e.g. because it is missing in the resource bundle). By default a string
 is returned showing the name of the resource and the name of the property. When defining
 defaultvalue as "null" then null is returned at runtime.
+
+expression (optional): expression of the resource reader that loads the literals. By
+Default the resource reader is used with expression "rr", so that a literal is reached
+by e.g. expression "#{rr.literals['literalId']}". You may add an own implementation
+of a resource reader and use some different expression name than "rr".
 -->

@@ -37,6 +37,13 @@
     <filter-class>org.eclnt.jsfserver.util.CompressionFilter</filter-class>
   </filter>
   <!-- 
+      Optional: filter for setting no-cache/no-store in response header
+      <filter>
+        <filter-name>org.eclnt.jsfserver.util.NoCacheNoStoreFilter</filter-name>
+        <filter-class>org.eclnt.jsfserver.util.NoCacheNoStoreFilter</filter-class>
+      </filter>
+  -->
+  <!-- 
       Optional: response logging filter: only for development usage!
       <filter>
         <filter-name>org.eclnt.jsfserver.util.ResponseLoggerFilter</filter-name>
@@ -63,6 +70,12 @@
     <filter-name>org.eclnt.jsfserver.util.CompressionFilter</filter-name>
     <url-pattern>*.xml</url-pattern>
   </filter-mapping>
+  <!-- 
+      <filter-mapping>
+        <filter-name>org.eclnt.jsfserver.util.NoCacheNoStoreFilter</filter-name>
+        <url-pattern>*.js</url-pattern>
+      </filter-mapping>
+  -->
   <!-- 
       <filter-mapping>
         <filter-name>org.eclnt.jsfserver.util.SecurityFilter</filter-name>

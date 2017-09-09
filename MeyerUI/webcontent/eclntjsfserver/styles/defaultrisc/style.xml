@@ -250,7 +250,6 @@
     
     <tag name="tabbedpane" variant="topmenu">
         <set attribute="styleseq" value="risctabbedpane_ribbon"/>
-        <set attribute="styleseqtabs" value="risctabbedline_ribbon"/>
     </tag>
     <tag name="tabbedpanetab" variant="topmenu" >
     </tag>
@@ -398,23 +397,31 @@
     <tag name="pane" variant="WP_WORKPAGECONTAINERMINIICON_SELECTED" extendstag="pane" extendsvariant="default">
         <set attribute="fxstyleseq" value="cc_pane_wp_workpagecontainerminiicon_selected"/>
     </tag>
-    
+        
     <tag name="rowworkplacefunctiontree" variant="default">
         <set attribute="foreground" value="#000000"/>
         <set attribute="background" value="#FFFFFF"/>
+    </tag>
+    <!-- ...used in ROWWORKPLACEFUNCTIONS -->
+    <tag name="t:rowworkplacefunctiontree" variant="WP_WORKPLACEFUNCTIONTREE">
+        <set attribute="foreground" value="#000000"/>
+        <set attribute="background" value="#FFFFFF"/>
+<!--         <set attribute="treenoderowheight" value="25"/> -->
+<!--         <set attribute="bordercolor" value="#0000000A"/> -->
+<!--         <set attribute="borderheight" value="1"/> -->
+<!--         <set attribute="treenodefont" value="size:15"/> -->
+    </tag>
+    
+    <tag name="fixgrid" variant="WP_FUNCTIONTREE">
+    </tag>
+    <tag name="treenode" variant="WP_FUNCTIONTREE">
+        <set attribute="styleseq" value="cc_wp_functiontree_singletreenode"/>
     </tag>
     
     <!-- 
         style variant that is used for the bottom or top tabs within the
         workplace selector component 
     -->
-    <tag name="fixgrid" variant="WP_FUNCTIONTREE">
-    </tag>
-    
-    <tag name="treenode" variant="WP_FUNCTIONTREE">
-        <set attribute="fxstyleseq" value="cc_singletreenode"/>
-    </tag>
-    
     <tag name="t:tabbedline" variant="WP_WORKPAGESELECTOR" >
         <set attribute="fxstyleseq" value="cc_wp_workpageselector"/>
     </tag>
@@ -437,6 +444,7 @@
     -->
     <tag name="splitpane" variant="WP_TILESPLITPANE">
         <set attribute="dividercolor" value="#00000000"/>
+        <set attribute="styleseq" value="cc_wp_tilesplitpane"/>
     </tag>
     
     <!--
@@ -477,14 +485,6 @@
     <tag name="outlookbarcontent" variant="WP_OUTLOOKBARCONTENT" extendstag="outlookbarcontent" extendsvariant="default">
     </tag>
 
-    <!--
-        ...used in ROWWORKPLACEFUNCTIONS
-     -->
-    <tag name="t:rowworkplacefunctiontree" variant="WP_WORKPLACEFUNCTIONTREE">
-        <set attribute="foreground" value="#000000"/>
-        <set attribute="background" value="#FFFFFF"/>
-    </tag>
-    
     <!--
         ...used in WORKPLACEPERSPECTIVESELECTOR
      -->

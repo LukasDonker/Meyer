@@ -43,16 +43,16 @@
     <var n="@gridHeaderBackground@" v="#E0E0E0"/>
     <var n="@gridHeaderForeground@" v="#404040"/>
     <var n="@gridLineColor@" v="rgba(0,0,0,0.1)"/>
-    <var n="@headerBackground@" v="#F4F4F4"/>
+    <var n="@headerBackground@" v="#EEEEEE"/>
     <var n="@hoverColor@" v="rgba(0,0,0,0.05)"/>
     <var n="@mode@" v="edged"/>
     <var n="@menuBackground@" v="#FFFFFF"/>
     <var n="@noTextSelection@" v="-webkit-touch-callout: none;-webkit-user-select: none;-khtml-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;"/>
-    <var n="@placeholderColor@" v="#D0D0D0"/>
+    <var n="@placeholderColor@" v="#D8D8D8"/>
     <var n="@popupBackground@" v="#FFFFFF"/>
     <var n="@popupTitleBackground@" v="#34495e"/>
     <var n="@rowbodypaneBackground@" v="#F7F7F7"/>
-    <var n="@rowbodypaneBorderWidth@" v="1"/>
+    <var n="@rowbodypaneBorderWidth@" v="0"/>
     <var n="@scrollbarBackground@" v="#F4F4F4"/>
     <var n="@scrollbarMoverBackground@" v="#DDDDDD"/>
     <var n="@scrollbarMoverBorderWidth@" v="1"/>
@@ -60,7 +60,7 @@
     <var n="@shadedBackground@" v="#FFFFFF"/>
     <var n="@shadedShadedBackground@" v="#EAEAEA"/>
     <var n="@shiftContainerNavigationBackground@" v="rgba(0,0,0,0.2)"/>
-    <var n="@statusbarBackground@" v="#F4F4F4"/>
+    <var n="@statusbarBackground@" v="#EEEEEE"/>
     <var n="@textForeground@" v="#000000"/>
     <var n="@titlebarBackground@" v="#33607f"/>
     <var n="@titlebarForeground@" v="#FFFFFF"/>
@@ -90,7 +90,17 @@
     <var n="@animationDuration@" v="0.5s"/>
     <var n="@animationTransparencyDark@" v="0.25"/>
     <var n="@animationTransparencyLight@" v="0.5"/>
-    
+
+    <!-- images used in splitter/stretcher of SPLITPANE and SIZEABLEPANE  -->
+    <var n="@stretcherHorizontalBackgroundImage@" v="url(eclntjsfserver/images/splitpane/dividerhorizontal.png)"/>
+    <var n="@stretcherVerticalBackgroundImage@" v="url(eclntjsfserver/images/splitpane/dividervertical.png)"/>
+ 
+    <!-- placholder -->
+    <class n="::-webkit-input-placeholder" directcss="true"><style n="color" v="@placeholderColor@"/></class>
+    <class n="::-moz-placeholder" directcss="true"><style n="color" v="@placeholderColor@"/></class>
+    <class n=":-ms-input-placeholder" directcss="true"><style n="color" v="@placeholderColor@ !important"/></class>
+    <class n="input:-moz-placeholder" directcss="true"><style n="color" v="@placeholderColor@"/></class>
+           
     <!-- global styles -->
 
     <class n="riscinternal_riscglobal" internal="true">
@@ -367,17 +377,18 @@
     </class>
     
     <class n="riscpaintareaitem">
+        <class n="_mover">
+            <style n="background" v="rgba(0,0,0,0.1)"/>
+            <style n="border-radius" v="8px 8px 8px 8px"/>
+            <style n="border" v="0px solid #c0c0c0"/>
+            <style n="cursor" v="move"/>
+        </class>
+        <class n="_sizer">
+            <style n="background" v="transparent"/>
+            <style n="cursor" v="nw-resize"/>
+        </class>
     </class>
     
-    <class n="riscpaintareaitem_mover">
-        <style n="background" v="rgba(0,0,0,0.1)"/>
-        <style n="cursor" v="move"/>
-    </class>
-    
-    <class n="riscpaintareaitem_sizer">
-        <style n="background" v="rgba(0,0,0,0.1)"/>
-        <style n="cursor" v="nw-resize"/>
-    </class>
     
     <!-- drawarea -->
     
@@ -497,7 +508,13 @@
             </class>
         </class>
     </class>
-    
+
+    <!-- slidecontainer -->
+    <class n="riscslidecontainer">
+        <risc n="border" v="1 1 1 1"/>
+        <style n="border" v="1px solid #c0c0c0"/>
+    </class>
+            
     <!-- touchfieldgeneric -->
     
     <class n="risctouchfieldgeneric" extends="riscinternal_panewithborderandbackground">
@@ -603,12 +620,11 @@
         <var n="@insetWidth@" v="0"/>
         <var n="@borderColor@" v="#C0C0C0"/>
         <var n="@backgroundColor@" v="#F0F0F0"/>
-        <class n="_content" extends="risclabel">
+        <class n="_content" extends="risclabel_nopadding">
             <var n="@borderWidth@" v="0"/>
-            <var n="@insetWidth@" v="0"/>
             <var n="@borderColor@" v="#C0C0C0"/>
             <var n="@backgroundColor@" v="transparent"/>
-        </class>
+       </class>
     </class>
 
     <!-- subpage, browser -->
@@ -619,12 +635,18 @@
         <var n="@borderColor@" v="#C0C0C0"/>
         <var n="@backgroundColor@" v="transparent"/>
     </class>
-    <class n="browser_container" extends="riscinternal_panewithborderandbackground">
+    <class n="riscbrowser_container" extends="riscinternal_panewithborderandbackground">
         <var n="@borderWidth@" v="0"/>
         <var n="@insetWidth@" v="0"/>
         <var n="@borderColor@" v="#C0C0C0"/>
         <var n="@backgroundColor@" v="transparent"/>
-    </class>
+        <style n="-webkit-touch-callout" v="text !important"/> 
+        <style n="-webkit-user-select" v="text !important"/> 
+        <style n="-khtml-user-select" v="text !important"/> 
+        <style n="-moz-user-select" v="text !important"/> 
+        <style n="-ms-user-select" v="text !important"/> 
+        <style n="user-select" v="text !important"/> 
+   </class>
          
     <!-- dialog -->
     
@@ -638,8 +660,11 @@
     <class n="riscdialog_popup">
         <style n="background" v="@popupBackground@"/>
         <style n="box-shadow" v="4px 4px 2px #A0A0A0 "/>
-        <class n="showUp">
-            <style n="transition" v="height 0.25s"/>
+        <class n=".showUpHeight">
+            <style n="transition" v="height 0.2s"/>
+        </class>
+        <class n=".showUpWidth">
+            <style n="transition" v="width 0.2s"/>
         </class>
     </class>
        
@@ -742,6 +767,11 @@
     
     <!-- longtextfield -->
     
+    <class n="risclongtextfield" extends="risccombofield">
+        <class n="_icon">
+            <style n="background-image" v="url(../../../eclntjsfserver/images/combobox/longtextfieldselector.png)"/>
+        </class>
+    </class>
     <class n="risclongtextfield_textarea">
         <style n="border" v="1px solid @containerBorderColor@"/>
         <style n="font-family" v="@fontFamily@"/>
@@ -780,10 +810,10 @@
         <class n=".workday"><style n="background" v="#FFFFFF"/></class>
         <class n=".workday.selected"><style n="background" v="#FFFFC0"/></class>
         <class n=".weekendday"><style n="background" v="#D0D0D0"/></class>
-        <class n=".weelendday.selected"><style n="background" v="#FFFFC0"/></class>
+        <class n=".weekendday.selected"><style n="background" v="#FFFFC0"/></class>
         <class n=".workdayheadline"><style n="background" v="#F0F0F0"/></class>
         <class n=".weekenddayheadline"><style n="background" v="#C0C0C0"/></class>
-        <class n=".roday"><style n="background" v="#E0E0E0"/></class>
+        <class n=".today"><style n="background" v="#E0E0E0"/></class>
         <class n=".yearprev">
             <style n="background" v="#E0E0E0"/>
             <style n="background-image" v="url(../../../eclntjsfserver/images/control_playbackwards.png)"/>
@@ -898,6 +928,8 @@
     <class n="risccombofield">
         <risc n="background" v="@fieldBackground@"/>
         <risc n="border" v="1 1 1 1"/>
+        <risc n="_imagewidth" v="16"/>
+        <risc n="_imageheight" v="16"/>
         <style n="background" v="@fieldBackground@"/>
         <style n="border" v="1px solid @fieldbordercolor@"/>
         <style condition="@rounded@" n="border-radius" v="3px"/>
@@ -1073,19 +1105,24 @@
     <!-- treenode -->
       
     <class n="riscsingletreenode">
+        <risc n="_imageopened" v="eclntjsfserver/images/treenode/opened.png"/>
+        <risc n="_imageclosed" v="eclntjsfserver/images/treenode/closed.png"/>
+        <risc n="_imageendnode" v="eclntjsfserver/images/treenode/endnode.png"/>
+        <risc n="_indentperlevel" v="20"/>        
+        <risc n="_imagesize" v="16"/>        
         <risc n="font" v="&quot;@fontFamily@&quot; @fontDefaultSize@"/>
         <style n="font-family" v="@fontFamily@"/>
         <style n="font-size" v="@fontDefaultSize@px"/>
         <style n="white-space" v="nowrap"/>
-    </class>
-    <class n="riscsingletreenode_text">
-        <style n="font-family" v="@fontFamily@"/>
-        <style n="font-size" v="@fontDefaultSize@px"/>
-        <style n="white-space" v="nowrap"/>
-        <style n="color" v="@textForeground@"/>
-    </class>
-    <class n="riscsingletreenode_toggleimage">
-        <style n="cursor" v="pointer"/>
+        <class n="_text">
+            <style n="font-family" v="@fontFamily@"/>
+            <style n="font-size" v="@fontDefaultSize@px"/>
+            <style n="white-space" v="nowrap"/>
+            <style n="color" v="@textForeground@"/>
+        </class>
+        <class n="_toggleimage">
+            <style n="cursor" v="pointer"/>
+        </class>
     </class>
     
     <!-- sizeablepane -->
@@ -1094,7 +1131,7 @@
     </class>
     <class n="riscsizeablepanehorizontal">
         <class n=" > .riscsizeablepane_stretcher">
-            <style n="background-image" v="url(eclntjsfserver/images/splitpane/dividerhorizontal.png)"/>
+            <style n="background-image" v="@stretcherHorizontalBackgroundImage@"/>
             <style n="background-repeat" v="no-repeat"/>
             <style n="background-position" v="center"/>
             <style n="cursor" v="e-resize"/>
@@ -1102,7 +1139,7 @@
     </class>
     <class n="riscsizeablepanevertical">
         <class n=" > .riscsizeablepane_stretcher">
-            <style n="background-image" v="url(eclntjsfserver/images/splitpane/dividervertical.png)"/>
+            <style n="background-image" v="@stretcherVerticalBackgroundImage@"/>
             <style n="background-repeat" v="no-repeat"/>
             <style n="background-position" v="center"/>
             <style n="cursor" v="n-resize"/>
@@ -1214,6 +1251,8 @@
         <style n="background" v="transparent"/>
         <style n="border" v="0px solid @buttonBorderColor@"/>
     </class>
+    <class n="riscicon_nofill" extends="riscicon">
+    </class>
     
     <class n="risccloseicon" extends="riscbutton">
         <risc n="border" v="0 0 0 0"/>
@@ -1228,13 +1267,10 @@
     <class n="riscbuttonmenu_separator">
         <risc n="border" v="0 0 0 1"/>
         <risc n="inset" v="0 0 0 4"/>
-        <risc n="background" v="transparent"/>
-        <style n="background" v="transparent"/>
+        <risc n="background" v="url(eclntjsfserver/images/combobox/comboselector.png) no-repeat center"/>
         <style n="border-left" v="1px solid @buttonBorderColor@"/>
         <style n="cursor" v="pointer"/>
-        <style n="background-image" v="url(../../../eclntjsfserver/images/combobox/comboselector.png)"/>
-        <style n="background-repeat" v="no-repeat"/>
-        <style n="background-position" v="center"/>
+        <style n="background" v="url(../../../eclntjsfserver/images/combobox/comboselector.png) no-repeat center"/>
         <style n="opacity" v="0.5"/>
     </class>    
     
@@ -1266,19 +1302,10 @@
             <style n="font-family" v="@fontFamily@"/>
             <style n="font-size" v="@fontDefaultSize@px"/>
             <style n="color" v="@textForeground@"/>
-            <!-- character wrapping -->
-            <style n="-ms-word-break" v="break-all"/>
-            <style n="word-break" v="break-all"/>
-            <style n="word-break" v="break-word"/>
-            <style n="-webkit-hyphens" v="auto"/>
-            <style n="-moz-hyphens" v="auto"/>
-            <style n="-ms-hyphens" v="auto"/>
-            <style n="hyphens" v="auto"/>
         </class>    
     </class>
     
-    <!-- userhint -->
-    
+    <!-- userhint and tooltip -->
     <class n="riscuserhint_textpane">
         <risc n="background" v="#FFFFC0"/>
         <risc n="font" v="&quot;@fontFamily@&quot; 10"/>
@@ -1293,6 +1320,9 @@
             <style n="font-size" v="10px"/>
             <style n="color" v="#000000"/>
         </class>    
+    </class>
+    
+    <class n="risctooltip_textpane" extends="riscuserhint_textpane">
     </class>
     
     <!-- tabbedline -->
@@ -1402,7 +1432,10 @@
     </class>
     
     <!-- workplace -->
-    
+ 
+    <class n="cc_wp_functiontree_singletreenode" extends="riscsingletreenode">
+    </class>
+          
     <class n="cc_wp_workpageselector" extends="risctabbedline">
         <style condition="@edged@" n="background" v="@wpselectorBackground@"/>
         <class n="_content">
@@ -1578,61 +1611,62 @@
     
     <class n="risctabbedpane">
         <style n="border" v="0px"/>
+        <class n="_tabbedline" extends="risctabbedline">
+        </class>
+        <class n="_content">
+            <risc condition="@edged@" n="background" v="@shadedBackground@"/>
+            <risc condition="@rounded@" n="background" v="transparent"/>
+            <risc n="inset" v="10 10 10 10"/>
+            <risc condition="@edged@" n="border" v="0 1 1 1"/>
+            <risc condition="@rounded@" n="border" v="1 1 1 1"/>
+            <style condition="@edged@" n="border" v="1px solid @containerBorderColor@"/>
+            <style condition="@edged@" n="border-top" v="0px solid #c0c0c0"/>
+            <style condition="@rounded@" n="border" v="1px solid #C0C0C0"/>
+            <style condition="@rounded@" n="border-radius" v="10px"/>
+            <style condition="@edged@" n="background" v="@shadedBackground@"/>
+            <style condition="@rounded@" n="background" v="transparent"/>
+        </class>
     </class>
-    <class n="risctabbedpane_content">
-        <risc condition="@edged@" n="background" v="@shadedBackground@"/>
-        <risc condition="@rounded@" n="background" v="transparent"/>
-        <risc n="inset" v="10 10 10 10"/>
-        <risc condition="@edged@" n="border" v="0 1 1 1"/>
-        <risc condition="@rounded@" n="border" v="1 1 1 1"/>
-        <style condition="@edged@" n="border" v="1px solid @containerBorderColor@"/>
-        <style condition="@edged@" n="border-top" v="0px solid #c0c0c0"/>
-        <style condition="@rounded@" n="border" v="1px solid #C0C0C0"/>
-        <style condition="@rounded@" n="border-radius" v="10px"/>
-        <style condition="@edged@" n="background" v="@shadedBackground@"/>
-        <style condition="@rounded@" n="background" v="transparent"/>
-    </class>
-    
+
     <!-- tabbedpane usedas ribbon -->
     
-    <class n="risctabbedpane_ribbon">
+    <class n="risctabbedpane_ribbon" extends="risctabbedpane">
         <style n="border" v="0px"/>
-    </class>
-    <class n="risctabbedpane_ribbon_content">
-        <risc n="background" v="@shadedShadedBackground@"/>
-        <risc n="inset" v="5 5 5 5"/>
-        <risc condition="@edged@" n="border" v="0 0 0 0"/>
-        <risc condition="@rounded@" n="border" v="1 1 1 1"/>
-        <style condition="@edged@" n="border" v="0px solid #c0c0c0"/>
-        <style condition="@edged@" n="border-top" v="0px solid #c0c0c0"/>
-        <style condition="@rounded@" n="border" v="1px solid #C0C0C0"/>
-        <style condition="@rounded@" n="border-radius" v="5px"/>
-        <style n="background" v="@shadedShadedBackground@"/>
-    </class>
- 
-    <class n="risctabbedline_ribbon" extends="risctabbedline">
-        <risc condition="@edged@" n="inset" v="0 14 0 0"/>
-        <risc condition="@rounded@" n="inset" v="0 @fontBigSize@ 0 20"/>
-        <style condition="@edged@" n="background" v="@type2Background@"/>
-        <style condition="@rounded@" n="background" v="transparent"/>
-        <style n="border" v="0px solid #C0C0C0"/>
-        <class n="_content">
-            <risc condition="@edged@" n="background" v="@type2Background@"/>
-            <risc condition="@rounded@" n="background" v="transparent"/>
-            <style n="font-family" v="@fontFamily@"/>
-            <style n="font-size" v="@fontBigSize@px"/>
+        <class n="_tabbedline">
+            <risc condition="@edged@" n="inset" v="0 14 0 0"/>
+            <risc condition="@rounded@" n="inset" v="0 @fontBigSize@ 0 20"/>
             <style condition="@edged@" n="background" v="@type2Background@"/>
             <style condition="@rounded@" n="background" v="transparent"/>
-            <style n="border" v="0px solid #c0c0c0"/>
+            <style n="border" v="0px solid #C0C0C0"/>
+            <class n="_content">
+                <risc condition="@edged@" n="background" v="@type2Background@"/>
+                <risc condition="@rounded@" n="background" v="transparent"/>
+                <style n="font-family" v="@fontFamily@"/>
+                <style n="font-size" v="@fontBigSize@px"/>
+                <style condition="@edged@" n="background" v="@type2Background@"/>
+                <style condition="@rounded@" n="background" v="transparent"/>
+                <style n="border" v="0px solid #c0c0c0"/>
+            </class>
+             <class n="_button">
+                <var condition="@rounded@" n="@buttonBackground@" v="transparent"/>
+                <style condition="@rounded@" n="border" v="1px solid rgba(0,0,0,0)"/>
+            </class>
+           <class n="_button_selected">
+                <var n="@buttonBackground@" v="@shadedShadedBackground@"/>
+                <var n="@buttonForeground@" v="#000000"/>
+                <risc n="_backgroundModifierFocus" v="@backgroundModifierFocusDark@"/>
+            </class>
         </class>
-         <class n="_button">
-            <var condition="@rounded@" n="@buttonBackground@" v="transparent"/>
-            <style condition="@rounded@" n="border" v="1px solid rgba(0,0,0,0)"/>
-        </class>
-       <class n="_button_selected">
-            <var n="@buttonBackground@" v="@shadedShadedBackground@"/>
-            <var n="@buttonForeground@" v="#000000"/>
-            <risc n="_backgroundModifierFocus" v="@backgroundModifierFocusDark@"/>
+        <class n="_content">
+            <risc n="background" v="@shadedShadedBackground@"/>
+            <risc n="inset" v="5 5 5 5"/>
+            <risc condition="@edged@" n="border" v="0 0 0 0"/>
+            <risc condition="@rounded@" n="border" v="1 1 1 1"/>
+            <style condition="@edged@" n="border" v="0px solid #c0c0c0"/>
+            <style condition="@edged@" n="border-top" v="0px solid #c0c0c0"/>
+            <style condition="@rounded@" n="border" v="1px solid #C0C0C0"/>
+            <style condition="@rounded@" n="border-radius" v="5px"/>
+            <style n="background" v="@shadedShadedBackground@"/>
         </class>
     </class>
      
@@ -1703,12 +1737,34 @@
         <style n="font-size" v="@fontDefaultSize@px"/>
         <style n="font-weight" v="bold"/>
         <style n="background" v="@gridHeaderBackground@"/>
-        <class n="_text" extends="risclabel_nopadding">
+<!--        <class n="_text" extends="risclabel">
             <risc n="inset" v="0 3 0 3"/>
             <risc n="font" v="&quot;@fontFamily@&quot; @fontDefaultSize@ bold"/>
             <style n="font-weight" v="bold"/>
             <style n="color" v="@gridHeaderForeground@"/>
             <class n=" > .riscelement">
+                <style n="font-weight" v="bold"/>
+                <style n="color" v="@gridHeaderForeground@"/>
+            </class>                                
+        </class>-->
+        <class n="_text" extends="risctextpane">
+            <risc n="inset" v="0 3 0 3"/>
+            <risc n="font" v="&quot;@fontFamily@&quot; @fontDefaultSize@ bold"/>
+            <style n="font-weight" v="bold"/>
+            <style n="color" v="@gridHeaderForeground@"/>
+            <style n="white-space" v="nowrap"/>
+            <class n="_text">
+                <style n="font-weight" v="bold"/>
+                <style n="color" v="@gridHeaderForeground@"/>
+                <style n="white-space" v="nowrap"/>
+            </class>                                
+        </class>
+        <class n="_text_multiline" extends="risctextpane">
+            <risc n="inset" v="0 3 0 3"/>
+            <risc n="font" v="&quot;@fontFamily@&quot; @fontDefaultSize@ bold"/>
+            <style n="font-weight" v="bold"/>
+            <style n="color" v="@gridHeaderForeground@"/>
+            <class n="_text">
                 <style n="font-weight" v="bold"/>
                 <style n="color" v="@gridHeaderForeground@"/>
             </class>                                
@@ -1895,16 +1951,24 @@
             <style n="cursor" v="move"/>
         </class>
         <class n=".horizontal > .@PARENTCLASSNAME@_divider">
-            <style n="background-image" v="url(eclntjsfserver/images/splitpane/dividerhorizontal.png)"/>
+            <style n="background-image" v="@stretcherHorizontalBackgroundImage@"/>
             <style n="background-repeat" v="no-repeat"/>
             <style n="background-position" v="center"/>
             <style n="cursor" v="ew-resize"/>
         </class>
         <class n=".vertical > .@PARENTCLASSNAME@_divider">
-            <style n="background-image" v="url(eclntjsfserver/images/splitpane/dividervertical.png)"/>
+            <style n="background-image" v="@stretcherVerticalBackgroundImage@"/>
             <style n="background-repeat" v="no-repeat"/>
             <style n="background-position" v="center"/>
             <style n="cursor" v="ns-resize"/>
+        </class>
+    </class>
+    <class n="cc_wp_tilesplitpane" extends="riscsplitpane">
+        <class n=".horizontal > .@PARENTCLASSNAME@_divider">
+            <style n="background-image" v="url(eclntjsfserver/images/splitpane/dividerhorizontal_light.png)"/>
+        </class>
+        <class n=".vertical > .@PARENTCLASSNAME@_divider">
+            <style n="background-image" v="url(eclntjsfserver/images/splitpane/dividervertical_light.png)"/>
         </class>
     </class>
     <class n="riscsplitpane_split">
@@ -2103,19 +2167,8 @@
     
     <!-- tabbedlinecontainer -->
     
-    <class n="cc_tabbedpane_tabbedline">
+    <class n="cc_tabbedpane" extends="risctabbedpane">
     </class>
-    <class n="cc_tabbedpane_content">
-        <risc n="background" v="@shadedBackground@"/>
-        <risc n="inset" v="10 10 10 10"/>
-        <risc condition="@edged@" n="border" v="0 1 1 1"/>
-        <risc condition="@rounded@" n="border" v="1 1 1 1"/>
-        <style condition="@edged@" n="border" v="1px solid #c0c0c0"/>
-        <style condition="@edged@" n="border-top" v="0px solid #c0c0c0"/>
-        <style condition="@rounded@" n="border" v="1px solid #C0C0C0"/>
-        <style condition="@rounded@" n="border-radius" v="10px"/>
-        <style n="background" v="@shadedBackground@"/>
-    </class>    
     
     <!-- scrollnotifier -->
     
@@ -2152,6 +2205,11 @@
     <!-- nicedit -->
     
     <class n="riscnicedit">
+        <risc n="background" v="#FFFFFF"/>
+        <style n="background" v="#FFFFFF"/>
+    </class>
+    
+    <class n="riscckeditor">
         <risc n="background" v="#FFFFFF"/>
         <style n="background" v="#FFFFFF"/>
     </class>
@@ -2212,7 +2270,36 @@
         </class>
     </class>
          
-         
+    <!-- pdfprinter popup -->
+    <class n="riscpdfprinterpopup_button_printed" extends="riscbutton">
+        <var n="@buttonBackground@" v="#008000"/>
+        <var n="@buttonForeground@" v="#FFFFFF"/>
+    </class>
+    
+    <class n="riscpdfprinterpopup_button_notprinted" extends="riscbutton">
+        <var n="@buttonBackground@" v="#800000"/>
+        <var n="@buttonForeground@" v="#FFFFFF"/>
+    </class>
+    
+    <class n="riscpdfprinterpopup_confirmlabel" extends="risclabel">
+
+        <var n="@textForeground@" v="#FFFFFF"/>        
+        <risc n="font" v="&quot;@fontFamily@&quot; @fontDefaultSize@ bold"/>
+        <style n="font-weight" v="bold"/>
+    </class>
+    
+    <class n="riscpdfprinterpopup_openlink" extends="risclink">
+        <var n="@buttonBackground@" v="transparent"/>
+        <var n="@buttonForeground@" v="#FFFFFF"/>
+    </class>
+    
+    <class n="riscpdfprinterpopup_footer">
+        <risc n="inset" v="5 5 5 5"/>
+        <risc n="background" v="#404040"/>
+        <risc n="border" v="1 0 0 0"/>
+        <style n="background" v="#404040"/>
+        <style n="border-top" v="1px solid #c0c0c0"/>
+    </class>
          
     
 </stylesheet>

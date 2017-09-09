@@ -48,9 +48,17 @@
     <var n="@scrollbarMoverBackground@" v="#A0A0A0"/>
     <var n="@scrollbarMoverBorderWidth@" v="0"/>
     
+    <var n="@stretcherHorizontalBackgroundImage@" v="url(eclntjsfserver/images/splitpane/dividerhorizontal_light.png)"/>
+    <var n="@stretcherVerticalBackgroundImage@" v="url(eclntjsfserver/images/splitpane/dividervertical_light.png)"/>
+    
     <class n="riscinternal_riscglobal" internal="true">
         <risc n="_backgroundModifierGridSelection" v="linear-gradient(to bottom, rgba(255,128,0,0.4),rgba(255,128,0,0.4))"/>
     </class>    
 
-        
+    <class n="riscsingletreenode">
+        <risc n="_imageopened" v="eclntjsfserver/images/treenode/opened_light.png"/>
+        <risc n="_imageclosed" v="eclntjsfserver/images/treenode/closed_light.png"/>
+        <risc n="_imageendnode" v="eclntjsfserver/images/treenode/endnode_light.png"/>
+    </class>
+
 </stylesheet>

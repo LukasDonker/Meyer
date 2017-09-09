@@ -1,11 +1,4 @@
 
-RISCSTYLE.browser_container = 
-{
-    background: "transparent",
-    borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
-    insetTop:0, insetRight: 0, insetBottom: 0, insetLeft: 0,
-    generated: true
-};
 RISCSTYLE.cc_label_titlebar = 
 {
     font: new RISCFont("Open Sans",15),
@@ -24,14 +17,14 @@ RISCSTYLE.cc_rowbodypane =
 };
 RISCSTYLE.cc_rowheader = 
 {
-    background: "#F4F4F4",
+    background: "#EEEEEE",
     borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
     insetTop:4, insetRight: 4, insetBottom: 4, insetLeft: 4,
     generated: true
 };
 RISCSTYLE.cc_statusbar = 
 {
-    background: "#F4F4F4",
+    background: "#EEEEEE",
     insetTop:3, insetRight: 3, insetBottom: 3, insetLeft: 3,
     generated: true
 };
@@ -42,11 +35,54 @@ RISCSTYLE.cc_tabbedpane_content =
     insetTop:10, insetRight: 10, insetBottom: 10, insetLeft: 10,
     generated: true
 };
+RISCSTYLE.cc_tabbedpane_tabbedline = 
+{
+    insetTop:0, insetRight: 14, insetBottom: 0, insetLeft: 4,
+    generated: true
+};
+RISCSTYLE.cc_tabbedpane_tabbedline_button = 
+{
+    font: new RISCFont("Open Sans",15,"normal"),
+    background: "#707070",
+    borderTop:0, borderRight: 1, borderBottom: 0, borderLeft: 0,
+    insetTop:3, insetRight: 6, insetBottom: 4, insetLeft: 6,
+    _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
+    generated: true
+};
+RISCSTYLE.cc_tabbedpane_tabbedline_button_selected = 
+{
+    font: new RISCFont("Open Sans",15,"bold"),
+    background: "#707070",
+    borderTop:0, borderRight: 1, borderBottom: 0, borderLeft: 0,
+    insetTop:3, insetRight: 6, insetBottom: 4, insetLeft: 6,
+    _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
+    generated: true
+};
+RISCSTYLE.cc_tabbedpane_tabbedline_content = 
+{
+    background: "#707070",
+    generated: true
+};
+RISCSTYLE.cc_tabbedpane_tabbedline_menuicon = 
+{
+    background: "url(eclntjsfserver/images/tabbedline_icon.png) no-repeat center",
+    generated: true
+};
 RISCSTYLE.cc_wp_background = 
 {
     background: "#606060",
     borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
     insetTop:0, insetRight: 0, insetBottom: 0, insetLeft: 0,
+    generated: true
+};
+RISCSTYLE.cc_wp_functiontree_singletreenode = 
+{
+    font: new RISCFont("Open Sans",12),
+    _indentperlevel:"20",
+    _imageclosed:"eclntjsfserver/images/treenode/closed.png",
+    _imageopened:"eclntjsfserver/images/treenode/opened.png",
+    _imagesize:"16",
+    _imageendnode:"eclntjsfserver/images/treenode/endnode.png",
     generated: true
 };
 RISCSTYLE.cc_wp_workpagecontainer = 
@@ -165,6 +201,13 @@ RISCSTYLE.riscadaptivetoolbar_popuptable =
     insetTop:10, insetRight: 10, insetBottom: 10, insetLeft: 10,
     generated: true
 };
+RISCSTYLE.riscbrowser_container = 
+{
+    background: "transparent",
+    borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    insetTop:0, insetRight: 0, insetBottom: 0, insetLeft: 0,
+    generated: true
+};
 RISCSTYLE.riscbutton = 
 {
     font: new RISCFont("Open Sans",12,"normal"),
@@ -185,7 +228,7 @@ RISCSTYLE.riscbutton_nofill =
 };
 RISCSTYLE.riscbuttonmenu_separator = 
 {
-    background: "transparent",
+    background: "url(eclntjsfserver/images/combobox/comboselector.png) no-repeat center",
     borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 1,
     insetTop:0, insetRight: 0, insetBottom: 0, insetLeft: 4,
     generated: true
@@ -205,6 +248,11 @@ RISCSTYLE.risccheckbox =
 RISCSTYLE.risccheckbox_image = 
 {
     borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
+    generated: true
+};
+RISCSTYLE.riscckeditor = 
+{
+    background: "#FFFFFF",
     generated: true
 };
 RISCSTYLE.riscclipboardfake = 
@@ -260,6 +308,8 @@ RISCSTYLE.risccombofield =
 {
     background: "#FFFFFF",
     borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
+    _imageheight:"16",
+    _imagewidth:"16",
     generated: true
 };
 RISCSTYLE.risccombofield_field = 
@@ -531,6 +581,12 @@ RISCSTYLE.rischeaderlabel_text =
     insetTop:0, insetRight: 3, insetBottom: 0, insetLeft: 3,
     generated: true
 };
+RISCSTYLE.rischeaderlabel_text_multiline = 
+{
+    font: new RISCFont("Open Sans",12,"bold"),
+    insetTop:0, insetRight: 3, insetBottom: 0, insetLeft: 3,
+    generated: true
+};
 RISCSTYLE.rischtml = 
 {
     background: "transparent",
@@ -539,6 +595,15 @@ RISCSTYLE.rischtml =
     generated: true
 };
 RISCSTYLE.riscicon = 
+{
+    font: new RISCFont("Open Sans",12,"normal"),
+    background: "transparent",
+    borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    insetTop:2, insetRight: 2, insetBottom: 2, insetLeft: 2,
+    _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
+    generated: true
+};
+RISCSTYLE.riscicon_nofill = 
 {
     font: new RISCFont("Open Sans",12,"normal"),
     background: "transparent",
@@ -598,6 +663,28 @@ RISCSTYLE.risclink =
     borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
     insetTop:2, insetRight: 0, insetBottom: 2, insetLeft: 0,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
+    generated: true
+};
+RISCSTYLE.risclongtextfield = 
+{
+    background: "#FFFFFF",
+    borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
+    _imageheight:"16",
+    _imagewidth:"16",
+    generated: true
+};
+RISCSTYLE.risclongtextfield_field = 
+{
+    font: new RISCFont("Open Sans",12),
+    background: "transparent",
+    borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    generated: true
+};
+RISCSTYLE.risclongtextfield_field_field = 
+{
+    font: new RISCFont("Open Sans",12),
+    background: "transparent",
+    insetTop:4, insetRight: 0, insetBottom: 3, insetLeft: 0,
     generated: true
 };
 RISCSTYLE.riscmenu = 
@@ -674,6 +761,46 @@ RISCSTYLE.riscpane =
     background: "#FFFFFF",
     generated: true
 };
+RISCSTYLE.riscpdfprinterpopup_button_notprinted = 
+{
+    font: new RISCFont("Open Sans",12,"normal"),
+    background: "#800000",
+    borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
+    insetTop:3, insetRight: 10, insetBottom: 4, insetLeft: 10,
+    _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
+    generated: true
+};
+RISCSTYLE.riscpdfprinterpopup_button_printed = 
+{
+    font: new RISCFont("Open Sans",12,"normal"),
+    background: "#008000",
+    borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
+    insetTop:3, insetRight: 10, insetBottom: 4, insetLeft: 10,
+    _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
+    generated: true
+};
+RISCSTYLE.riscpdfprinterpopup_confirmlabel = 
+{
+    font: new RISCFont("Open Sans",12,"bold"),
+    insetTop:2, insetRight: 2, insetBottom: 2, insetLeft: 0,
+    generated: true
+};
+RISCSTYLE.riscpdfprinterpopup_footer = 
+{
+    background: "#404040",
+    borderTop:1, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    insetTop:5, insetRight: 5, insetBottom: 5, insetLeft: 5,
+    generated: true
+};
+RISCSTYLE.riscpdfprinterpopup_openlink = 
+{
+    font: new RISCFont("Open Sans",12,"normal"),
+    background: "transparent",
+    borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    insetTop:2, insetRight: 0, insetBottom: 2, insetLeft: 0,
+    _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
+    generated: true
+};
 RISCSTYLE.riscprogressbar = 
 {
     borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
@@ -718,7 +845,7 @@ RISCSTYLE.riscscheduleitem =
 RISCSTYLE.riscscheduleitem_content = 
 {
     font: new RISCFont("Open Sans",12),
-    insetTop:2, insetRight: 2, insetBottom: 2, insetLeft: 0,
+    insetTop:0, insetRight: 0, insetBottom: 0, insetLeft: 0,
     generated: true
 };
 RISCSTYLE.riscscrollbar = 
@@ -791,6 +918,16 @@ RISCSTYLE.riscshiftcontainerwithnavigation_right =
 RISCSTYLE.riscsingletreenode = 
 {
     font: new RISCFont("Open Sans",12),
+    _indentperlevel:"20",
+    _imageclosed:"eclntjsfserver/images/treenode/closed.png",
+    _imageopened:"eclntjsfserver/images/treenode/opened.png",
+    _imagesize:"16",
+    _imageendnode:"eclntjsfserver/images/treenode/endnode.png",
+    generated: true
+};
+RISCSTYLE.riscslidecontainer = 
+{
+    borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
     generated: true
 };
 RISCSTYLE.riscspinner = 
@@ -855,39 +992,6 @@ RISCSTYLE.risctabbedline_menuicon =
     background: "url(eclntjsfserver/images/tabbedline_icon.png) no-repeat center",
     generated: true
 };
-RISCSTYLE.risctabbedline_ribbon = 
-{
-    insetTop:0, insetRight: 14, insetBottom: 0, insetLeft: 0,
-    generated: true
-};
-RISCSTYLE.risctabbedline_ribbon_button = 
-{
-    font: new RISCFont("Open Sans",15,"normal"),
-    background: "#707070",
-    borderTop:0, borderRight: 1, borderBottom: 0, borderLeft: 0,
-    insetTop:3, insetRight: 6, insetBottom: 4, insetLeft: 6,
-    _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
-    generated: true
-};
-RISCSTYLE.risctabbedline_ribbon_button_selected = 
-{
-    font: new RISCFont("Open Sans",15,"bold"),
-    background: "#EAEAEA",
-    borderTop:0, borderRight: 1, borderBottom: 0, borderLeft: 0,
-    insetTop:3, insetRight: 6, insetBottom: 4, insetLeft: 6,
-    _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
-    generated: true
-};
-RISCSTYLE.risctabbedline_ribbon_content = 
-{
-    background: "#707070",
-    generated: true
-};
-RISCSTYLE.risctabbedline_ribbon_menuicon = 
-{
-    background: "url(eclntjsfserver/images/tabbedline_icon.png) no-repeat center",
-    generated: true
-};
 RISCSTYLE.risctabbedlinevertical = 
 {
     insetTop:0, insetRight: 0, insetBottom: 0, insetLeft: 0,
@@ -918,6 +1022,39 @@ RISCSTYLE.risctabbedpane_content =
     insetTop:10, insetRight: 10, insetBottom: 10, insetLeft: 10,
     generated: true
 };
+RISCSTYLE.risctabbedpane_tabbedline = 
+{
+    insetTop:0, insetRight: 14, insetBottom: 0, insetLeft: 4,
+    generated: true
+};
+RISCSTYLE.risctabbedpane_tabbedline_button = 
+{
+    font: new RISCFont("Open Sans",15,"normal"),
+    background: "#707070",
+    borderTop:0, borderRight: 1, borderBottom: 0, borderLeft: 0,
+    insetTop:3, insetRight: 6, insetBottom: 4, insetLeft: 6,
+    _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
+    generated: true
+};
+RISCSTYLE.risctabbedpane_tabbedline_button_selected = 
+{
+    font: new RISCFont("Open Sans",15,"bold"),
+    background: "#707070",
+    borderTop:0, borderRight: 1, borderBottom: 0, borderLeft: 0,
+    insetTop:3, insetRight: 6, insetBottom: 4, insetLeft: 6,
+    _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
+    generated: true
+};
+RISCSTYLE.risctabbedpane_tabbedline_content = 
+{
+    background: "#707070",
+    generated: true
+};
+RISCSTYLE.risctabbedpane_tabbedline_menuicon = 
+{
+    background: "url(eclntjsfserver/images/tabbedline_icon.png) no-repeat center",
+    generated: true
+};
 RISCSTYLE.risctabbedpane_ribbon_content = 
 {
     background: "#EAEAEA",
@@ -925,9 +1062,50 @@ RISCSTYLE.risctabbedpane_ribbon_content =
     insetTop:5, insetRight: 5, insetBottom: 5, insetLeft: 5,
     generated: true
 };
+RISCSTYLE.risctabbedpane_ribbon_tabbedline = 
+{
+    insetTop:0, insetRight: 14, insetBottom: 0, insetLeft: 0,
+    generated: true
+};
+RISCSTYLE.risctabbedpane_ribbon_tabbedline_button = 
+{
+    font: new RISCFont("Open Sans",15,"normal"),
+    background: "#707070",
+    borderTop:0, borderRight: 1, borderBottom: 0, borderLeft: 0,
+    insetTop:3, insetRight: 6, insetBottom: 4, insetLeft: 6,
+    _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
+    generated: true
+};
+RISCSTYLE.risctabbedpane_ribbon_tabbedline_button_selected = 
+{
+    font: new RISCFont("Open Sans",15,"bold"),
+    background: "#EAEAEA",
+    borderTop:0, borderRight: 1, borderBottom: 0, borderLeft: 0,
+    insetTop:3, insetRight: 6, insetBottom: 4, insetLeft: 6,
+    _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
+    generated: true
+};
+RISCSTYLE.risctabbedpane_ribbon_tabbedline_content = 
+{
+    background: "#707070",
+    generated: true
+};
+RISCSTYLE.risctabbedpane_ribbon_tabbedline_menuicon = 
+{
+    background: "url(eclntjsfserver/images/tabbedline_icon.png) no-repeat center",
+    generated: true
+};
 RISCSTYLE.risctextpane = 
 {
     font: new RISCFont("Open Sans",12),
+    generated: true
+};
+RISCSTYLE.risctooltip_textpane = 
+{
+    font: new RISCFont("Open Sans",10),
+    background: "#FFFFC0",
+    borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
+    insetTop:5, insetRight: 5, insetBottom: 5, insetLeft: 5,
     generated: true
 };
 RISCSTYLE.risctouchfieldgeneric = 

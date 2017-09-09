@@ -1,13 +1,21 @@
 
 
-/* -------------------- browser_container, extends: riscinternal_panewithborderandbackground */
-.browser_container
+/* -------------------- :-ms-input-placeholder */
+:-ms-input-placeholder
 {
-    -moz-box-sizing:border-box;
-    -webkit-box-sizing:border-box;
-    background:transparent;
-    border:0px solid #C0C0C0;
-    box-sizing:border-box;
+    color:#D8D8D8 !important;
+}
+
+/* -------------------- ::-moz-placeholder */
+::-moz-placeholder
+{
+    color:#D8D8D8;
+}
+
+/* -------------------- ::-webkit-input-placeholder */
+::-webkit-input-placeholder
+{
+    color:#D8D8D8;
 }
 
 /* -------------------- cc_editorselectionarea */
@@ -47,7 +55,7 @@
 /* -------------------- cc_rowheader */
 .cc_rowheader
 {
-    background:#F4F4F4;
+    background:#EEEEEE;
     border:0px solid #c0c0c0;
     border-left:0px;
     border-right:0px;
@@ -57,21 +65,100 @@
 /* -------------------- cc_statusbar */
 .cc_statusbar
 {
-    background:#F4F4F4;
+    background:#EEEEEE;
     border:0px solid #c0c0c0;
 }
 
-/* -------------------- cc_tabbedpane_content */
+/* -------------------- cc_tabbedpane, extends: risctabbedpane */
+.cc_tabbedpane
+{
+    border:0px;
+}
 .cc_tabbedpane_content
 {
     background:#FFFFFF;
-    border:1px solid #c0c0c0;
+    border:1px solid rgba(0,0,0,0.1);
     border-top:0px solid #c0c0c0;
 }
-
-/* -------------------- cc_tabbedpane_tabbedline */
 .cc_tabbedpane_tabbedline
 {
+    background:#707070;
+    border:0px solid #C0C0C0;
+}
+.cc_tabbedpane_tabbedline_button
+{
+    background:#707070;
+    border:0px solid #c0c0c0;
+    border-radius:0px 0px 0px 0px;
+    border-right:1px solid #808080;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:15px;
+    padding:6px;
+    white-space:nowrap;
+}
+.cc_tabbedpane_tabbedline_button > .riscelement
+{
+    color:rgba(255,255,255,0.85);
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:15px;
+    font-weight:normal;
+    white-space:nowrap;
+}
+.cc_tabbedpane_tabbedline_button.disabled
+{
+    cursor:default;
+    opacity:0.4;
+}
+.cc_tabbedpane_tabbedline_button.disabled > *
+{
+    cursor:default;
+}
+.cc_tabbedpane_tabbedline_button_selected
+{
+    background:#707070;
+    border:0px solid #c0c0c0;
+    border-radius:0px 0px 0px 0px;
+    border-right:1px solid #808080;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:15px;
+    padding:6px;
+    white-space:nowrap;
+}
+.cc_tabbedpane_tabbedline_button_selected > .riscelement
+{
+    color:#FFFFFF;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:15px;
+    font-weight:bold;
+    white-space:nowrap;
+}
+.cc_tabbedpane_tabbedline_button_selected.disabled
+{
+    cursor:default;
+    opacity:0.4;
+}
+.cc_tabbedpane_tabbedline_button_selected.disabled > *
+{
+    cursor:default;
+}
+.cc_tabbedpane_tabbedline_content
+{
+    background:#707070;
+    border:0px solid #c0c0c0;
+    font-family:Open Sans;
+    font-size:15px;
+}
+.cc_tabbedpane_tabbedline_menuicon
+{
+    background:url(../../../eclntjsfserver/images/tabbedline_icon.png) no-repeat center;
+    border:0px solid #c0c0c0;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:12px;
 }
 
 /* -------------------- cc_wp_background, extends: riscinternal_panewithborderandbackground */
@@ -82,6 +169,49 @@
     background:#606060;
     border:0px solid #c0c0c0;
     box-sizing:border-box;
+}
+
+/* -------------------- cc_wp_functiontree_singletreenode, extends: riscsingletreenode */
+.cc_wp_functiontree_singletreenode
+{
+    font-family:Open Sans;
+    font-size:12px;
+    white-space:nowrap;
+}
+.cc_wp_functiontree_singletreenode_text
+{
+    color:#000000;
+    font-family:Open Sans;
+    font-size:12px;
+    white-space:nowrap;
+}
+.cc_wp_functiontree_singletreenode_toggleimage
+{
+    cursor:pointer;
+}
+
+/* -------------------- cc_wp_tilesplitpane, extends: riscsplitpane */
+.cc_wp_tilesplitpane
+{
+}
+.cc_wp_tilesplitpane.horizontal > .cc_wp_tilesplitpane_divider
+{
+    background-image:url(../../../eclntjsfserver/images/splitpane/dividerhorizontal_light.png);
+    background-position:center;
+    background-repeat:no-repeat;
+    cursor:ew-resize;
+}
+.cc_wp_tilesplitpane.vertical > .cc_wp_tilesplitpane_divider
+{
+    background-image:url(../../../eclntjsfserver/images/splitpane/dividervertical_light.png);
+    background-position:center;
+    background-repeat:no-repeat;
+    cursor:ns-resize;
+}
+.cc_wp_tilesplitpane_divider
+{
+    background:rgba(0,0,0,0.05);
+    cursor:move;
 }
 
 /* -------------------- cc_wp_workpagecontainer */
@@ -193,6 +323,12 @@
     border:0px solid #c0c0c0;
     font-family:Open Sans;
     font-size:15px;
+}
+
+/* -------------------- input:-moz-placeholder */
+input:-moz-placeholder
+{
+    color:#D8D8D8;
 }
 
 /* -------------------- riscadaptivesplitarea, extends: riscinternal_panewithborderandbackground */
@@ -587,6 +723,22 @@
     user-select:text !important;
 }
 
+/* -------------------- riscbrowser_container, extends: riscinternal_panewithborderandbackground */
+.riscbrowser_container
+{
+    -khtml-user-select:text !important;
+    -moz-box-sizing:border-box;
+    -moz-user-select:text !important;
+    -ms-user-select:text !important;
+    -webkit-box-sizing:border-box;
+    -webkit-touch-callout:text !important;
+    -webkit-user-select:text !important;
+    background:transparent;
+    border:0px solid #C0C0C0;
+    box-sizing:border-box;
+    user-select:text !important;
+}
+
 /* -------------------- riscbutton */
 .riscbutton
 {
@@ -650,10 +802,7 @@
 /* -------------------- riscbuttonmenu_separator */
 .riscbuttonmenu_separator
 {
-    background:transparent;
-    background-image:url(../../../eclntjsfserver/images/combobox/comboselector.png);
-    background-position:center;
-    background-repeat:no-repeat;
+    background:url(../../../eclntjsfserver/images/combobox/comboselector.png) no-repeat center;
     border-left:1px solid rgba(0,0,0,0.1);
     cursor:pointer;
     opacity:0.5;
@@ -714,6 +863,12 @@
     color:#000000;
     cursor:pointer;
     white-space:nowrap;
+}
+
+/* -------------------- riscckeditor */
+.riscckeditor
+{
+    background:#FFFFFF;
 }
 
 /* -------------------- riscclipboardfake */
@@ -928,7 +1083,7 @@
     background-position:center;
     background-repeat:no-repeat;
 }
-.riscdateselection_datebutton.roday
+.riscdateselection_datebutton.today
 {
     background:#E0E0E0;
 }
@@ -936,13 +1091,13 @@
 {
     background:#D0D0D0;
 }
+.riscdateselection_datebutton.weekendday.selected
+{
+    background:#FFFFC0;
+}
 .riscdateselection_datebutton.weekenddayheadline
 {
     background:#C0C0C0;
-}
-.riscdateselection_datebutton.weelendday.selected
-{
-    background:#FFFFC0;
 }
 .riscdateselection_datebutton.workday
 {
@@ -996,9 +1151,13 @@
     background:#FFFFFF;
     box-shadow:4px 4px 2px #A0A0A0 ;
 }
-.riscdialog_popupshowUp
+.riscdialog_popup.showUpHeight
 {
-    transition:height 0.25s;
+    transition:height 0.2s;
+}
+.riscdialog_popup.showUpWidth
+{
+    transition:width 0.2s;
 }
 
 /* -------------------- riscdialogdecoration */
@@ -1553,7 +1712,20 @@
     font-weight:bold;
     white-space:nowrap;
 }
-.rischeaderlabel_text > .riscelement
+.rischeaderlabel_text_text
+{
+    color:#404040;
+    font-weight:bold;
+    white-space:nowrap;
+}
+.rischeaderlabel_text_multiline
+{
+    color:#404040;
+    font-family:Open Sans;
+    font-size:12px;
+    font-weight:bold;
+}
+.rischeaderlabel_text_multiline_text
 {
     color:#404040;
     font-weight:bold;
@@ -1600,6 +1772,36 @@
     opacity:0.4;
 }
 .riscicon.disabled > *
+{
+    cursor:default;
+}
+
+/* -------------------- riscicon_nofill, extends: riscicon */
+.riscicon_nofill
+{
+    background:transparent;
+    border:0px solid rgba(0,0,0,0.1);
+    border-radius:5px;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:12px;
+    white-space:nowrap;
+}
+.riscicon_nofill > .riscelement
+{
+    color:#000000;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:12px;
+    font-weight:normal;
+    white-space:nowrap;
+}
+.riscicon_nofill.disabled
+{
+    cursor:default;
+    opacity:0.4;
+}
+.riscicon_nofill.disabled > *
 {
     cursor:default;
 }
@@ -1753,6 +1955,55 @@
     text-decoration:underline;
 }
 
+/* -------------------- risclongtextfield, extends: risccombofield */
+.risclongtextfield
+{
+    background:#FFFFFF;
+    border:1px solid rgba(0,0,0,0.2);
+}
+.risclongtextfield.disabled
+{
+    cursor:default !important;
+}
+.risclongtextfield.disabled > .risccombofield_icon
+{
+    cursor:default !important;
+    opacity:0.5;
+}
+.risclongtextfield.riscformaterror
+{
+    background:linear-gradient(to bottom, rgba(255,0,0,0.2),rgba(255,0,0,0.0),rgba(255,0,0,0.0),rgba(255,0,0,0.0));
+}
+.risclongtextfield_field
+{
+    background:transparent;
+    border:0px;
+}
+.risclongtextfield_field.riscformaterror
+{
+    background:linear-gradient(to bottom, rgba(255,0,0,0.2),rgba(255,0,0,0.0),rgba(255,0,0,0.0),rgba(255,0,0,0.0));
+}
+.risclongtextfield_field_field
+{
+    background:transparent;
+    border:0px solid #C0C0C0;
+    color:#000000;
+    font-family:Open Sans;
+    font-size:12px;
+    padding-left:5px;
+    padding-right:5px;
+    resize:none;
+}
+.risclongtextfield_icon
+{
+    background:transparent;
+    background-image:url(../../../eclntjsfserver/images/combobox/longtextfieldselector.png);
+    background-position:center;
+    background-repeat:no-repeat;
+    border-left-width:0px;
+    cursor:pointer;
+}
+
 /* -------------------- risclongtextfield_textarea */
 .risclongtextfield_textarea
 {
@@ -1772,7 +2023,7 @@
 /* -------------------- riscmenubar */
 .riscmenubar
 {
-    background:#F4F4F4;
+    background:#EEEEEE;
     border:0px solid #c0c0c0;
 }
 
@@ -2007,18 +2258,16 @@
 .riscpaintareaitem
 {
 }
-
-/* -------------------- riscpaintareaitem_mover */
 .riscpaintareaitem_mover
 {
     background:rgba(0,0,0,0.1);
+    border:0px solid #c0c0c0;
+    border-radius:8px 8px 8px 8px;
     cursor:move;
 }
-
-/* -------------------- riscpaintareaitem_sizer */
 .riscpaintareaitem_sizer
 {
-    background:rgba(0,0,0,0.1);
+    background:transparent;
     cursor:nw-resize;
 }
 
@@ -2026,6 +2275,129 @@
 .riscpane
 {
     background:#FFFFFF;
+}
+
+/* -------------------- riscpdfprinterpopup_button_notprinted, extends: riscbutton */
+.riscpdfprinterpopup_button_notprinted
+{
+    background:#800000;
+    border:1px solid rgba(0,0,0,0.1);
+    border-radius:5px;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:12px;
+    white-space:nowrap;
+}
+.riscpdfprinterpopup_button_notprinted > .riscelement
+{
+    color:#FFFFFF;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:12px;
+    font-weight:normal;
+    white-space:nowrap;
+}
+.riscpdfprinterpopup_button_notprinted.disabled
+{
+    cursor:default;
+    opacity:0.4;
+}
+.riscpdfprinterpopup_button_notprinted.disabled > *
+{
+    cursor:default;
+}
+
+/* -------------------- riscpdfprinterpopup_button_printed, extends: riscbutton */
+.riscpdfprinterpopup_button_printed
+{
+    background:#008000;
+    border:1px solid rgba(0,0,0,0.1);
+    border-radius:5px;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:12px;
+    white-space:nowrap;
+}
+.riscpdfprinterpopup_button_printed > .riscelement
+{
+    color:#FFFFFF;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:12px;
+    font-weight:normal;
+    white-space:nowrap;
+}
+.riscpdfprinterpopup_button_printed.disabled
+{
+    cursor:default;
+    opacity:0.4;
+}
+.riscpdfprinterpopup_button_printed.disabled > *
+{
+    cursor:default;
+}
+
+/* -------------------- riscpdfprinterpopup_confirmlabel, extends: risclabel */
+.riscpdfprinterpopup_confirmlabel
+{
+    font-family:Open Sans;
+    font-size:12px;
+    font-weight:bold;
+    white-space:nowrap;
+}
+.riscpdfprinterpopup_confirmlabel > .riscelement
+{
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
+    color:#FFFFFF;
+    font-family:Open Sans;
+    font-size:12px;
+    user-select:none;
+    white-space:nowrap;
+}
+
+/* -------------------- riscpdfprinterpopup_footer */
+.riscpdfprinterpopup_footer
+{
+    background:#404040;
+    border-top:1px solid #c0c0c0;
+}
+
+/* -------------------- riscpdfprinterpopup_openlink, extends: risclink */
+.riscpdfprinterpopup_openlink
+{
+    background:transparent;
+    border:0px solid #c0c0c0;
+    border-radius:5px;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:12px;
+    white-space:nowrap;
+}
+.riscpdfprinterpopup_openlink > .riscelement
+{
+    color:#FFFFFF;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:12px;
+    font-weight:normal;
+    white-space:nowrap;
+}
+.riscpdfprinterpopup_openlink.disabled
+{
+    cursor:default;
+    opacity:0.4;
+}
+.riscpdfprinterpopup_openlink.disabled > *
+{
+    cursor:default;
+}
+.riscpdfprinterpopup_openlink:hover > .riscelement
+{
+    text-decoration:underline;
 }
 
 /* -------------------- riscprogressbar */
@@ -2312,8 +2684,6 @@
     font-size:12px;
     white-space:nowrap;
 }
-
-/* -------------------- riscsingletreenode_text */
 .riscsingletreenode_text
 {
     color:#000000;
@@ -2321,8 +2691,6 @@
     font-size:12px;
     white-space:nowrap;
 }
-
-/* -------------------- riscsingletreenode_toggleimage */
 .riscsingletreenode_toggleimage
 {
     cursor:pointer;
@@ -2355,6 +2723,12 @@
     background-position:center;
     background-repeat:no-repeat;
     cursor:n-resize;
+}
+
+/* -------------------- riscslidecontainer */
+.riscslidecontainer
+{
+    border:1px solid #c0c0c0;
 }
 
 /* -------------------- riscslider */
@@ -2580,88 +2954,6 @@
     font-size:12px;
 }
 
-/* -------------------- risctabbedline_ribbon, extends: risctabbedline */
-.risctabbedline_ribbon
-{
-    background:#707070;
-    border:0px solid #C0C0C0;
-}
-.risctabbedline_ribbon_button
-{
-    background:#707070;
-    border:0px solid #c0c0c0;
-    border-radius:0px 0px 0px 0px;
-    border-right:1px solid #808080;
-    cursor:pointer;
-    font-family:Open Sans;
-    font-size:15px;
-    padding:6px;
-    white-space:nowrap;
-}
-.risctabbedline_ribbon_button > .riscelement
-{
-    color:rgba(255,255,255,0.85);
-    cursor:pointer;
-    font-family:Open Sans;
-    font-size:15px;
-    font-weight:normal;
-    white-space:nowrap;
-}
-.risctabbedline_ribbon_button.disabled
-{
-    cursor:default;
-    opacity:0.4;
-}
-.risctabbedline_ribbon_button.disabled > *
-{
-    cursor:default;
-}
-.risctabbedline_ribbon_button_selected
-{
-    background:#EAEAEA;
-    border:0px solid #c0c0c0;
-    border-radius:0px 0px 0px 0px;
-    border-right:1px solid #808080;
-    cursor:pointer;
-    font-family:Open Sans;
-    font-size:15px;
-    padding:6px;
-    white-space:nowrap;
-}
-.risctabbedline_ribbon_button_selected > .riscelement
-{
-    color:#000000;
-    cursor:pointer;
-    font-family:Open Sans;
-    font-size:15px;
-    font-weight:bold;
-    white-space:nowrap;
-}
-.risctabbedline_ribbon_button_selected.disabled
-{
-    cursor:default;
-    opacity:0.4;
-}
-.risctabbedline_ribbon_button_selected.disabled > *
-{
-    cursor:default;
-}
-.risctabbedline_ribbon_content
-{
-    background:#707070;
-    border:0px solid #c0c0c0;
-    font-family:Open Sans;
-    font-size:15px;
-}
-.risctabbedline_ribbon_menuicon
-{
-    background:url(../../../eclntjsfserver/images/tabbedline_icon.png) no-repeat center;
-    border:0px solid #c0c0c0;
-    cursor:pointer;
-    font-family:Open Sans;
-    font-size:12px;
-}
-
 /* -------------------- risctabbedlinevertical */
 .risctabbedlinevertical
 {
@@ -2734,27 +3026,183 @@
 {
     border:0px;
 }
-
-/* -------------------- risctabbedpane_content */
 .risctabbedpane_content
 {
     background:#FFFFFF;
     border:1px solid rgba(0,0,0,0.1);
     border-top:0px solid #c0c0c0;
 }
+.risctabbedpane_tabbedline
+{
+    background:#707070;
+    border:0px solid #C0C0C0;
+}
+.risctabbedpane_tabbedline_button
+{
+    background:#707070;
+    border:0px solid #c0c0c0;
+    border-radius:0px 0px 0px 0px;
+    border-right:1px solid #808080;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:15px;
+    padding:6px;
+    white-space:nowrap;
+}
+.risctabbedpane_tabbedline_button > .riscelement
+{
+    color:rgba(255,255,255,0.85);
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:15px;
+    font-weight:normal;
+    white-space:nowrap;
+}
+.risctabbedpane_tabbedline_button.disabled
+{
+    cursor:default;
+    opacity:0.4;
+}
+.risctabbedpane_tabbedline_button.disabled > *
+{
+    cursor:default;
+}
+.risctabbedpane_tabbedline_button_selected
+{
+    background:#707070;
+    border:0px solid #c0c0c0;
+    border-radius:0px 0px 0px 0px;
+    border-right:1px solid #808080;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:15px;
+    padding:6px;
+    white-space:nowrap;
+}
+.risctabbedpane_tabbedline_button_selected > .riscelement
+{
+    color:#FFFFFF;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:15px;
+    font-weight:bold;
+    white-space:nowrap;
+}
+.risctabbedpane_tabbedline_button_selected.disabled
+{
+    cursor:default;
+    opacity:0.4;
+}
+.risctabbedpane_tabbedline_button_selected.disabled > *
+{
+    cursor:default;
+}
+.risctabbedpane_tabbedline_content
+{
+    background:#707070;
+    border:0px solid #c0c0c0;
+    font-family:Open Sans;
+    font-size:15px;
+}
+.risctabbedpane_tabbedline_menuicon
+{
+    background:url(../../../eclntjsfserver/images/tabbedline_icon.png) no-repeat center;
+    border:0px solid #c0c0c0;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:12px;
+}
 
-/* -------------------- risctabbedpane_ribbon */
+/* -------------------- risctabbedpane_ribbon, extends: risctabbedpane */
 .risctabbedpane_ribbon
 {
     border:0px;
 }
-
-/* -------------------- risctabbedpane_ribbon_content */
 .risctabbedpane_ribbon_content
 {
     background:#EAEAEA;
     border:0px solid #c0c0c0;
     border-top:0px solid #c0c0c0;
+}
+.risctabbedpane_ribbon_tabbedline
+{
+    background:#707070;
+    border:0px solid #C0C0C0;
+}
+.risctabbedpane_ribbon_tabbedline_button
+{
+    background:#707070;
+    border:0px solid #c0c0c0;
+    border-radius:0px 0px 0px 0px;
+    border-right:1px solid #808080;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:15px;
+    padding:6px;
+    white-space:nowrap;
+}
+.risctabbedpane_ribbon_tabbedline_button > .riscelement
+{
+    color:rgba(255,255,255,0.85);
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:15px;
+    font-weight:normal;
+    white-space:nowrap;
+}
+.risctabbedpane_ribbon_tabbedline_button.disabled
+{
+    cursor:default;
+    opacity:0.4;
+}
+.risctabbedpane_ribbon_tabbedline_button.disabled > *
+{
+    cursor:default;
+}
+.risctabbedpane_ribbon_tabbedline_button_selected
+{
+    background:#EAEAEA;
+    border:0px solid #c0c0c0;
+    border-radius:0px 0px 0px 0px;
+    border-right:1px solid #808080;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:15px;
+    padding:6px;
+    white-space:nowrap;
+}
+.risctabbedpane_ribbon_tabbedline_button_selected > .riscelement
+{
+    color:#000000;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:15px;
+    font-weight:bold;
+    white-space:nowrap;
+}
+.risctabbedpane_ribbon_tabbedline_button_selected.disabled
+{
+    cursor:default;
+    opacity:0.4;
+}
+.risctabbedpane_ribbon_tabbedline_button_selected.disabled > *
+{
+    cursor:default;
+}
+.risctabbedpane_ribbon_tabbedline_content
+{
+    background:#707070;
+    border:0px solid #c0c0c0;
+    font-family:Open Sans;
+    font-size:15px;
+}
+.risctabbedpane_ribbon_tabbedline_menuicon
+{
+    background:url(../../../eclntjsfserver/images/tabbedline_icon.png) no-repeat center;
+    border:0px solid #c0c0c0;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:12px;
 }
 
 /* -------------------- risctextpane */
@@ -2766,20 +3214,29 @@
 .risctextpane_text
 {
     -khtml-user-select:none;
-    -moz-hyphens:auto;
     -moz-user-select:none;
-    -ms-hyphens:auto;
     -ms-user-select:none;
-    -ms-word-break:break-all;
-    -webkit-hyphens:auto;
     -webkit-touch-callout:none;
     -webkit-user-select:none;
     color:#000000;
     font-family:Open Sans;
     font-size:12px;
-    hyphens:auto;
     user-select:none;
-    word-break:break-word;
+}
+
+/* -------------------- risctooltip_textpane, extends: riscuserhint_textpane */
+.risctooltip_textpane
+{
+    background:#FFFFC0;
+    border:1px #C0C0C0 solid;
+    font-family:Open Sans;
+    font-size:10px;
+}
+.risctooltip_textpane > .risctextpane_text
+{
+    color:#000000;
+    font-family:Open Sans;
+    font-size:10px;
 }
 
 /* -------------------- risctouchfieldgeneric, extends: riscinternal_panewithborderandbackground */

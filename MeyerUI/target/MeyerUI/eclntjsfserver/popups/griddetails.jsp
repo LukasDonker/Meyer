@@ -123,6 +123,7 @@
 							
 							<t:button id="g_32"
 								actionListener="#{eclntdefscr.gridDetails.onApply}"
+								requestfocus="creation"
 								text="#{eclnti18n.GRID_apply}" />
 						</t:row>
 
