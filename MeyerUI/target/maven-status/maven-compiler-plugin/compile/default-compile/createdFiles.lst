@@ -67,7 +67,6 @@ managedbeans\StartFavoritenUI$IListener.class
 managedbeans\AntragStatusZweiUI$IListener.class
 managedbeans\ExternEntwuerfeUI$IListener.class
 model\person\Techniker.class
-managedbeans\ExternStartContentUI.class
 model\zeiterfassung\EinsatzZeit.class
 managedbeans\AuftragsboxUI$AuftragstreeNode.class
 model\material\Hersteller.class

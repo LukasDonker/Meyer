@@ -3,7 +3,7 @@
 	<modelVersion>6.0.0</modelVersion>
 	<groupId>org.eclnt</groupId>
 	<artifactId>eclntwebappaddonsRISC</artifactId>
-	<version>20170306</version>
+	<version>20170522</version>
 	<name>Enterprise Client, Web Application Addons, RISC</name>
 	<description>Enterprise Client, Web Application Addons, RISC</description>
 	<dependencies>

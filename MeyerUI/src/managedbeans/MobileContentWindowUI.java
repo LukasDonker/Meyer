@@ -21,7 +21,7 @@ public class MobileContentWindowUI extends ContentWindowUI {
 
 	public void render() {
 		IWorkpageDispatcher wpd = (IWorkpageDispatcher) getOwningDispatcher().getTopOwner();
-		IWorkpageContainer wpc = wpd.getWorkpageContainer();
+		IWorkpageContainer wpc = getWorkpageContainer();
 
 		wpc.closeAllWorkpages();
 

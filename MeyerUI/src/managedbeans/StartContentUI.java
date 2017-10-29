@@ -53,18 +53,6 @@ public class StartContentUI extends WorkpageDispatchedPageBean implements Serial
 
 	ModalPopup popup;
 
-	// ------------------------------------------------------------------------
-	public void onNewGadget(javax.faces.event.ActionEvent event) {
-		final NewGadgetHandlerUI bean = new NewGadgetHandlerUI(this);
-		popup = openModalPopup(bean, "Inhalt hinzufügen", 800, 850, new ModalPopup.IModalPopupListener() {
-			@Override
-			public void reactOnPopupClosedByUser() {
-				closePopup(bean);
-			}
-		});
-		popup.setLeftTopReferenceCentered();
-	}
-
 	@Override
 	public String getPageName() {
 		return "/pages/start/StartContent.jsp";
