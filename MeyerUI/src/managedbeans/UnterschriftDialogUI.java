@@ -1,48 +1,47 @@
 package managedbeans;
 
 import java.io.Serializable;
-
 import org.eclnt.editor.annotations.CCGenClass;
+import org.eclnt.jsfserver.managedbean.IDispatcher;
 import org.eclnt.jsfserver.pagebean.PageBean;
 
-@CCGenClass (expressionBase="#{d.AntragUebersichtUI}")
+import javax.faces.event.ActionEvent;
 
-public class AntragUebersichtUI
-extends PageBean
-implements Serializable
+@CCGenClass (expressionBase="#{d.UnterschriftDialogUI}")
+
+public class UnterschriftDialogUI
+    extends PageBean 
+    implements Serializable
 {
     // ------------------------------------------------------------------------
     // inner classes
     // ------------------------------------------------------------------------
-
-    /**
-     *
-     */
-    private static final long serialVersionUID = -8594282860263212258L;
-
+    
     /* Listener to the user of the page bean. */
     public interface IListener
     {
     }
-
+    
     // ------------------------------------------------------------------------
     // members
     // ------------------------------------------------------------------------
-
+    
     private IListener m_listener;
-
+    
     // ------------------------------------------------------------------------
     // constructors & initialization
     // ------------------------------------------------------------------------
 
-    public AntragUebersichtUI()
+    public UnterschriftDialogUI()
     {
     }
 
-    @Override
-    public String getPageName() { return "/pages/AntragUebersicht.jsp"; }
-    @Override
-    public String getRootExpressionUsedInPage() { return "#{d.AntragUebersichtUI}"; }
+    public UnterschriftDialogUI(IDispatcher owningDispatcher) {
+		// TODO Auto-generated constructor stub
+	}
+
+	public String getPageName() { return "/pages/dialog/UnterschriftDialog.jsp"; }
+    public String getRootExpressionUsedInPage() { return "#{d.UnterschriftDialogUI}"; }
 
     // ------------------------------------------------------------------------
     // public usage
