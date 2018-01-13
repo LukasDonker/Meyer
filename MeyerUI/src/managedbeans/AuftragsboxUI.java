@@ -8,13 +8,16 @@ import org.eclnt.jsfserver.elements.impl.FIXGRIDTreeItem;
 import org.eclnt.jsfserver.pagebean.PageBean;
 
 @CCGenClass (expressionBase="#{d.AuftragsboxUI}")
-
 public class AuftragsboxUI
 extends PageBean
 implements Serializable
 {
 	
-	private final int MOBILE_TABLESIZE = 3;
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 6158746680567204655L;
+	private final int MOBILE_TABLESIZE = 10;
 	private final int DESKTOP_TABLESIZE = 30;
 	
     int m_tableSize;

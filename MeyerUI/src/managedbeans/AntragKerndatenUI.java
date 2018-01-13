@@ -58,7 +58,7 @@ public class AntragKerndatenUI extends DefaultDispatchedPageBean implements Seri
 
 	private boolean m_notdienstpauschale;
 	private boolean m_abgeschlossen;
-	private boolean m_weitererEinsatz;
+	private boolean m_weitererEinsatz = true;
 
 	private double m_teileUndPauschalSumme;
 

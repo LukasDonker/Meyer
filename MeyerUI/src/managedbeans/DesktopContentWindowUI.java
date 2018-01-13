@@ -20,14 +20,27 @@ public class DesktopContentWindowUI extends ContentWindowUI {
 	}
 
 	public void render() {
+//		IWorkpageDispatcher wpd = (IWorkpageDispatcher) getOwningDispatcher().getTopOwner();
+//		IWorkpageContainer wpc = getWorkpageContainer();
+//
+//		wpc.closeAllWorkpages();
+//
+//		WorkpageStartInfo wpsi = new WorkpageStartInfo();
+//		wpsi.setJspPage("/pages/start/StartContent.jsp");
+//		wpsi.setText("Startseite");
+//		// wpsi.setImage("/awesomefont(f015,#FFFFFF,15)");
+//		wpsi.setOpenMultipleInstances(false);
+//		wpsi.setCloseSupported(false);
+//		WorkpageStarterFactory.getWorkpageStarter().startWorkpage(wpd, wpc, wpsi);
+		
 		IWorkpageDispatcher wpd = (IWorkpageDispatcher) getOwningDispatcher().getTopOwner();
 		IWorkpageContainer wpc = getWorkpageContainer();
 
 		wpc.closeAllWorkpages();
 
 		WorkpageStartInfo wpsi = new WorkpageStartInfo();
-		wpsi.setJspPage("/pages/start/StartContent.jsp");
-		wpsi.setText("Startseite");
+		wpsi.setJspPage("/pages/Auftragsbox.jsp");
+		wpsi.setText("Auftragskorb");
 		// wpsi.setImage("/awesomefont(f015,#FFFFFF,15)");
 		wpsi.setOpenMultipleInstances(false);
 		wpsi.setCloseSupported(false);

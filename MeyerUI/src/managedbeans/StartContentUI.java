@@ -37,9 +37,9 @@ public class StartContentUI extends WorkpageDispatchedPageBean implements Serial
 		m_diagrammBAR = new StartDiagrammUI(new ClassloaderReader(getClass().getClassLoader())
 				.readUTF8File("resources/ExampleBarChart.json", true));
 
-		m_tiledAreaBinding.addTile("PIECHART", "Diagramm Beispiel 1", m_diagrammPIE, "100%;500");
-		m_tiledAreaBinding.addTile("LINECHART", "Diagramm Beispiel 2", m_diagrammLINE, "100%;500");
-		m_tiledAreaBinding.addTile("BARCHART", "Diagramm Beispiel 3", m_diagrammBAR, "100%;500");
+//		m_tiledAreaBinding.addTile("PIECHART", "Diagramm Beispiel 1", m_diagrammPIE, "100%;500");
+//		m_tiledAreaBinding.addTile("LINECHART", "Diagramm Beispiel 2", m_diagrammLINE, "100%;500");
+//		m_tiledAreaBinding.addTile("BARCHART", "Diagramm Beispiel 3", m_diagrammBAR, "100%;500");
 		m_tiledAreaBinding.addTile("INBOX", "Auftragskorb", m_auftragskorb, "100%;500");
 		// m_tiledAreaBinding.addTile("FAVORITES", "Favoriten", m_favoriten,
 		// "100%;300");
