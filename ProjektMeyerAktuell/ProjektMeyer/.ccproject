@@ -14,4 +14,8 @@
             fromdir="${project}/target/${projectname}"
             todir="${projectdeploy}">
     </deploycopyinfo>
+
+    <hotdeploymentpackage
+            name="*">
+    </hotdeploymentpackage>
 </project>

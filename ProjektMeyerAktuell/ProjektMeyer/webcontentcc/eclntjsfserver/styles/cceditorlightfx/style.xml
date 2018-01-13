@@ -1,0 +1,76 @@
+<style extends="ccmetrofx" >
+    <stylevalue name="ccEditorTitlebarRendered" value="true"/>
+    
+    <tag name="arraygrid" variant="default" extendsparenttag="true">
+        <set attribute="background" value="#F8F8F8"/>
+        <set attribute="border" value="0"/>
+        <set attribute="bordercolor" value="#00000010"/>
+        <set attribute="borderheight" value="1"/>
+        <set attribute="borderwidth" value="1"/>
+        <set attribute="scrollanimationtype" value="fog(#000000,4)"/>
+    </tag>
+    <tag name="fixgrid" variant="default" extendsparenttag="true">
+        <set attribute="background" value="#F8F8F8"/>
+        <set attribute="border" value="0"/>
+        <set attribute="bordercolor" value="#00000010"/>
+        <set attribute="borderheight" value="1"/>
+        <set attribute="borderwidth" value="1"/>
+        <set attribute="scrollanimationtype" value="fog(#000000,4)"/>
+        <set attribute="scrollbartype" value="dark"/>
+    </tag>
+    <tag name="combofield" variant="default" extendsparenttag="true">
+        <set attribute="background" value="#FFFFFFC0"/>
+    </tag>
+    <tag name="combofield" variant="INGRID" extendstag="combofield" extendsvariant="default">
+        <set attribute="background" value="#FFFFFFC0"/>
+    </tag>
+    <tag name="gridcol" variant="default" extendsparenttag="true">
+        <set attribute="background" value="#435555"/>
+        <set attribute="font" value="weight:default"/>
+    </tag>
+    
+    <tag name="pane" variant="RIGHT" extendstag="pane" extendsvariant="default">
+        <set attribute="padding" value="0"/>
+        <set attribute="background" value="#F0F0F0"/>
+        <set attribute="border" value="bottom:0;top:0;left:0;right:0"/>
+    </tag>
+    <tag name="pane" variant="TOOLS" extendstag="pane" extendsvariant="default">
+        <set attribute="background" value="#00000000"/>
+    </tag>
+    <tag name="pane" variant="SELECTIONAREA" extendstag="pane" extendsvariant="default">
+        <set attribute="background" value="#768888"/>
+    </tag>
+    
+    <tag name="rowbodypane" variant="default" extendsparenttag="true">
+        <set attribute="padding" value="20"/>
+        <set attribute="background" value="#F0F0F0"/>
+        <set attribute="border" value="bottom:0;top:0;left:0;right:0"/>
+    </tag>
+    <tag name="rowbodypane" variant="EDITOR" extendstag="robodypane" extendsvariant="default">
+        <set attribute="padding" value="0"/>
+        <set attribute="background" value="#F0F0F0"/>
+        <set attribute="border" value="bottom:0;top:0;left:0;right:0"/>
+    </tag>
+    <tag name="rowbodypane" variant="LEFT" extendstag="robodypane" extendsvariant="default">
+        <set attribute="padding" value="0"/>
+        <set attribute="background" value="#F0F0F0"/>
+        <set attribute="border" value="bottom:0;top:0;left:0;right:0"/>
+    </tag>
+    
+    <tag name="tabbedline" variant="default" extendsparenttag="true">
+        <set attribute="font" value="size:14"/>
+        <set attribute="fontselected" value="size:14;weight:bold"/>
+        <set attribute="width" value="100%"/>
+    </tag>
+    
+    <tag name="t:tabbedline" variant="WP_WORKPAGESELECTOR" extendsparenttag="true">
+        <set attribute="font" value="size:14"/>
+        <set attribute="fontselected" value="size:14;weight:bold"/>
+        <set attribute="width" value="100%"/>
+    </tag>
+    
+    <tag name="pane" variant="BUTTONPOPUP" extendstag="pane" extendsvariant="default">
+        <set attribute="background" value="#F0F0F0"/>
+    </tag>
+    
+</style>
