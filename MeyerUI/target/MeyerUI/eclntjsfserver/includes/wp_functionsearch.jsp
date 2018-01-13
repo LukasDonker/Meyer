@@ -15,7 +15,7 @@
 <t:rowdistance id="g_2" height="5" />
 <t:row id="g_3" >
 <t:coldistance id="g_4" width="5" />
-<t:field id="g_5" actionListener="#{WorkplaceFunctionSearch.onSearchAction}" flush="true" flushtimer="1000" popupmenu="CCSEARCH" text="#{WorkplaceFunctionSearch.searchText}" textimage="/eclntjsfserver/images/magnifier.png" width="100%" />
+<t:field id="g_5" actionListener="#{WorkplaceFunctionSearch.onSearchAction}" flush="true" flushtimer="1000" popupmenu="CCSEARCH" text="#{WorkplaceFunctionSearch.searchText}" textimage="/eclntjsfserver/images/magnifier.png" width="100%" requestfocus="creation"/>
 <t:coldistance id="g_6" width="5" />
 </t:row>
 <t:rowdistance id="g_7" height="20" />

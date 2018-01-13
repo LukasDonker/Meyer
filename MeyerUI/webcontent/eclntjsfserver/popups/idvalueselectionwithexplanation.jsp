@@ -22,11 +22,11 @@
 								requestfocus="creation" rowheight="16" sbvisibleamount="20"
 								stylevariant="IDVALUESELECTION" width="100%"
 								singleclickexecute="true" keysensitive="true">
-								<t:gridcol id="e_140" text="#{eclntdefscr.popupIdTextSelection.titleId}" width="100" focusable="false" rendered="#{eclntdefscr.popupIdTextSelection.renderIdColumn}">
+								<t:gridcol id="e_140" text="Id" width="100" focusable="false" rendered="#{eclntdefscr.popupIdTextSelection.renderIdColumn}">
 									<t:label id="e_141" stylevariant="IDVALUESELECTION"
 										text=".{id}" bgpaint=".{bgpaint}"/>
 								</t:gridcol>
-								<t:gridcol id="g_6" text="#{eclntdefscr.popupIdTextSelection.titleText}" width="100%" focusable="false"  rendered="#{eclntdefscr.popupIdTextSelection.renderTextColumn}">
+								<t:gridcol id="g_6" text="Text" width="100%" focusable="false"  rendered="#{eclntdefscr.popupIdTextSelection.renderTextColumn}">
 									<t:label id="g_7" stylevariant="IDVALUESELECTION"
 										text=".{text}" bgpaint=".{bgpaint}"/>
 								</t:gridcol>

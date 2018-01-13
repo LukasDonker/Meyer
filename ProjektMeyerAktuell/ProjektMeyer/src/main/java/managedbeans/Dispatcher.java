@@ -18,14 +18,14 @@ public class Dispatcher extends WorkpageDispatcher
     /**
      * Returns the expression under which the dispatcher can be reached.
      */
-    protected String getRootExpression() { return "#d"; }
+    protected String getRootExpression() { return "#{d}"; }
     
     // ------------------------------------------------------------------------
     // constructors
     // ------------------------------------------------------------------------
     
     /**
-     * Dispatcher that is used for the root object, e.g. "#d".
+     * Dispatcher that is used for the root object, e.g. "#{d}".
      */
     public Dispatcher()
     {

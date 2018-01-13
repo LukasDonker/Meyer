@@ -31,12 +31,12 @@
 		<dependency>
 			<groupId>org.eclnt</groupId>
 			<artifactId>eclntjsfserver</artifactId>
-			<version>20170522</version>
+			<version>20180108</version>
 		</dependency>
 		<dependency>
 			<groupId>org.eclnt</groupId>
 			<artifactId>eclntpbc</artifactId>
-			<version>20170306</version>
+			<version>20180108</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.faces</groupId>

@@ -12,7 +12,7 @@
 	<h:form>
 		<f:subview id="eclntjsfserver_popups_okg_8">
 		<t:row><t:pane width="100%" height="100%" iswindowmover="true">
-			<t:rowbodypane id="g_1" background="#{eclntdefscr.okPopup.bodyBackgroundColor}" bgpaint="#{eclntdefscr.okPopup.bodyBgpaint}">
+			<t:rowbodypane id="g_1" bgpaint="#{eclntdefscr.okPopup.bodyBgpaint}">
 				<t:row id="g_2">
                     <t:image id="g_101" rowalignmenty="middle" image="#{eclntdefscr.okPopup.icon}" rendered="#{eclntdefscr.okPopup.iconRendered}"/>
 				    <t:coldistance id="g_102" width="20" rendered="#{eclntdefscr.okPopup.iconRendered}"/>

@@ -30,10 +30,10 @@
 <t:rowbodypane id="g_12" padding="0" stylevariant="IDVALUESELECTION" >
 <t:row id="g_13" >
 <t:fixgrid id="g_14" avoidroundtrips="true" border="top:0;left:0;right:0;bottom:0" height="100%" keysensitive="true" objectbinding="#{eclntdefscr.popupIdTextSelection.lines}" requestfocus="#{eclntdefscr.popupIdTextSelection.requestFocus}" rowheight="16" sbvisibleamount="20" singleclickexecute="true" stylevariant="IDVALUESELECTION" suppressheadline="#{eclntdefscr.popupIdTextSelection.suppressHeadline}" width="100%" >
-<t:gridcol id="e_140" rendered="#{eclntdefscr.popupIdTextSelection.renderIdColumn}" text="#{eclntdefscr.popupIdTextSelection.titleId}" width="100" focusable="false">
+<t:gridcol id="e_140" rendered="#{eclntdefscr.popupIdTextSelection.renderIdColumn}" text="Id" width="100" focusable="false">
 <t:label id="e_141" bgpaint=".{bgpaint}" stylevariant="IDVALUESELECTION" text=".{id}" />
 </t:gridcol>
-<t:gridcol id="g_15" rendered="#{eclntdefscr.popupIdTextSelection.renderTextColumn}" text="#{eclntdefscr.popupIdTextSelection.titleText}" width="100%" focusable="false">
+<t:gridcol id="g_15" rendered="#{eclntdefscr.popupIdTextSelection.renderTextColumn}" text="Text" width="100%" focusable="false">
 <t:label id="g_16" bgpaint=".{bgpaint}" stylevariant="IDVALUESELECTION" text=".{text}" />
 </t:gridcol>
 </t:fixgrid>
