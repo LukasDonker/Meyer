@@ -4,7 +4,7 @@
         javasourcedirectory="${project}/src"
         reloadwebapp="true"
         webappaddonsdirectory="${project}/webcontent"
-        webcontentdeploydirectory="C:/Java/CaptainCasa/EnterpriseClient/server/tomcat/webapps/MeyerUI"
+        webcontentdeploydirectory="C:/Java/EnterpriseClientRISC/server/tomcat/webapps/MeyerUI"
         webcontentdirectory="${project}/webcontent"
         webcontextroot="MeyerUI"
         webhostport="localhost:50000">
@@ -14,7 +14,7 @@
             todir="${projectdeploy}">
     </deploycopyinfo>
 
-<deploycopyinfo
+    <deploycopyinfo
             fromdir="${project}/webcontentbuild"
             todir="${projectdeploy}">
     </deploycopyinfo>

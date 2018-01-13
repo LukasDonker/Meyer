@@ -4,9 +4,9 @@
   <classpathentry kind="output" path="webcontentbuild/WEB-INF/classes"/>
   <classpathentry kind="var" path="M2_REPO/javax/servlet/javax.servlet-api/3.1.0/javax.servlet-api-3.1.0.jar"/>
   <classpathentry kind="var" path="M2_REPO/javax/faces/jsf-api/2.0/jsf-api-2.0.jar"/>
-  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8"/>
   <classpathentry kind="var" path="M2_REPO/junit/junit/3.8.1/junit-3.8.1.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/eclnt/eclntjsfserver/20170306/eclntjsfserver-20170306.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclnt/eclntjsfserver/20170522/eclntjsfserver-20170522.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/eclnt/eclntpbc/20170306/eclntpbc-20170306.jar"/>
   <classpathentry kind="var" path="M2_REPO/org/glassfish/javax.faces/2.0.11/javax.faces-2.0.11.jar"/>
 </classpath>

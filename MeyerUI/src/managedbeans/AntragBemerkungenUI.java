@@ -6,7 +6,6 @@ import org.eclnt.editor.annotations.CCGenClass;
 import org.eclnt.jsfserver.pagebean.PageBean;
 
 @CCGenClass (expressionBase="#{d.AntragBemerkungenUI}")
-
 public class AntragBemerkungenUI
 extends PageBean
 implements Serializable

@@ -1,0 +1,14 @@
+The names of the jar files in WEB-INF/lib do not contain a version information
+in order to simplify the delivey of updated jar files. The list below contains
+the exact version information on each file.
+
+iText-2.1.7
+jsf-api-2.2.14
+jsf-impl-2.2.14
+jstl-api-1.2
+log4j-1.2.17
+xercesImpl-2.11.0
+
+Some libraries may be listed twice - one version having a size of 1kByte. In this
+case we update the corresponding jar file and deliver the previous version as
+dummy file so that it overwrites the file in case of copying and posting.
