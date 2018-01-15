@@ -12,7 +12,7 @@
 <h:form>
 <f:subview id="wp_2">
 	<t:row id="g_1">
-		<t:pane id="g_40" width="100%" height="100%" style="WP_WORKPAGECONTAINER_ICONSELECTORRIGHT">
+		<t:pane id="g_40" width="100%" height="100%" stylevariant="WP_WORKPAGECONTAINER_ICONSELECTORRIGHT">
 			<t:row id="g_41" rendered="#{wpr.workpageAvailable}">
 				<t:pane id="g_10" width="100%" height="100%">
 					<t:captureanimator id="g_22" trigger="#{wpr.animationTrigger}"

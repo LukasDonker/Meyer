@@ -49,7 +49,7 @@
 .cc_rowbodypane
 {
     background:#F7F7F7;
-    border:0px solid #c0c0c0;
+    border:0px solid rgba(0,0,0,0.1);
 }
 
 /* -------------------- cc_rowheader */
@@ -73,6 +73,7 @@
 .cc_tabbedpane
 {
     border:0px;
+    box-shadow:none;
 }
 .cc_tabbedpane_content
 {
@@ -91,6 +92,7 @@
     border:0px solid #c0c0c0;
     border-radius:0px 0px 0px 0px;
     border-right:1px solid #8aabc1;
+    box-shadow:0px 0px 0px #000000;
     cursor:pointer;
     font-family:Open Sans;
     font-size:15px;
@@ -121,6 +123,7 @@
     border:0px solid #c0c0c0;
     border-radius:0px 0px 0px 0px;
     border-right:1px solid #8aabc1;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:15px;
@@ -217,7 +220,7 @@
 /* -------------------- cc_wp_workpagecontainer */
 .cc_wp_workpagecontainer
 {
-    border:0 solid #C0C0C0;
+    border:0 solid rgba(0,0,0,0.1);
     border-radius:0px;
 }
 
@@ -233,6 +236,7 @@
     border:0px solid #c0c0c0;
     border-radius:0px 0px 0px 0px;
     border-right:1px solid #556e7f;
+    box-shadow:0px 0px 0px #000000;
     cursor:pointer;
     font-family:Open Sans;
     font-size:15px;
@@ -241,7 +245,7 @@
 }
 .cc_wp_workpageselector_button > .riscelement
 {
-    color:rgba(255,255,255,0.85);
+    color:rgba(255,255,255,0.75);
     cursor:pointer;
     font-family:Open Sans;
     font-size:15px;
@@ -263,6 +267,7 @@
     border:0px solid #c0c0c0;
     border-radius:0px 0px 0px 0px;
     border-right:1px solid #556e7f;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:15px;
@@ -337,7 +342,7 @@ input:-moz-placeholder
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
     background:transparent;
-    border:0px solid #C0C0C0;
+    border:0px solid rgba(0,0,0,0.1);
     box-sizing:border-box;
 }
 .riscadaptivesplitarea_divider_horizontal_closed
@@ -345,6 +350,7 @@ input:-moz-placeholder
     background:url(../../../eclntjsfserver/images/metro_right.png) no-repeat center, #33607f;
     border:0px;
     border-radius:0px 0px 0px 0px ;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -373,6 +379,7 @@ input:-moz-placeholder
     background:url(../../../eclntjsfserver/images/metro_left.png) no-repeat center, #33607f;
     border:0px;
     border-radius:0px 0px 0px 0px ;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -401,6 +408,7 @@ input:-moz-placeholder
     background:url(../../../eclntjsfserver/images/metro_down.png) no-repeat center, #33607f;
     border:0px;
     border-radius:0px 0px 0px 0px ;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -429,6 +437,7 @@ input:-moz-placeholder
     background:url(../../../eclntjsfserver/images/metro_up.png) no-repeat center, #33607f;
     border:0px;
     border-radius:0px 0px 0px 0px ;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -469,6 +478,7 @@ input:-moz-placeholder
     background:#DDDDDD;
     border:1px solid rgba(0,0,0,0.1);
     border-radius:5px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -644,6 +654,46 @@ input:-moz-placeholder
     width:100%;
 }
 
+/* -------------------- riscaweseomfonticon, extends: riscbutton */
+.riscaweseomfonticon
+{
+    background:#DDDDDD;
+    border:1px solid rgba(0,0,0,0.1);
+    border-radius:5px;
+    box-shadow:none;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:12px;
+    white-space:nowrap;
+}
+.riscaweseomfonticon > .riscelement
+{
+    color:#000000;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:12px;
+    font-weight:normal;
+    white-space:nowrap;
+}
+.riscaweseomfonticon.disabled
+{
+    cursor:default;
+    opacity:0.4;
+}
+.riscaweseomfonticon.disabled > *
+{
+    cursor:default;
+}
+
+/* -------------------- riscblockablearea */
+.riscblockablearea
+{
+}
+.riscblockablearea_shader
+{
+    background:rgba(0,0,0,0.1);
+}
+
 /* -------------------- riscbody */
 .riscbody
 {
@@ -656,6 +706,10 @@ input:-moz-placeholder
     -webkit-touch-callout:none;
     -webkit-user-select:none;
     user-select:none;
+}
+.riscbody *:focus
+{
+    outline:none;
 }
 
 /* -------------------- riscbodyuserselectnone, extends: riscinternal_notextselection_important */
@@ -723,6 +777,14 @@ input:-moz-placeholder
     user-select:text !important;
 }
 
+/* -------------------- riscbox */
+.riscbox
+{
+    background:#FFFFFF;
+    border:1px solid rgba(0,0,0,0.1);
+    box-shadow:none;
+}
+
 /* -------------------- riscbrowser_container, extends: riscinternal_panewithborderandbackground */
 .riscbrowser_container
 {
@@ -734,7 +796,7 @@ input:-moz-placeholder
     -webkit-touch-callout:text !important;
     -webkit-user-select:text !important;
     background:transparent;
-    border:0px solid #C0C0C0;
+    border:0px solid rgba(0,0,0,0.1);
     box-sizing:border-box;
     user-select:text !important;
 }
@@ -745,6 +807,7 @@ input:-moz-placeholder
     background:#DDDDDD;
     border:1px solid rgba(0,0,0,0.1);
     border-radius:5px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -775,6 +838,7 @@ input:-moz-placeholder
     background:transparent;
     border:0px solid rgba(0,0,0,0.1);
     border-radius:5px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -795,6 +859,68 @@ input:-moz-placeholder
     opacity:0.4;
 }
 .riscbutton_nofill.disabled > *
+{
+    cursor:default;
+}
+
+/* -------------------- riscbuttoncopypasteactivation_off, extends: riscbuttoncopypasteactivation_on */
+.riscbuttoncopypasteactivation_off
+{
+    background:#DDDDDD;
+    border:1px solid rgba(0,0,0,0.1);
+    border-radius:5px;
+    box-shadow:none;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:12px;
+    white-space:nowrap;
+}
+.riscbuttoncopypasteactivation_off > .riscelement
+{
+    color:#000000;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:12px;
+    font-weight:normal;
+    white-space:nowrap;
+}
+.riscbuttoncopypasteactivation_off.disabled
+{
+    cursor:default;
+    opacity:0.4;
+}
+.riscbuttoncopypasteactivation_off.disabled > *
+{
+    cursor:default;
+}
+
+/* -------------------- riscbuttoncopypasteactivation_on, extends: riscbutton */
+.riscbuttoncopypasteactivation_on
+{
+    background:#DDDDDD;
+    border:1px solid rgba(0,0,0,0.1);
+    border-radius:5px;
+    box-shadow:none;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:12px;
+    white-space:nowrap;
+}
+.riscbuttoncopypasteactivation_on > .riscelement
+{
+    color:#000000;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:12px;
+    font-weight:normal;
+    white-space:nowrap;
+}
+.riscbuttoncopypasteactivation_on.disabled
+{
+    cursor:default;
+    opacity:0.4;
+}
+.riscbuttoncopypasteactivation_on.disabled > *
 {
     cursor:default;
 }
@@ -844,7 +970,7 @@ input:-moz-placeholder
 {
     background-position:center;
     background-repeat:no-repeat;
-    border:1px solid #808080;
+    border:1px solid rgba(0,0,0,0.15);
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -912,6 +1038,7 @@ input:-moz-placeholder
     background:url(../../../eclntjsfserver/images/window_close_metro.png) no-repeat center;
     border:0px solid rgba(0,0,0,0.1);
     border-radius:5px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -1002,7 +1129,7 @@ input:-moz-placeholder
 .risccombofield
 {
     background:#FFFFFF;
-    border:1px solid rgba(0,0,0,0.2);
+    border:1px solid rgba(0,0,0,0.15);
 }
 .risccombofield.disabled
 {
@@ -1034,7 +1161,7 @@ input:-moz-placeholder
     font-family:Open Sans;
     font-size:12px;
     padding-left:5px;
-    padding-right:5px;
+    padding-right:0px;
     resize:none;
 }
 .risccombofield_icon
@@ -1050,38 +1177,48 @@ input:-moz-placeholder
 /* -------------------- riscdateselection */
 .riscdateselection
 {
-    border:1px solid #C0C0C0;
+    border:1px solid rgba(0,0,0,0.1);
 }
 
-/* -------------------- riscdateselection_datebutton */
+/* -------------------- riscdateselection_datebutton, extends: riscbutton_nofill */
 .riscdateselection_datebutton
 {
-    border:0px solid #C0C0C0;
+    background:transparent;
+    border:0px solid rgba(0,0,0,0.1);
+    border-radius:0px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
+    white-space:nowrap;
 }
 .riscdateselection_datebutton > *
 {
     cursor:pointer;
 }
+.riscdateselection_datebutton > .riscelement
+{
+    color:#000000;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:12px;
+    font-weight:normal;
+    white-space:nowrap;
+}
+.riscdateselection_datebutton.disabled
+{
+    color:#b0b0b0;
+    cursor:default;
+    opacity:1;
+}
+.riscdateselection_datebutton.disabled > *
+{
+    color:#b0b0b0;
+    cursor:default;
+}
 .riscdateselection_datebutton.month
 {
     background:#E0E0E0;
-}
-.riscdateselection_datebutton.monthnext
-{
-    background:#E0E0E0;
-    background-image:url(../../../eclntjsfserver/images/control_play.png);
-    background-position:center;
-    background-repeat:no-repeat;
-}
-.riscdateselection_datebutton.monthprev
-{
-    background:#E0E0E0;
-    background-image:url(../../../eclntjsfserver/images/control_playbackwards.png);
-    background-position:center;
-    background-repeat:no-repeat;
 }
 .riscdateselection_datebutton.today
 {
@@ -1097,7 +1234,7 @@ input:-moz-placeholder
 }
 .riscdateselection_datebutton.weekenddayheadline
 {
-    background:#C0C0C0;
+    background:rgba(0,0,0,0.1);
 }
 .riscdateselection_datebutton.workday
 {
@@ -1115,19 +1252,163 @@ input:-moz-placeholder
 {
     background:#E0E0E0;
 }
-.riscdateselection_datebutton.yearnext
+
+/* -------------------- riscdateselection_datebutton_monthnext */
+.riscdateselection_datebutton_monthnext
 {
-    background:#E0E0E0;
-    background-image:url(../../../eclntjsfserver/images/control_play.png);
-    background-position:center;
-    background-repeat:no-repeat;
+    background:url(../../../eclntjsfserver/images/control_play.png) no-repeat center, #E0E0E0;
 }
-.riscdateselection_datebutton.yearprev
+
+/* -------------------- riscdateselection_datebutton_monthprev, extends: riscdateselection_datebutton */
+.riscdateselection_datebutton_monthprev
+{
+    background:url(../../../eclntjsfserver/images/control_playbackwards.png) no-repeat center, #E0E0E0;
+    border:0px solid rgba(0,0,0,0.1);
+    border-radius:0px;
+    box-shadow:none;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:12px;
+    white-space:nowrap;
+}
+.riscdateselection_datebutton_monthprev > *
+{
+    cursor:pointer;
+}
+.riscdateselection_datebutton_monthprev > .riscelement
+{
+    color:#000000;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:12px;
+    font-weight:normal;
+    white-space:nowrap;
+}
+.riscdateselection_datebutton_monthprev.disabled
+{
+    color:#b0b0b0;
+    cursor:default;
+    opacity:1;
+}
+.riscdateselection_datebutton_monthprev.disabled > *
+{
+    color:#b0b0b0;
+    cursor:default;
+}
+.riscdateselection_datebutton_monthprev.month
 {
     background:#E0E0E0;
-    background-image:url(../../../eclntjsfserver/images/control_playbackwards.png);
-    background-position:center;
-    background-repeat:no-repeat;
+}
+.riscdateselection_datebutton_monthprev.today
+{
+    background:#E0E0E0;
+}
+.riscdateselection_datebutton_monthprev.weekendday
+{
+    background:#D0D0D0;
+}
+.riscdateselection_datebutton_monthprev.weekendday.selected
+{
+    background:#FFFFC0;
+}
+.riscdateselection_datebutton_monthprev.weekenddayheadline
+{
+    background:rgba(0,0,0,0.1);
+}
+.riscdateselection_datebutton_monthprev.workday
+{
+    background:#FFFFFF;
+}
+.riscdateselection_datebutton_monthprev.workday.selected
+{
+    background:#FFFFC0;
+}
+.riscdateselection_datebutton_monthprev.workdayheadline
+{
+    background:#F0F0F0;
+}
+.riscdateselection_datebutton_monthprev.year
+{
+    background:#E0E0E0;
+}
+
+/* -------------------- riscdateselection_datebutton_yearnext */
+.riscdateselection_datebutton_yearnext
+{
+    background:url(../../../eclntjsfserver/images/control_play.png) no-repeat center, #E0E0E0;
+}
+
+/* -------------------- riscdateselection_datebutton_yearprev, extends: riscdateselection_datebutton */
+.riscdateselection_datebutton_yearprev
+{
+    background:url(../../../eclntjsfserver/images/control_playbackwards.png) no-repeat center, #E0E0E0;
+    border:0px solid rgba(0,0,0,0.1);
+    border-radius:0px;
+    box-shadow:none;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:12px;
+    white-space:nowrap;
+}
+.riscdateselection_datebutton_yearprev > *
+{
+    cursor:pointer;
+}
+.riscdateselection_datebutton_yearprev > .riscelement
+{
+    color:#000000;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:12px;
+    font-weight:normal;
+    white-space:nowrap;
+}
+.riscdateselection_datebutton_yearprev.disabled
+{
+    color:#b0b0b0;
+    cursor:default;
+    opacity:1;
+}
+.riscdateselection_datebutton_yearprev.disabled > *
+{
+    color:#b0b0b0;
+    cursor:default;
+}
+.riscdateselection_datebutton_yearprev.month
+{
+    background:#E0E0E0;
+}
+.riscdateselection_datebutton_yearprev.today
+{
+    background:#E0E0E0;
+}
+.riscdateselection_datebutton_yearprev.weekendday
+{
+    background:#D0D0D0;
+}
+.riscdateselection_datebutton_yearprev.weekendday.selected
+{
+    background:#FFFFC0;
+}
+.riscdateselection_datebutton_yearprev.weekenddayheadline
+{
+    background:rgba(0,0,0,0.1);
+}
+.riscdateselection_datebutton_yearprev.workday
+{
+    background:#FFFFFF;
+}
+.riscdateselection_datebutton_yearprev.workday.selected
+{
+    background:#FFFFC0;
+}
+.riscdateselection_datebutton_yearprev.workdayheadline
+{
+    background:#F0F0F0;
+}
+.riscdateselection_datebutton_yearprev.year
+{
+    background:#E0E0E0;
 }
 
 /* -------------------- riscdefault */
@@ -1141,7 +1422,7 @@ input:-moz-placeholder
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
     background:#FFFFFF;
-    border:0px solid #C0C0C0;
+    border:0px solid rgba(0,0,0,0.1);
     box-sizing:border-box;
 }
 
@@ -1149,7 +1430,7 @@ input:-moz-placeholder
 .riscdialog_popup
 {
     background:#FFFFFF;
-    box-shadow:4px 4px 2px #A0A0A0 ;
+    box-shadow:4px 4px 2px rgba(0,0,0,0.4) ;
 }
 .riscdialog_popup.showUpHeight
 {
@@ -1173,6 +1454,7 @@ input:-moz-placeholder
     background:transparent;
     border:0px solid rgba(0,0,0,0.1);
     border-radius:5px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -1265,27 +1547,43 @@ input:-moz-placeholder
 /* -------------------- riscdragblock */
 .riscdragblock
 {
-    background:#FF8080;
+    background:rgba(0,0,0,0.4);
+}
+
+/* -------------------- riscdragblock_highlight */
+.riscdragblock_highlight
+{
+    background:rgba(0,0,0,0.6);
+}
+
+/* -------------------- riscdragblockinner */
+.riscdragblockinner
+{
+    background:rgba(255,255,255,0.4);
+}
+
+/* -------------------- riscdragblockinner_highlight */
+.riscdragblockinner_highlight
+{
+    background:rgba(255,255,255,0.6);
 }
 
 /* -------------------- riscdragoverontop */
 .riscdragoverontop
 {
-    background:rgba(255,255,0,0.2);
-    background-position:center;
-    background-repeat:no-repeat;
-    background-size:100% 100%;
+    background:rgba(255,0,0,0.3);
 }
 
 /* -------------------- riscdragoverontoppart */
 .riscdragoverontoppart
 {
+    background:rgba(0,0,0,0);
 }
 
 /* -------------------- riscdragoverontoppart_rollover */
 .riscdragoverontoppart_rollover
 {
-    background:rgba(255,255,0,0.4);
+    background:rgba(255,0,0,1);
 }
 
 /* -------------------- riscdrawarea */
@@ -1320,6 +1618,21 @@ input:-moz-placeholder
     font-size:12px;
 }
 
+/* -------------------- riscelementcanvas */
+.riscelementcanvas
+{
+}
+
+/* -------------------- riscelementsvg */
+.riscelementsvg
+{
+}
+
+/* -------------------- riscelementvideo */
+.riscelementvideo
+{
+}
+
 /* -------------------- riscfield */
 .riscfield
 {
@@ -1337,7 +1650,7 @@ input:-moz-placeholder
 .riscfieldcontainer
 {
     background:#FFFFFF;
-    border:1px solid rgba(0,0,0,0.2);
+    border:1px solid rgba(0,0,0,0.15);
 }
 .riscfieldcontainer.riscformaterror
 {
@@ -1370,7 +1683,7 @@ input:-moz-placeholder
 /* -------------------- riscfileselectiondialog */
 .riscfileselectiondialog
 {
-    border:1px solid #c0c0c0;
+    border:1px solid rgba(0,0,0,0.1);
 }
 
 /* -------------------- riscfileselectiondialog_cancelbutton, extends: riscbutton */
@@ -1379,6 +1692,7 @@ input:-moz-placeholder
     background:#DDDDDD;
     border:1px solid rgba(0,0,0,0.1);
     border-radius:5px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -1411,7 +1725,7 @@ input:-moz-placeholder
 /* -------------------- riscfileselectiondialog_scrollpane */
 .riscfileselectiondialog_scrollpane
 {
-    border:1px solid #c0c0c0;
+    border:1px solid rgba(0,0,0,0.1);
 }
 
 /* -------------------- riscfileselectiondialog_selectbutton, extends: riscbutton */
@@ -1420,6 +1734,7 @@ input:-moz-placeholder
     background:#DDDDDD;
     border:1px solid rgba(0,0,0,0.1);
     border-radius:5px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -1450,6 +1765,7 @@ input:-moz-placeholder
     background:#DDDDDD;
     border:1px solid rgba(0,0,0,0.1);
     border-radius:5px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -1480,7 +1796,7 @@ input:-moz-placeholder
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
     background:transparent;
-    border:0px solid #C0C0C0;
+    border:0px solid rgba(0,0,0,0.1);
     box-sizing:border-box;
 }
 
@@ -1519,6 +1835,7 @@ input:-moz-placeholder
     background:rgba(0,0,0,0.02);
     border:1px solid rgba(0,0,0,0.1);
     border-radius:5px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -1547,6 +1864,7 @@ input:-moz-placeholder
 .riscfoldablepane
 {
     border:0px solid rgba(0,0,0,0.1);
+    box-shadow:none;
 }
 .riscfoldablepane_contentpane
 {
@@ -1565,6 +1883,7 @@ input:-moz-placeholder
     background:transparent;
     border:0px solid #c0c0c0;
     border-radius:5px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:15px;
@@ -1602,6 +1921,7 @@ input:-moz-placeholder
 .riscfoldablepane_light
 {
     border:1px solid rgba(0,0,0,0.1);
+    box-shadow:none;
 }
 .riscfoldablepane_light_contentpane
 {
@@ -1611,6 +1931,7 @@ input:-moz-placeholder
     background:transparent;
     border:0px solid #c0c0c0;
     border-radius:5px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:15px;
@@ -1645,6 +1966,7 @@ input:-moz-placeholder
 .riscfoldableverticalpane
 {
     border:0px solid rgba(0,0,0,0.1);
+    box-shadow:none;
 }
 .riscfoldableverticalpane_contentpane
 {
@@ -1659,6 +1981,7 @@ input:-moz-placeholder
     background:transparent;
     border:0px solid #c0c0c0;
     border-radius:5px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:15px;
@@ -1714,8 +2037,14 @@ input:-moz-placeholder
 }
 .rischeaderlabel_text_text
 {
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
     color:#404040;
     font-weight:bold;
+    user-select:none;
     white-space:nowrap;
 }
 .rischeaderlabel_text_multiline
@@ -1727,8 +2056,14 @@ input:-moz-placeholder
 }
 .rischeaderlabel_text_multiline_text
 {
+    -khtml-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    -webkit-touch-callout:none;
+    -webkit-user-select:none;
     color:#404040;
     font-weight:bold;
+    user-select:none;
 }
 
 /* -------------------- rischideable */
@@ -1742,7 +2077,7 @@ input:-moz-placeholder
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
     background:transparent;
-    border:0px solid #C0C0C0;
+    border:0px solid rgba(0,0,0,0.1);
     box-sizing:border-box;
 }
 
@@ -1752,6 +2087,7 @@ input:-moz-placeholder
     background:transparent;
     border:0px solid rgba(0,0,0,0.1);
     border-radius:5px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -1782,6 +2118,7 @@ input:-moz-placeholder
     background:transparent;
     border:0px solid rgba(0,0,0,0.1);
     border-radius:5px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -1806,13 +2143,18 @@ input:-moz-placeholder
     cursor:default;
 }
 
+/* -------------------- risciframeinclude */
+.risciframeinclude
+{
+}
+
 /* -------------------- riscimage, extends: riscinternal_panewithborderandbackground */
 .riscimage
 {
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
     background:transparent;
-    border:0px solid #C0C0C0;
+    border:0px solid rgba(0,0,0,0.1);
     box-sizing:border-box;
 }
 
@@ -1905,10 +2247,17 @@ input:-moz-placeholder
 .risclayerallblocker
 {
     background:#FFFFFF;
-    cursor:wait;
     font-family:Open Sans;
     font-size:12px;
     opacity:0.4;
+}
+
+/* -------------------- risclayerallblocker_transparent */
+.risclayerallblocker_transparent
+{
+    background:transparent;
+    font-family:Open Sans;
+    font-size:12px;
 }
 
 /* -------------------- risclayerblocker */
@@ -1921,12 +2270,23 @@ input:-moz-placeholder
     opacity:0.2;
 }
 
+/* -------------------- risclayerhighlightblocker */
+.risclayerhighlightblocker
+{
+    background:#000000;
+    cursor:not-allowed;
+    font-family:Open Sans;
+    font-size:12px;
+    opacity:0.6;
+}
+
 /* -------------------- risclink, extends: riscbutton */
 .risclink
 {
     background:transparent;
     border:0px solid #c0c0c0;
     border-radius:5px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -1959,7 +2319,7 @@ input:-moz-placeholder
 .risclongtextfield
 {
     background:#FFFFFF;
-    border:1px solid rgba(0,0,0,0.2);
+    border:1px solid rgba(0,0,0,0.15);
 }
 .risclongtextfield.disabled
 {
@@ -1991,7 +2351,7 @@ input:-moz-placeholder
     font-family:Open Sans;
     font-size:12px;
     padding-left:5px;
-    padding-right:5px;
+    padding-right:0px;
     resize:none;
 }
 .risclongtextfield_icon
@@ -2015,7 +2375,7 @@ input:-moz-placeholder
 /* -------------------- riscmenu */
 .riscmenu
 {
-    background-color:#FFFFFF;
+    background:#FFFFFF;
     border:1px solid #c0c0c0;
     padding:3px;
 }
@@ -2073,7 +2433,7 @@ input:-moz-placeholder
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
     background:transparent;
-    border:1px solid #c0c0c0;
+    border:1px solid rgba(0,0,0,0.1);
     box-sizing:border-box;
 }
 .riscmessagedialog.error
@@ -2090,6 +2450,7 @@ input:-moz-placeholder
     background:url(../../../eclntjsfserver/images/tabbedline_lefticon.png) no-repeat center;
     border:0px solid rgba(0,0,0,0.1);
     border-radius:5px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -2122,6 +2483,7 @@ input:-moz-placeholder
     background:url(../../../eclntjsfserver/images/tabbedline_righticon.png) no-repeat center;
     border:0px solid rgba(0,0,0,0.1);
     border-radius:5px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -2167,6 +2529,7 @@ input:-moz-placeholder
     border:0px solid rgba(0,0,0,0.1);
     border-bottom:1px solid #43708f;
     border-radius:0px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:15px;
@@ -2196,6 +2559,7 @@ input:-moz-placeholder
     border:0px solid rgba(0,0,0,0.1);
     border-bottom:1px solid #43708f;
     border-radius:0px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:15px;
@@ -2203,7 +2567,7 @@ input:-moz-placeholder
 }
 .riscoutlookbar_button_selected > .riscelement
 {
-    color:rgba(255,255,255,0.85);
+    color:#FFFFFF;
     cursor:pointer;
     font-family:Open Sans;
     font-size:15px;
@@ -2261,11 +2625,28 @@ input:-moz-placeholder
 .riscpaintareaitem_mover
 {
     background:rgba(0,0,0,0.1);
-    border:0px solid #c0c0c0;
+    border:0px solid rgba(0,0,0,0.1);
     border-radius:8px 8px 8px 8px;
     cursor:move;
 }
 .riscpaintareaitem_sizer
+{
+    background:transparent;
+    cursor:nw-resize;
+}
+
+/* -------------------- riscpaintareaitemnofocus, extends: riscpaintareaitem */
+.riscpaintareaitemnofocus
+{
+}
+.riscpaintareaitemnofocus_mover
+{
+    background:rgba(0,0,0,0.1);
+    border:0px solid rgba(0,0,0,0.1);
+    border-radius:8px 8px 8px 8px;
+    cursor:move;
+}
+.riscpaintareaitemnofocus_sizer
 {
     background:transparent;
     cursor:nw-resize;
@@ -2283,6 +2664,7 @@ input:-moz-placeholder
     background:#800000;
     border:1px solid rgba(0,0,0,0.1);
     border-radius:5px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -2313,6 +2695,7 @@ input:-moz-placeholder
     background:#008000;
     border:1px solid rgba(0,0,0,0.1);
     border-radius:5px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -2372,6 +2755,7 @@ input:-moz-placeholder
     background:transparent;
     border:0px solid #c0c0c0;
     border-radius:5px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -2460,7 +2844,7 @@ input:-moz-placeholder
 }
 .riscradiobutton_image
 {
-    border:1px solid #808080;
+    border:1px solid rgba(0,0,0,0.15);
     border-radius:10px;
     cursor:pointer;
     font-family:Open Sans;
@@ -2496,15 +2880,15 @@ input:-moz-placeholder
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
     background:#F0F0F0;
-    border:1px solid #C0C0C0;
+    border:1px solid rgba(0,0,0,0.1);
     box-sizing:border-box;
 }
 .riscschedule_blockline
 {
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
-    background:#C0C0C0;
-    border:0px solid #C0C0C0;
+    background:rgba(0,0,0,0.1);
+    border:0px solid rgba(0,0,0,0.1);
     box-sizing:border-box;
 }
 
@@ -2514,7 +2898,7 @@ input:-moz-placeholder
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
     background:#F0F0F0;
-    border:1px solid #C0C0C0;
+    border:1px solid rgba(0,0,0,0.1);
     box-sizing:border-box;
 }
 .riscscheduleitem_content
@@ -2592,6 +2976,13 @@ input:-moz-placeholder
     font-family:Open Sans;
     font-size:12px;
 }
+.riscscrollcontainer_scrollindicator
+{
+    background-color:rgba(255,255,255,0.1);
+    background-image:url(../../../eclntjsfserver/images/grid/scrollindicator.png);
+    background-position:center;
+    background-repeat:no-repeat;
+}
 
 /* -------------------- riscscrollnotifier */
 .riscscrollnotifier
@@ -2609,6 +3000,7 @@ input:-moz-placeholder
     background:#DDDDDD;
     border:0px solid rgba(0,0,0,0.1);
     border-radius:5px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -2636,13 +3028,13 @@ input:-moz-placeholder
 /* -------------------- riscshiftcontainer */
 .riscshiftcontainer
 {
-    border:1px solid #c0c0c0;
+    border:1px solid rgba(0,0,0,0.1);
 }
 
 /* -------------------- riscshiftcontainerwithnavigation */
 .riscshiftcontainerwithnavigation
 {
-    border:0px solid #c0c0c0;
+    border:0px solid rgba(0,0,0,0.1);
 }
 .riscshiftcontainerwithnavigation_left
 {
@@ -2728,7 +3120,7 @@ input:-moz-placeholder
 /* -------------------- riscslidecontainer */
 .riscslidecontainer
 {
-    border:1px solid #c0c0c0;
+    border:1px solid rgba(0,0,0,0.1);
 }
 
 /* -------------------- riscslider */
@@ -2784,7 +3176,7 @@ input:-moz-placeholder
 .riscspinner
 {
     background:#FFFFFF;
-    border:1px solid rgba(0,0,0,0.2);
+    border:1px solid rgba(0,0,0,0.15);
 }
 .riscspinner.disabled > .riscspinner_icondown
 {
@@ -2868,7 +3260,7 @@ input:-moz-placeholder
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
     background:transparent;
-    border:0px solid #C0C0C0;
+    border:0px solid rgba(0,0,0,0.1);
     box-sizing:border-box;
 }
 
@@ -2884,6 +3276,7 @@ input:-moz-placeholder
     border:0px solid #c0c0c0;
     border-radius:0px 0px 0px 0px;
     border-right:1px solid #8aabc1;
+    box-shadow:0px 0px 0px #000000;
     cursor:pointer;
     font-family:Open Sans;
     font-size:15px;
@@ -2914,6 +3307,7 @@ input:-moz-placeholder
     border:0px solid #c0c0c0;
     border-radius:0px 0px 0px 0px;
     border-right:1px solid #8aabc1;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:15px;
@@ -2966,6 +3360,7 @@ input:-moz-placeholder
     border:0px solid #c0c0c0;
     border-bottom:1px solid #8aabc1;
     border-radius:5px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:15px;
@@ -2996,6 +3391,7 @@ input:-moz-placeholder
     border:0px solid #c0c0c0;
     border-bottom:1px solid #8aabc1;
     border-radius:5px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:15px;
@@ -3025,6 +3421,7 @@ input:-moz-placeholder
 .risctabbedpane
 {
     border:0px;
+    box-shadow:none;
 }
 .risctabbedpane_content
 {
@@ -3043,6 +3440,7 @@ input:-moz-placeholder
     border:0px solid #c0c0c0;
     border-radius:0px 0px 0px 0px;
     border-right:1px solid #8aabc1;
+    box-shadow:0px 0px 0px #000000;
     cursor:pointer;
     font-family:Open Sans;
     font-size:15px;
@@ -3073,6 +3471,7 @@ input:-moz-placeholder
     border:0px solid #c0c0c0;
     border-radius:0px 0px 0px 0px;
     border-right:1px solid #8aabc1;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:15px;
@@ -3117,6 +3516,7 @@ input:-moz-placeholder
 .risctabbedpane_ribbon
 {
     border:0px;
+    box-shadow:none;
 }
 .risctabbedpane_ribbon_content
 {
@@ -3135,6 +3535,7 @@ input:-moz-placeholder
     border:0px solid #c0c0c0;
     border-radius:0px 0px 0px 0px;
     border-right:1px solid #8aabc1;
+    box-shadow:0px 0px 0px #000000;
     cursor:pointer;
     font-family:Open Sans;
     font-size:15px;
@@ -3165,6 +3566,7 @@ input:-moz-placeholder
     border:0px solid #c0c0c0;
     border-radius:0px 0px 0px 0px;
     border-right:1px solid #8aabc1;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:15px;
@@ -3203,6 +3605,56 @@ input:-moz-placeholder
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
+}
+
+/* -------------------- risctextareawithcomment */
+.risctextareawithcomment
+{
+    border:1px solid rgba(0,0,0,0.15);
+}
+.risctextareawithcomment_textareacomment
+{
+    background:#FFFFFF;
+    border:0px solid rgba(0,0,0,0.15);
+    border-right:1px solid rgba(0,0,0,0.15);
+}
+.risctextareawithcomment_textareacomment.riscformaterror
+{
+    background:linear-gradient(to bottom, rgba(255,0,0,0.2),rgba(255,0,0,0.0),rgba(255,0,0,0.0),rgba(255,0,0,0.0));
+}
+.risctextareawithcomment_textareacomment_field
+{
+    background:transparent;
+    border:0px solid #C0C0C0;
+    color:#000000;
+    font-family:Open Sans;
+    font-size:12px;
+    overflow-x:hidden;
+    overflow-y:hidden;
+    padding-left:5px;
+    padding-right:5px;
+    resize:none;
+    text-align:right;
+}
+.risctextareawithcomment_textareaedit
+{
+    background:#FFFFFF;
+    border:0px solid rgba(0,0,0,0.15);
+}
+.risctextareawithcomment_textareaedit.riscformaterror
+{
+    background:linear-gradient(to bottom, rgba(255,0,0,0.2),rgba(255,0,0,0.0),rgba(255,0,0,0.0),rgba(255,0,0,0.0));
+}
+.risctextareawithcomment_textareaedit_field
+{
+    background:transparent;
+    border:0px solid #C0C0C0;
+    color:#000000;
+    font-family:Open Sans;
+    font-size:12px;
+    padding-left:5px;
+    padding-right:5px;
+    resize:none;
 }
 
 /* -------------------- risctextpane */
@@ -3245,7 +3697,7 @@ input:-moz-placeholder
     -moz-box-sizing:border-box;
     -webkit-box-sizing:border-box;
     background:#d0d0d0;
-    border:1px solid #c0c0c0;
+    border:1px solid rgba(0,0,0,0.1);
     box-sizing:border-box;
 }
 .risctouchfieldgeneric_button
@@ -3253,6 +3705,7 @@ input:-moz-placeholder
     background:#f0f0f0;
     border:1px solid rgba(0,0,0,0.1);
     border-radius:5px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:15px;
@@ -3281,6 +3734,7 @@ input:-moz-placeholder
     background:#dddddd;
     border:1px solid rgba(0,0,0,0.1);
     border-radius:5px;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:15px;
@@ -3311,7 +3765,7 @@ input:-moz-placeholder
 .risctouchfieldgeneric_field
 {
     background:#FFFFFF;
-    border:1px solid rgba(0,0,0,0.2);
+    border:1px solid rgba(0,0,0,0.15);
 }
 .risctouchfieldgeneric_field.riscformaterror
 {
@@ -3332,7 +3786,7 @@ input:-moz-placeholder
 /* -------------------- risctouchselector */
 .risctouchselector
 {
-    border:1px solid #c0c0c0;
+    border:1px solid rgba(0,0,0,0.1);
 }
 .risctouchselector.disabled > .risctouchselector_icondown
 {
@@ -3397,6 +3851,7 @@ input:-moz-placeholder
     border:0px solid #c0c0c0;
     border-radius:0px 0px 0px 0px;
     border-right:0px solid #c0c0c0;
+    box-shadow:0px 0px 0px #000000;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -3435,6 +3890,7 @@ input:-moz-placeholder
     border:0px solid #c0c0c0;
     border-radius:0px 0px 0px 0px;
     border-right:0px solid #c0c0c0;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -3495,6 +3951,7 @@ input:-moz-placeholder
     border:0px solid #c0c0c0;
     border-radius:0px 0px 0px 0px;
     border-right:0px solid #c0c0c0;
+    box-shadow:0px 0px 0px #000000;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -3533,6 +3990,7 @@ input:-moz-placeholder
     border:0px solid #c0c0c0;
     border-radius:0px 0px 0px 0px;
     border-right:0px solid #c0c0c0;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -3594,6 +4052,7 @@ input:-moz-placeholder
     border-bottom-width:0px;
     border-radius:5px 5px 0px 0px;
     border-right:1px solid #c0c0c0;
+    box-shadow:0px 0px 0px #000000;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -3633,6 +4092,7 @@ input:-moz-placeholder
     border-bottom:0px;
     border-radius:5px 5px 0px 0px;
     border-right:1px solid #c0c0c0;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -3685,6 +4145,92 @@ input:-moz-placeholder
     font-size:12px;
 }
 
+/* -------------------- tabbedline_cctl05, extends: risctabbedline */
+.tabbedline_cctl05
+{
+    background:#FFFFFF;
+    border:0px solid #C0C0C0;
+}
+.tabbedline_cctl05_button
+{
+    background:#FFFFFF;
+    border:0px solid #c0c0c0;
+    border-bottom:4px solid transparent;
+    border-radius:0px 0px 0px 0px;
+    border-right:0px solid transparent;
+    box-shadow:0px 0px 0px #000000;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:15px;
+    padding:6px;
+    white-space:nowrap;
+}
+.tabbedline_cctl05_button > .riscelement
+{
+    color:#808080;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:15px;
+    font-weight:normal;
+    white-space:nowrap;
+}
+.tabbedline_cctl05_button.disabled
+{
+    cursor:default;
+    opacity:0.4;
+}
+.tabbedline_cctl05_button.disabled > *
+{
+    cursor:default;
+}
+.tabbedline_cctl05_button_selected
+{
+    background:#FFFFFF;
+    border:0px solid #c0c0c0;
+    border-bottom:4px solid #8aabc1;
+    border-radius:0px 0px 0px 0px;
+    border-right:0px solid #8aabc1;
+    box-shadow:none;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:15px;
+    padding:6px;
+    white-space:nowrap;
+}
+.tabbedline_cctl05_button_selected > .riscelement
+{
+    color:#000000;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:15px;
+    font-weight:bold;
+    white-space:nowrap;
+}
+.tabbedline_cctl05_button_selected.disabled
+{
+    cursor:default;
+    opacity:0.4;
+}
+.tabbedline_cctl05_button_selected.disabled > *
+{
+    cursor:default;
+}
+.tabbedline_cctl05_content
+{
+    background:#FFFFFF;
+    border:0px solid #c0c0c0;
+    font-family:Open Sans;
+    font-size:15px;
+}
+.tabbedline_cctl05_menuicon
+{
+    background:url(../../../eclntjsfserver/images/tabbedline_icon.png) no-repeat center;
+    border:0px solid #c0c0c0;
+    cursor:pointer;
+    font-family:Open Sans;
+    font-size:12px;
+}
+
 /* -------------------- tabbedline_cctlbreadcrumb01, extends: tabbedline_cctl01 */
 .tabbedline_cctlbreadcrumb01
 {
@@ -3697,6 +4243,7 @@ input:-moz-placeholder
     border:0px solid #c0c0c0;
     border-radius:0px 0px 0px 0px;
     border-right:0px solid #c0c0c0;
+    box-shadow:0px 0px 0px #000000;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;
@@ -3735,6 +4282,7 @@ input:-moz-placeholder
     border:0px solid #c0c0c0;
     border-radius:0px 0px 0px 0px;
     border-right:0px solid #c0c0c0;
+    box-shadow:none;
     cursor:pointer;
     font-family:Open Sans;
     font-size:12px;

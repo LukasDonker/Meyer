@@ -94,8 +94,6 @@
         <set attribute="styleseq" value="riscfoldablepane_light"/>
     </tag>
     <tag name="foldableverticalpane" variant="default">
-        <set attribute="image" value="/eclntjsfserver/images/foldableverticalpanedefaulticon.png"/>
-        <set attribute="imageto" value="/eclntjsfserver/images/foldablepanedefaulticon.png"/>
     </tag>
     <tag name="foldablepopupinclude" variant="default">
         <set attribute="innerpadding" value="0"/>
@@ -609,6 +607,9 @@
     </tag>
     <tag name="t:tabbedline" variant="cctl04" >
       <set attribute="fxstyleseq" value="tabbedline_cctl04"/>
+    </tag>
+    <tag name="t:tabbedline" variant="cctl05" >
+      <set attribute="styleseq" value="tabbedline_cctl05"/>
     </tag>
     <tag name="t:tabbedline" variant="cctlbreadcrumb01" >
       <set attribute="fxstyleseq" value="tabbedline_cctlbreadcrumb01"/>

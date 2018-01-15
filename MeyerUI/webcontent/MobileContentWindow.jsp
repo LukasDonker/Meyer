@@ -21,6 +21,8 @@
 <t:coldistance id="g_52" />
 <t:button id="g_53" font="weight:bold" foreground="#ffffff" stylevariant="primaryButton" text="Neue Zeiterfassung" width="150" />
 <t:coldistance id="g_6" />
+<t:button id="g_102" font="weight:bold" foreground="#ffffff" stylevariant="primaryButton" text="Gerätebestellung/KVA" width="150" />
+<t:coldistance id="g_103" />
 <t:button id="g_7" height="35" image="/images/LukasDonker.png" imageheight="35" imagewidth="35" stylevariant="primaryButton" width="35" />
 <t:coldistance id="g_75" width="10" />
 <t:icon id="g_8" background="linear-gradient(to bottom, #006bff,#2e6dff)" height="35" image="/awesomefont(f085,#FFFFFF,30)" width="35" />
