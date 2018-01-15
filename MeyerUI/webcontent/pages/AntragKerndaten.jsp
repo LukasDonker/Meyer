@@ -47,7 +47,7 @@
 <t:pane id="g_27" >
 <t:row id="g_28" >
 <t:textwithlinks id="g_29" font="weight:bold" text="Termin" width="150" />
-<t:calendarfield id="g_30" exacttime="true" flush="true" format="datetime" formatmask="short" timezone="Europe/Paris" width="100%;150" />
+<t:calendarfield id="g_30" enabled="false" exacttime="true" flush="true" format="datetime" formatmask="short" timezone="Europe/Paris" value="1519462694850" width="100%;150" />
 </t:row>
 </t:pane>
 </t:rowadaptiveline>
@@ -62,8 +62,8 @@
 <t:coldistance id="g_37" width="50" />
 <t:pane id="g_38" >
 <t:row id="g_39" >
-<t:textwithlinks id="g_40" font="weight:bold" text="Techniker&lt;br&gt; &lt;br&gt;&lt;br&gt;" width="150" />
-<t:textwithlinks id="g_41" text="Techniker 1  &lt;br&gt;&lt;br&gt;&lt;br&gt;" width="100%;100" />
+<t:textwithlinks id="g_40" font="weight:bold" text="Techniker" width="150" />
+<t:field id="g_41" enabled="false" text="Techniker 1, Techniker 2" width="100%;200" />
 </t:row>
 </t:pane>
 </t:rowadaptiveline>
@@ -127,9 +127,10 @@
 <t:rowdistance id="g_82" height="15" />
 <t:rowadaptiveline id="g_83" breakindex="1" breakpixels="300" comment="Finanzierungsart" >
 <t:label id="g_84" font="weight:bold" text="Überstunden" width="200" />
-<t:radiobutton id="g_85" group="ueberstunden" text="25%" value="0.25" width="50" />
-<t:radiobutton id="g_86" group="ueberstunden" text="50%" value="0.5" width="50" />
-<t:radiobutton id="g_87" group="ueberstunden" text="100%" value="1" width="50" />
+<t:radiobutton id="g_150" group="ueberstunden" refvalue="0" text="0%" width="50" />
+<t:radiobutton id="g_85" group="ueberstunden" refvalue="0.25" text="25%" width="50" />
+<t:radiobutton id="g_86" group="ueberstunden" refvalue="0.5" text="50%" width="50" />
+<t:radiobutton id="g_87" group="ueberstunden" refvalue="1" text="100%" width="50" />
 </t:rowadaptiveline>
 <t:rowdistance id="g_88" height="5" />
 <t:rowadaptiveline id="g_89" breakindex="1" breakpixels="300" comment="Finanzierungsart" >
