@@ -2,6 +2,11 @@ package model.material;
 
 import java.util.List;
 
+import javax.persistence.Entity;
+
+import ui.model.Artikel;
+
+@Entity
 public class Lager {
 
 	private List<Artikel> listartikel;

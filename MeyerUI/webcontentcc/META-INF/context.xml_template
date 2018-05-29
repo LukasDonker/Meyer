@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!--
+Must be set to "false" for runtime purposes - especially when using the RISC
+Client: CapatainCasa uses URL rewriting for session management.
+
+If session id cookies are passed to the browser, then multiple browser instances
+will share the same session id cookie - which may have server side problems as
+consequence.
+-->
+<Context cookies='false'>
+</Context>

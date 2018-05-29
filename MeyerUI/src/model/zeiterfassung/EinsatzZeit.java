@@ -2,7 +2,7 @@ package model.zeiterfassung;
 
 import java.util.Date;
 
-import model.person.Techniker;
+import ui.model.Techniker;
 
 public class EinsatzZeit extends Zeit {
 	

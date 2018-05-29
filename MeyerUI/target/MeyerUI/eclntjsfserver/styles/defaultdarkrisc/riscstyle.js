@@ -28,6 +28,11 @@ RISCSTYLE.cc_statusbar =
     insetTop:3, insetRight: 3, insetBottom: 3, insetLeft: 3,
     generated: true
 };
+RISCSTYLE.cc_tabbedpane = 
+{
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
+    generated: true
+};
 RISCSTYLE.cc_tabbedpane_content = 
 {
     background: "#FFFFFF",
@@ -45,6 +50,7 @@ RISCSTYLE.cc_tabbedpane_tabbedline_button =
     font: new RISCFont("Open Sans",15,"normal"),
     background: "#707070",
     borderTop:0, borderRight: 1, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:3, insetRight: 6, insetBottom: 4, insetLeft: 6,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -54,6 +60,7 @@ RISCSTYLE.cc_tabbedpane_tabbedline_button_selected =
     font: new RISCFont("Open Sans",15,"bold"),
     background: "#707070",
     borderTop:0, borderRight: 1, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:3, insetRight: 6, insetBottom: 4, insetLeft: 6,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -100,6 +107,7 @@ RISCSTYLE.cc_wp_workpageselector_button =
     font: new RISCFont("Open Sans",15,"normal"),
     background: "#404040",
     borderTop:0, borderRight: 1, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:3, insetRight: 6, insetBottom: 4, insetLeft: 6,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -109,6 +117,7 @@ RISCSTYLE.cc_wp_workpageselector_button_selected =
     font: new RISCFont("Open Sans",15,"bold"),
     background: "#404040",
     borderTop:0, borderRight: 1, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:3, insetRight: 6, insetBottom: 4, insetLeft: 6,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -147,6 +156,7 @@ RISCSTYLE.riscadaptivesplitarea_divider_horizontal_closed =
     font: new RISCFont("Open Sans",12,"normal"),
     background: "url(eclntjsfserver/images/metro_right.png) no-repeat center, #404040",
     borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:0, insetRight: 0, insetBottom: 0, insetLeft: 0,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -156,6 +166,7 @@ RISCSTYLE.riscadaptivesplitarea_divider_horizontal_opened =
     font: new RISCFont("Open Sans",12,"normal"),
     background: "url(eclntjsfserver/images/metro_left.png) no-repeat center, #404040",
     borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:0, insetRight: 0, insetBottom: 0, insetLeft: 0,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -165,6 +176,7 @@ RISCSTYLE.riscadaptivesplitarea_divider_vertical_closed =
     font: new RISCFont("Open Sans",12,"normal"),
     background: "url(eclntjsfserver/images/metro_down.png) no-repeat center, #404040",
     borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:0, insetRight: 0, insetBottom: 0, insetLeft: 0,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -174,6 +186,7 @@ RISCSTYLE.riscadaptivesplitarea_divider_vertical_opened =
     font: new RISCFont("Open Sans",12,"normal"),
     background: "url(eclntjsfserver/images/metro_up.png) no-repeat center, #404040",
     borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:0, insetRight: 0, insetBottom: 0, insetLeft: 0,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -190,6 +203,7 @@ RISCSTYLE.riscadaptivetoolbar_menuicon =
     font: new RISCFont("Open Sans",12,"normal"),
     background: "#DDDDDD",
     borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:3, insetRight: 10, insetBottom: 4, insetLeft: 10,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -198,6 +212,24 @@ RISCSTYLE.riscadaptivetoolbar_popuptable =
 {
     background: "#FFFFFF",
     borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
+    insetTop:10, insetRight: 10, insetBottom: 10, insetLeft: 10,
+    generated: true
+};
+RISCSTYLE.riscaweseomfonticon = 
+{
+    font: new RISCFont("Open Sans",12,"normal"),
+    background: "#DDDDDD",
+    borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
+    insetTop:3, insetRight: 10, insetBottom: 4, insetLeft: 10,
+    _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
+    generated: true
+};
+RISCSTYLE.riscbox = 
+{
+    background: "#FFFFFF",
+    borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:10, insetRight: 10, insetBottom: 10, insetLeft: 10,
     generated: true
 };
@@ -213,6 +245,7 @@ RISCSTYLE.riscbutton =
     font: new RISCFont("Open Sans",12,"normal"),
     background: "#DDDDDD",
     borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:3, insetRight: 10, insetBottom: 4, insetLeft: 10,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -222,7 +255,28 @@ RISCSTYLE.riscbutton_nofill =
     font: new RISCFont("Open Sans",12,"normal"),
     background: "transparent",
     borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:4, insetRight: 3, insetBottom: 4, insetLeft: 3,
+    _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
+    generated: true
+};
+RISCSTYLE.riscbuttoncopypasteactivation_off = 
+{
+    font: new RISCFont("Open Sans",12,"normal"),
+    background: "#DDDDDD",
+    borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
+    insetTop:3, insetRight: 10, insetBottom: 4, insetLeft: 10,
+    _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
+    generated: true
+};
+RISCSTYLE.riscbuttoncopypasteactivation_on = 
+{
+    font: new RISCFont("Open Sans",12,"normal"),
+    background: "#DDDDDD",
+    borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
+    insetTop:3, insetRight: 10, insetBottom: 4, insetLeft: 10,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
 };
@@ -278,6 +332,7 @@ RISCSTYLE.risccloseicon =
     font: new RISCFont("Open Sans",12,"normal"),
     background: "url(eclntjsfserver/images/window_close_metro.png) no-repeat center",
     borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:2, insetRight: 2, insetBottom: 2, insetLeft: 2,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -334,7 +389,42 @@ RISCSTYLE.riscdateselection =
 };
 RISCSTYLE.riscdateselection_datebutton = 
 {
-    font: new RISCFont("Open Sans",12,"bold"),
+    font: new RISCFont("Open Sans",12,"normal"),
+    background: "transparent",
+    borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
+    insetTop:4, insetRight: 3, insetBottom: 4, insetLeft: 3,
+    _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
+    generated: true
+};
+RISCSTYLE.riscdateselection_datebutton_monthnext = 
+{
+    background: "url(eclntjsfserver/images/control_play.png) no-repeat center, #E0E0E0",
+    generated: true
+};
+RISCSTYLE.riscdateselection_datebutton_monthprev = 
+{
+    font: new RISCFont("Open Sans",12,"normal"),
+    background: "url(eclntjsfserver/images/control_playbackwards.png) no-repeat center, #E0E0E0",
+    borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
+    insetTop:4, insetRight: 3, insetBottom: 4, insetLeft: 3,
+    _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
+    generated: true
+};
+RISCSTYLE.riscdateselection_datebutton_yearnext = 
+{
+    background: "url(eclntjsfserver/images/control_play.png) no-repeat center, #E0E0E0",
+    generated: true
+};
+RISCSTYLE.riscdateselection_datebutton_yearprev = 
+{
+    font: new RISCFont("Open Sans",12,"normal"),
+    background: "url(eclntjsfserver/images/control_playbackwards.png) no-repeat center, #E0E0E0",
+    borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
+    insetTop:4, insetRight: 3, insetBottom: 4, insetLeft: 3,
+    _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
 };
 RISCSTYLE.riscdefault = 
@@ -361,6 +451,7 @@ RISCSTYLE.riscdialogdecoration_closeicon =
     font: new RISCFont("Open Sans",12,"normal"),
     background: "transparent",
     borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:2, insetRight: 2, insetBottom: 2, insetLeft: 2,
     _closeIconImage:"eclntjsfserver/images/window_close_metro.png",
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
@@ -426,6 +517,7 @@ RISCSTYLE.riscfileselectiondialog_cancelbutton =
     font: new RISCFont("Open Sans",12,"normal"),
     background: "#DDDDDD",
     borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:3, insetRight: 10, insetBottom: 4, insetLeft: 10,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -445,6 +537,7 @@ RISCSTYLE.riscfileselectiondialog_selectbutton =
     font: new RISCFont("Open Sans",12,"normal"),
     background: "#DDDDDD",
     borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:3, insetRight: 10, insetBottom: 4, insetLeft: 10,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -454,6 +547,7 @@ RISCSTYLE.riscfileselectiondialog_uploadbutton =
     font: new RISCFont("Open Sans",12,"normal"),
     background: "#DDDDDD",
     borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:3, insetRight: 10, insetBottom: 4, insetLeft: 10,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -470,12 +564,14 @@ RISCSTYLE.riscflexgridrowselector =
     font: new RISCFont("Open Sans",12,"normal"),
     background: "rgba(0,0,0,0.02)",
     borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:3, insetRight: 10, insetBottom: 4, insetLeft: 10,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
 };
 RISCSTYLE.riscfoldablepane = 
 {
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     _imageOpened:"eclntjsfserver/images/metro_up.png",
     _imageClosed:"eclntjsfserver/images/metro_down.png",
     generated: true
@@ -492,6 +588,7 @@ RISCSTYLE.riscfoldablepane_titlebutton =
     font: new RISCFont("Open Sans",15,"bold"),
     background: "transparent",
     borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:0, insetRight: 0, insetBottom: 0, insetLeft: 0,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -509,6 +606,7 @@ RISCSTYLE.riscfoldablepane_toppane_closed =
 RISCSTYLE.riscfoldablepane_light = 
 {
     borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     _imageOpened:"eclntjsfserver/images/metro_up_dark.png",
     _imageClosed:"eclntjsfserver/images/metro_down_dark.png",
     generated: true
@@ -524,6 +622,7 @@ RISCSTYLE.riscfoldablepane_light_titlebutton =
     font: new RISCFont("Open Sans",15,"bold"),
     background: "transparent",
     borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:0, insetRight: 0, insetBottom: 0, insetLeft: 0,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -538,6 +637,11 @@ RISCSTYLE.riscfoldablepane_light_toppane_closed =
     insetTop:3, insetRight: 10, insetBottom: 4, insetLeft: 10,
     generated: true
 };
+RISCSTYLE.riscfoldableverticalpane = 
+{
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
+    generated: true
+};
 RISCSTYLE.riscfoldableverticalpane_contentpane = 
 {
     background: "#FFFFFF",
@@ -550,13 +654,14 @@ RISCSTYLE.riscfoldableverticalpane_titlebutton =
     font: new RISCFont("Open Sans",15,"bold"),
     background: "transparent",
     borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:0, insetRight: 0, insetBottom: 0, insetLeft: 0,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
 };
 RISCSTYLE.riscfoldableverticalpane_toppane = 
 {
-    insetTop:10, insetRight: 3, insetBottom: 10, insetLeft: 4,
+    insetTop:6, insetRight: 3, insetBottom: 10, insetLeft: 4,
     generated: true
 };
 RISCSTYLE.riscfoldermenuitem = 
@@ -599,6 +704,7 @@ RISCSTYLE.riscicon =
     font: new RISCFont("Open Sans",12,"normal"),
     background: "transparent",
     borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:2, insetRight: 2, insetBottom: 2, insetLeft: 2,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -608,6 +714,7 @@ RISCSTYLE.riscicon_nofill =
     font: new RISCFont("Open Sans",12,"normal"),
     background: "transparent",
     borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:2, insetRight: 2, insetBottom: 2, insetLeft: 2,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -620,15 +727,19 @@ RISCSTYLE.riscimage =
     generated: true
 };
 RISCSTYLE._backgroundModifierFormatMandatory = "url(eclntjsfserver/images/deco_mandatory_risc.png) no-repeat right top, linear-gradient(to bottom, rgba(0,0,255,0.35) 0%,rgba(0,0,255,0.0) 5px) no-repeat";
-RISCSTYLE._backgroundModifierGridSelection = "linear-gradient(to bottom, rgba(51,96,127,0.25),rgba(51,96,127,0.25))";
+RISCSTYLE._fixgridScrollbarSizeDesktop = "16";
 RISCSTYLE._backgroundModifierFormatError = "url(eclntjsfserver/images/deco_error_risc.png) no-repeat right top, linear-gradient(to bottom, rgba(255,0,0,0.35) 0%,rgba(255,0,0,0.0) 5px) no-repeat";
 RISCSTYLE._backgroundModifierGridOdd = "linear-gradient(to bottom, rgba(0,0,0,0.02),rgba(0,0,0,0.02))";
-RISCSTYLE._backgroundModifierDisabled = "linear-gradient(to bottom, rgba(0,0,0,0.035),rgba(0,0,0,0.035))";
-RISCSTYLE._backgroundModifierActive = "linear-gradient(to bottom, rgba(255,128,0,0.2),rgba(255,128,0,0.2))";
+RISCSTYLE._backgroundModifierPaintAreaItemSelection = "linear-gradient(to bottom, rgba(255,128,0,0.1),rgba(255,128,0,0.1))";
+RISCSTYLE._fixgridScrollbarSizeTouch = "25";
 RISCSTYLE._backgroundModifierFocus = "linear-gradient(to bottom, rgba(255,255,0,0.15),rgba(255,255,0,0.15))";
 RISCSTYLE._backgroundModifierHover = "linear-gradient(to bottom, rgba(0,0,0,0.1),rgba(0,0,0,0.1))";
-RISCSTYLE.defaultFont = new RISCFont("Open Sans" ,12);
 RISCSTYLE.replaceImageNames = true;
+RISCSTYLE._backgroundModifierGridSelection = "linear-gradient(to bottom, rgba(51,96,127,0.25),rgba(51,96,127,0.25))";
+RISCSTYLE._backgroundModifierDisabled = "linear-gradient(to bottom, rgba(0,0,0,0.035),rgba(0,0,0,0.035))";
+RISCSTYLE._touchSupport = "false";
+RISCSTYLE._backgroundModifierActive = "linear-gradient(to bottom, rgba(255,128,0,0.2),rgba(255,128,0,0.2))";
+RISCSTYLE.defaultFont = new RISCFont("Open Sans" ,12);
 RISCSTYLE.risckeyboardscanner = 
 {
     background: "transparent",
@@ -661,6 +772,7 @@ RISCSTYLE.risclink =
     font: new RISCFont("Open Sans",12,"normal"),
     background: "transparent",
     borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:2, insetRight: 0, insetBottom: 2, insetLeft: 0,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -689,18 +801,20 @@ RISCSTYLE.risclongtextfield_field_field =
 };
 RISCSTYLE.riscmenu = 
 {
+    background: "#FFFFFF",
     borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
-    insetTop:3, insetRight: 3, insetBottom: 3, insetLeft: 3,
+    insetTop:3, insetRight: 2, insetBottom: 3, insetLeft: 2,
     generated: true
 };
 RISCSTYLE.riscmenubar = 
 {
-    insetTop:3, insetRight: 3, insetBottom: 3, insetLeft: 8,
+    background: "#EEEEEE",
+    insetTop:3, insetRight: 3, insetBottom: 3, insetLeft: 5,
     generated: true
 };
 RISCSTYLE.riscmenubaritem = 
 {
-    insetTop:2, insetRight: 8, insetBottom: 2, insetLeft: 0,
+    insetTop:2, insetRight: 4, insetBottom: 2, insetLeft: 4,
     generated: true
 };
 RISCSTYLE.riscmenuitem = 
@@ -720,6 +834,7 @@ RISCSTYLE.riscmovecontainer_naviconleft =
     font: new RISCFont("Open Sans",12,"normal"),
     background: "url(eclntjsfserver/images/tabbedline_lefticon.png) no-repeat center",
     borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:0, insetRight: 0, insetBottom: 0, insetLeft: 0,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -729,6 +844,7 @@ RISCSTYLE.riscmovecontainer_naviconright =
     font: new RISCFont("Open Sans",12,"normal"),
     background: "url(eclntjsfserver/images/tabbedline_righticon.png) no-repeat center",
     borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:0, insetRight: 0, insetBottom: 0, insetLeft: 0,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -743,6 +859,7 @@ RISCSTYLE.riscoutlookbar_button =
     font: new RISCFont("Open Sans",15),
     background: "#404040",
     borderTop:0, borderRight: 0, borderBottom: 1, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:9, insetRight: 12, insetBottom: 10, insetLeft: 12,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -752,6 +869,7 @@ RISCSTYLE.riscoutlookbar_button_selected =
     font: new RISCFont("Open Sans",15,"bold"),
     background: "#404040",
     borderTop:0, borderRight: 0, borderBottom: 1, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:9, insetRight: 12, insetBottom: 10, insetLeft: 12,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -766,6 +884,7 @@ RISCSTYLE.riscpdfprinterpopup_button_notprinted =
     font: new RISCFont("Open Sans",12,"normal"),
     background: "#800000",
     borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:3, insetRight: 10, insetBottom: 4, insetLeft: 10,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -775,6 +894,7 @@ RISCSTYLE.riscpdfprinterpopup_button_printed =
     font: new RISCFont("Open Sans",12,"normal"),
     background: "#008000",
     borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:3, insetRight: 10, insetBottom: 4, insetLeft: 10,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -797,6 +917,7 @@ RISCSTYLE.riscpdfprinterpopup_openlink =
     font: new RISCFont("Open Sans",12,"normal"),
     background: "transparent",
     borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:2, insetRight: 0, insetBottom: 2, insetLeft: 0,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -830,7 +951,7 @@ RISCSTYLE.riscschedule =
 };
 RISCSTYLE.riscschedule_blockline = 
 {
-    background: "#C0C0C0",
+    background: "rgba(0,0,0,0.1)",
     borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
     insetTop:0, insetRight: 0, insetBottom: 0, insetLeft: 0,
     generated: true
@@ -875,6 +996,12 @@ RISCSTYLE.riscscrollcontainer =
     borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
     generated: true
 };
+RISCSTYLE.riscscrollcontainer_scrollindicator = 
+{
+    _scrollindicatorWidth:"32",
+    _scrollindicatorHeight:"32",
+    generated: true
+};
 RISCSTYLE.riscscrollnotifier = 
 {
     background: "#FF0000",
@@ -885,6 +1012,7 @@ RISCSTYLE.riscselector_button =
     font: new RISCFont("Open Sans",12,"normal"),
     background: "#DDDDDD",
     borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:3, insetRight: 10, insetBottom: 4, insetLeft: 10,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -969,6 +1097,7 @@ RISCSTYLE.risctabbedline_button =
     font: new RISCFont("Open Sans",15,"normal"),
     background: "#707070",
     borderTop:0, borderRight: 1, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:3, insetRight: 6, insetBottom: 4, insetLeft: 6,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -978,6 +1107,7 @@ RISCSTYLE.risctabbedline_button_selected =
     font: new RISCFont("Open Sans",15,"bold"),
     background: "#707070",
     borderTop:0, borderRight: 1, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:3, insetRight: 6, insetBottom: 4, insetLeft: 6,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -1002,6 +1132,7 @@ RISCSTYLE.risctabbedlinevertical_button =
     font: new RISCFont("Open Sans",15,"normal"),
     background: "#707070",
     borderTop:0, borderRight: 0, borderBottom: 1, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:3, insetRight: 6, insetBottom: 4, insetLeft: 6,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -1011,8 +1142,14 @@ RISCSTYLE.risctabbedlinevertical_button_selected =
     font: new RISCFont("Open Sans",15,"bold"),
     background: "#707070",
     borderTop:0, borderRight: 0, borderBottom: 1, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:3, insetRight: 6, insetBottom: 4, insetLeft: 6,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
+    generated: true
+};
+RISCSTYLE.risctabbedpane = 
+{
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     generated: true
 };
 RISCSTYLE.risctabbedpane_content = 
@@ -1032,6 +1169,7 @@ RISCSTYLE.risctabbedpane_tabbedline_button =
     font: new RISCFont("Open Sans",15,"normal"),
     background: "#707070",
     borderTop:0, borderRight: 1, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:3, insetRight: 6, insetBottom: 4, insetLeft: 6,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -1041,6 +1179,7 @@ RISCSTYLE.risctabbedpane_tabbedline_button_selected =
     font: new RISCFont("Open Sans",15,"bold"),
     background: "#707070",
     borderTop:0, borderRight: 1, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:3, insetRight: 6, insetBottom: 4, insetLeft: 6,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -1053,6 +1192,11 @@ RISCSTYLE.risctabbedpane_tabbedline_content =
 RISCSTYLE.risctabbedpane_tabbedline_menuicon = 
 {
     background: "url(eclntjsfserver/images/tabbedline_icon.png) no-repeat center",
+    generated: true
+};
+RISCSTYLE.risctabbedpane_ribbon = 
+{
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     generated: true
 };
 RISCSTYLE.risctabbedpane_ribbon_content = 
@@ -1072,6 +1216,7 @@ RISCSTYLE.risctabbedpane_ribbon_tabbedline_button =
     font: new RISCFont("Open Sans",15,"normal"),
     background: "#707070",
     borderTop:0, borderRight: 1, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:3, insetRight: 6, insetBottom: 4, insetLeft: 6,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -1081,6 +1226,7 @@ RISCSTYLE.risctabbedpane_ribbon_tabbedline_button_selected =
     font: new RISCFont("Open Sans",15,"bold"),
     background: "#EAEAEA",
     borderTop:0, borderRight: 1, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:3, insetRight: 6, insetBottom: 4, insetLeft: 6,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -1093,6 +1239,39 @@ RISCSTYLE.risctabbedpane_ribbon_tabbedline_content =
 RISCSTYLE.risctabbedpane_ribbon_tabbedline_menuicon = 
 {
     background: "url(eclntjsfserver/images/tabbedline_icon.png) no-repeat center",
+    generated: true
+};
+RISCSTYLE.risctextareawithcomment = 
+{
+    borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
+    generated: true
+};
+RISCSTYLE.risctextareawithcomment_textareacomment = 
+{
+    font: new RISCFont("Open Sans",12),
+    background: "#FFFFFF",
+    borderTop:0, borderRight: 1, borderBottom: 0, borderLeft: 0,
+    generated: true
+};
+RISCSTYLE.risctextareawithcomment_textareacomment_field = 
+{
+    font: new RISCFont("Open Sans",12),
+    background: "transparent",
+    insetTop:4, insetRight: 0, insetBottom: 3, insetLeft: 0,
+    generated: true
+};
+RISCSTYLE.risctextareawithcomment_textareaedit = 
+{
+    font: new RISCFont("Open Sans",12),
+    background: "#FFFFFF",
+    borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    generated: true
+};
+RISCSTYLE.risctextareawithcomment_textareaedit_field = 
+{
+    font: new RISCFont("Open Sans",12),
+    background: "transparent",
+    insetTop:4, insetRight: 0, insetBottom: 3, insetLeft: 0,
     generated: true
 };
 RISCSTYLE.risctextpane = 
@@ -1112,7 +1291,7 @@ RISCSTYLE.risctouchfieldgeneric =
 {
     background: "#d0d0d0",
     borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
-    insetTop:5, insetRight: 5, insetBottom: 5, insetLeft: 5,
+    insetTop:2, insetRight: 2, insetBottom: 2, insetLeft: 2,
     generated: true
 };
 RISCSTYLE.risctouchfieldgeneric_button = 
@@ -1120,7 +1299,7 @@ RISCSTYLE.risctouchfieldgeneric_button =
     font: new RISCFont("Open Sans",15,"bold"),
     background: "#f0f0f0",
     borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
-    marginTop:2, marginRight: 2, marginBottom: 2, marginLeft: 2,
+    marginTop:1, marginRight: 1, marginBottom: 0, marginLeft: 0,
     insetTop:0, insetRight: 0, insetBottom: 0, insetLeft: 0,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -1130,7 +1309,7 @@ RISCSTYLE.risctouchfieldgeneric_button_function =
     font: new RISCFont("Open Sans",15,"bold"),
     background: "#dddddd",
     borderTop:1, borderRight: 1, borderBottom: 1, borderLeft: 1,
-    marginTop:2, marginRight: 2, marginBottom: 2, marginLeft: 2,
+    marginTop:1, marginRight: 1, marginBottom: 0, marginLeft: 0,
     insetTop:0, insetRight: 0, insetBottom: 0, insetLeft: 0,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -1195,6 +1374,7 @@ RISCSTYLE.tabbedline_cctl01_button =
     font: new RISCFont("Open Sans",12,"normal"),
     background: "linear-gradient(to bottom,#d0d0d0,#eeeeee)",
     borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:6, insetRight: 10, insetBottom: 6, insetLeft: 10,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -1204,6 +1384,7 @@ RISCSTYLE.tabbedline_cctl01_button_selected =
     font: new RISCFont("Open Sans",12,"bold"),
     background: "linear-gradient(to bottom,#75b4e9,#cffafd)",
     borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:6, insetRight: 10, insetBottom: 6, insetLeft: 10,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -1229,6 +1410,7 @@ RISCSTYLE.tabbedline_cctl02_button =
     font: new RISCFont("Open Sans",12,"normal"),
     background: "linear-gradient(to bottom,#d0d0d0,#eeeeee)",
     borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:6, insetRight: 10, insetBottom: 6, insetLeft: 10,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -1238,6 +1420,7 @@ RISCSTYLE.tabbedline_cctl02_button_selected =
     font: new RISCFont("Open Sans",12,"bold"),
     background: "linear-gradient(to bottom,#804040,#db4040)",
     borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:6, insetRight: 10, insetBottom: 6, insetLeft: 10,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -1290,6 +1473,42 @@ RISCSTYLE.tabbedline_cctl04_menuicon =
     background: "url(eclntjsfserver/images/tabbedline_icon.png) no-repeat center",
     generated: true
 };
+RISCSTYLE.tabbedline_cctl05 = 
+{
+    background: "#FFFFFF",
+    insetTop:0, insetRight: 14, insetBottom: 0, insetLeft: 4,
+    generated: true
+};
+RISCSTYLE.tabbedline_cctl05_button = 
+{
+    font: new RISCFont("Open Sans",15,"normal"),
+    background: "#FFFFFF",
+    borderTop:0, borderRight: 0, borderBottom: 4, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
+    insetTop:3, insetRight: 6, insetBottom: 4, insetLeft: 6,
+    _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
+    generated: true
+};
+RISCSTYLE.tabbedline_cctl05_button_selected = 
+{
+    font: new RISCFont("Open Sans",15,"bold"),
+    background: "#FFFFFF",
+    borderTop:0, borderRight: 0, borderBottom: 4, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
+    insetTop:3, insetRight: 6, insetBottom: 4, insetLeft: 6,
+    _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
+    generated: true
+};
+RISCSTYLE.tabbedline_cctl05_content = 
+{
+    background: "#FFFFFF",
+    generated: true
+};
+RISCSTYLE.tabbedline_cctl05_menuicon = 
+{
+    background: "url(eclntjsfserver/images/tabbedline_icon.png) no-repeat center",
+    generated: true
+};
 RISCSTYLE.tabbedline_cctlbreadcrumb01 = 
 {
     background: "transparent",
@@ -1301,6 +1520,7 @@ RISCSTYLE.tabbedline_cctlbreadcrumb01_button =
     font: new RISCFont("Open Sans",12,"normal"),
     background: "url(eclntjsfserver/images/control_play.png) no-repeat left",
     borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:3, insetRight: 6, insetBottom: 3, insetLeft: 20,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true
@@ -1310,6 +1530,7 @@ RISCSTYLE.tabbedline_cctlbreadcrumb01_button_selected =
     font: new RISCFont("Open Sans",12,"bold"),
     background: "url(eclntjsfserver/images/control_play.png) no-repeat left, rgba(0,0,0,0.2)",
     borderTop:0, borderRight: 0, borderBottom: 0, borderLeft: 0,
+    marginTop:0, marginRight: 0, marginBottom: 0, marginLeft: 0,
     insetTop:3, insetRight: 6, insetBottom: 3, insetLeft: 20,
     _backgroundModifierFocus:"linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))",
     generated: true

@@ -1,8 +1,11 @@
 package model.arbeit;
 
-import model.common.ValueObject;
-import model.material.Geraet;
+import javax.persistence.Entity;
 
+import model.common.ValueObject;
+import ui.model.Geraet;
+
+@Entity
 public class Stoerung extends ValueObject {
 
 	private Geraet geraet;

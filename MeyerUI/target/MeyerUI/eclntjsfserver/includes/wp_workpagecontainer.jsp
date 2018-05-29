@@ -12,6 +12,7 @@
 <h:form>
 <f:subview id="wp_2">
 <t:row id="g_21">
+  <t:blockablearea id="g_ba1" width="100%" height="100%" blocked="#{OBJECTBINDING.currentWorkpage.blocked}">
   <t:pane id="g_22" actionListener="#{OBJECTBINDING.onPageAction}"
                     height="100%" 
                     width="100%" 
@@ -29,6 +30,7 @@
       </t:pane>
     </t:row>
   </t:pane>
+  </t:blockablearea>
 </t:row>
 <t:pageaddons/>
 </f:subview>

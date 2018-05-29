@@ -2,8 +2,11 @@ package model.arbeit;
 
 import java.util.Date;
 
+import javax.persistence.Entity;
+
 import model.common.ValueObject;
 
+@Entity
 public class Termin extends ValueObject {
 
 	private Date vonZeit;

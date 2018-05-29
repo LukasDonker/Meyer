@@ -1,0 +1,570 @@
+.ccRed
+{
+    background-color: #FF0000;
+}
+
+/* ----------------------------------------------------------------------------
+    HIGHLIGHTING
+   ---------------------------------------------------------------------------- */
+.cchla.cchlb.cchlc.cchld.cchle
+{
+	background-color: #FFFFC0;
+}
+
+/* ----------------------------------------------------------------------------
+    SORTING
+   ---------------------------------------------------------------------------- */
+
+.sapMBtn.ccSort
+{
+    width: 100%;
+    border-width: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.sapMBtn.ccSort > .sapMBtnDefault.sapMBtnInner 
+{
+    height: 1.5rem;
+	width: 100%;
+    border-width: 0;
+    padding: 0;
+    text-align: left;
+    background-color: transparent;
+}
+
+.sapMBtn.ccSort * .sapMBtnContent
+{
+    width: 100%;
+    border-width: 0;
+    padding: 0;
+    text-align: left;
+    background-color: transparent;
+}
+
+.sapMBtn.ccSort.ccSortDescending > .sapMBtnDefault.sapMBtnInner 
+{
+    background-image: url("../../eclntjsfserver/images/sort_down.png");
+    background-repeat: no-repeat;
+    background-position: center top; 
+}
+
+.sapMBtn.ccSort.ccSortAscending > .sapMBtnDefault.sapMBtnInner 
+{
+    background-image: url("../../eclntjsfserver/images/sort_up.png");
+    background-repeat: no-repeat;
+    background-position: center top; 
+}
+
+/* ----------------------------------------------------------------------------
+    FOLDABLEs
+   ---------------------------------------------------------------------------- */
+   
+.cc_foldable_pane_outerpane
+{
+    border-style: solid;
+    border-color: rgba(0,0,0,0.2);
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}   
+.cc_foldable_pane_headerpane
+{
+    background-color: #f2f2f2;	
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}   
+   
+/* ----------------------------------------------------------------------------
+    FIXGRIDs
+   ---------------------------------------------------------------------------- */
+
+.ccGridscrollpane
+{
+	width:100%;
+    border-style: solid;
+    border-color: rgba(0,0,0,0.2);
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+    overflow-x:auto;
+    overflow-y:hidden;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+.ccBorderedLeftCell
+{
+    border-style: solid;
+    border-color: rgba(0,0,0,0.2);
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    padding: 3px;
+}
+.ccBorderedCell
+{
+    border-style: solid;
+    border-color: rgba(0,0,0,0.2);
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 1px;
+    border-right-width: 0px;
+}
+
+.ccFixgridcell
+{
+	background-color: transparent;
+	border-width: 3px;
+	border-color: transparent;
+	border-style: solid;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.sapUiTf.sapUiTfStd.ccFixgridcell
+{
+    background-color: transparent;
+    border-color: transparent;
+}
+
+.ccFixgridcell.ccGridheaderlabel
+{
+    background-color: #e5e5e5;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.ccGridheaderlabelText
+{
+    color: #667ba5;
+    font-weight: bold;
+    padding-left: 2px;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.ccFixgridcell.ccGridheaderlabel.ccSortascending
+{
+    background-color: #e5e5e5;
+    color: #667ba5;
+    font-weight: bold;
+    background-image: url("../eclntjsfserver/images/sort_down.png");
+    background-repeat: no-repeat;
+    background-position: center top; 
+}
+
+.ccFixgridcell.ccGridheaderlabel.ccSortdescending
+{
+    background-color: #e5e5e5;
+    color: #667ba5;
+    font-weight: bold;
+    background-image: url("../eclntjsfserver/images/sort_up.png");
+    background-repeat: no-repeat;
+    background-position: center top; 
+}
+
+.ccSimpleborder
+{
+    border-style: solid;
+    border-color: rgba(0,0,0,0.2);
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-left-width: 1px;
+    border-right-width: 1px;
+}
+.ccNoborder
+{
+    border-style: solid;
+    border-color: transparent;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+
+.ccLabelmini
+{
+	font-size: 1px;
+}
+.sapMLabel.ccLabelmini
+{
+    font-size: 1px;
+}
+
+/* OUTLOOKBAR --------------------------------------------------------------- */
+.sapUiBtn.sapUiBtnStd.sapUiBtnNorm.ccOutlookbaritem
+{
+	background-color: #f2f2f2;
+	color: #C0C0C0;
+}
+.sapUiBtn.sapUiBtnStd.sapUiBtnNorm.ccOutlookbaritemselected
+{
+    background-color: #e6f2f9;
+    color: #000000;
+}
+
+.ccDisplaynone
+{
+	display:none
+}
+
+/* TABBEDLINE -------------------------------------------------------------- */
+.sapUiBtn.sapUiBtnStd.sapUiBtnLite.ccTabbedlinetabSelected
+{
+	color: #000000;
+	background-color: #e6f2f9;
+}
+.sapUiBtn.sapUiBtnStd.sapUiBtnLite.ccTabbedlinetabUnselected
+{
+    color: #C0C0C0;
+    background-color: #f2f2f2;
+}
+.sapUiBtnFoc.sapUiBtn.sapUiBtnStd.sapUiBtnLite.ccTabbedlinetabSelected
+{
+    color: #000000;
+    background-color: #e6f2f9;
+}
+.sapUiBtnFoc.sapUiBtn.sapUiBtnStd.sapUiBtnLite.ccTabbedlinetabUnselected
+{
+    color: #C0C0C0;
+    background-color: #f2f2f2;
+}
+
+.ccVBox
+{
+	overflow: hidden;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.ccTable
+{
+	display: table;
+}
+.ccTableCell
+{
+	display: table-cell;
+	height: 100%;
+}
+
+.ccSimpleLabel
+{
+	white-space: nowrap;
+	padding-top:1px;
+	padding-bottom: 1px;
+	font-size: 12px;
+}
+
+/* TITLEBAR ---------------------------------------------------------------- */
+.cc_pane_titlebar
+{
+	background-color: #e5e5e5;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.ccSimpleLabel.cc_label_titlebar
+{
+    white-space: nowrap;
+    padding-top:3px;
+    padding-bottom: 3px;
+    font-size: 18px;
+    color: #666666;
+}
+
+.ccVBox.ccScrollbar
+{
+    background-color: #f2f2f2;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* Pseudo Scrollbar --------------------------------------------------------- */
+.ccPseudoScrollbarTable
+{
+    padding-top: 0px;
+    padding-bottom: 0px;
+	padding-left: 0px;
+    padding-right: 0px;
+    border-left-width: 0px;
+    border-right-width: 1px;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-style: solid;
+    border-color:  rgba(0,0,0,0.2);
+	height: 100%;
+	width: 100%;
+    background-color: #f2f2f2;
+}
+.ccPseudoScrollbarInnerTable
+{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+}
+.ccPseudoScrollbarInnerTableTd
+{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+}
+.ccPseudoScrollbarScroller
+{
+    background-color: #cacaca;
+    padding: 0px;
+}
+.ccPseudoScrollbarTop
+{
+    width: 100%;
+    padding: 0px;
+    border-width:0px;
+}
+.ccPseudoScrollbarBottom
+{
+    width: 100%;
+    padding: 0px;
+    border-width:0px;
+}
+.ccPseudoScrollbarTopArrow
+{
+	font-size: 1px;
+    background-color: #f2f2f2;
+	height:16px;
+	width: 100%;
+    padding: 0px;
+    border-width:0px;
+    border-width:0px;
+    border-bottom-width: 1px;
+    border-color:  rgba(0,0,0,0.2);
+    border-style: solid;
+    background-image: url("../eclntjsfserver/images/sort_down.png");
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+.ccPseudoScrollbarBottomArrow
+{
+    font-size: 1px;
+	background-color: #f2f2f2;
+	height:16px;
+    width: 100%;
+    padding: 0px;
+    border-width:0px;
+    border-top-width: 1px;
+    border-color:  rgba(0,0,0,0.2);
+    border-style: solid;
+    background-image: url("../eclntjsfserver/images/sort_up.png");
+    background-repeat: no-repeat;
+    background-position: center; 
+}
+
+/* GRIDTABLE ------------------------------------------------------------------- */
+.ccGridTableTable
+{
+	table-layout:fixed;
+}
+.ccGridTableRow
+{
+    height:20px;
+	background-color: transparent;
+}
+.ccGridTableRow.ccRowselected
+{
+    height:20px;
+	background-color: #FFC080;
+}
+.ccGridTableRow.ccBorderedTopRow
+{
+    border-style: solid;
+    border-color: rgba(0,0,0,0.2);
+    border-top-width: 0px;
+    border-bottom-width: 1px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+.ccGridTableRow.ccBorderedRow
+{
+    border-style: solid;
+    border-color: rgba(0,0,0,0.2);
+    border-top-width: 0px;
+    border-bottom-width: 1px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+.ccGridTableCell
+{
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+	border-style: solid;
+    border-color: rgba(0,0,0,0.2);
+    border-top-width: 0px;
+    border-bottom-width: 0px;
+    border-left-width: 0px;
+    border-right-width: 0px;
+}
+
+.ccGridcolSizer
+{
+	background-color: rgba(0,0,0,0.1);
+	height: 15px;
+	width: 5px;
+	cursor: e-resize;
+	z-index: 1000;
+}
+
+/* TREENODE -------------------------------------------------------------------- */
+.ccTreeNodeTable
+{
+	table-layout: fixed;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    height: 100%;
+}
+.ccTreenodeDistanceTd
+{
+}
+.ccTreeNodeIconTd
+{
+	width: 20px;
+	height:100%;
+}
+.ccTreeNodeIconImage
+{
+	cursor: pointer;
+}
+.ccTreeNodeTextTd
+{
+	width: 100%;
+	font-size: 12px;
+}
+
+
+.ccStackPaneDDVerticalLine
+{
+	position: absolute;
+	width: 1px;
+	height: 100%;
+	background-color: #C0C0C0;
+	top: 0px;
+    z-index: 1000;
+}
+.ccStackPaneDDHorizontalLine
+{
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: #C0C0C0;
+    left: 0px;
+    z-index: 1000;
+}
+
+.ccAnimation
+{
+    -webkit-animation: ccAnimationKeyframes 1s 0s 1 linear normal;
+    -moz-animation: ccAnimationKeyframes 1s 0s 1 linear normal;
+    -ms-animation: ccAnimationKeyframes 1s 0s 1 linear normal;
+    -o-animation: ccAnimationKeyframes 1s 0s 1 linear normal;
+    animation: ccAnimationKeyframes 1s 0s 1 linear normal;
+}
+@-webkit-keyframes ccAnimationKeyframes 
+{
+  0% { opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+@keyframes ccAnimationKeyframes 
+{
+  0% { opacity: 0; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.ccAnimationRotate
+{
+    -webkit-animation: ccAnimationRotateKeyframes 1s 0s 1 linear normal;
+    -moz-animation: ccAnimationRotateKeyframes 1s 0s 1 linear normal;
+    -ms-animation: ccAnimationRotateKeyframes 1s 0s 1 linear normal;
+    -o-animation: ccAnimationRotateKeyframes 1s 0s 1 linear normal;
+    animation: ccAnimationRotateKeyframes 1s 0s 1 linear normal;
+}
+@-webkit-keyframes ccAnimationRotateKeyframes 
+{
+  0%
+  { 
+    -webkit-transform: rotate(0deg);
+  }
+  50% 
+  { 
+    -webkit-transform: rotate(180deg);
+  }
+  100%
+  { 
+    -webkit-transform: rotate(360deg);
+  }
+}
+@keyframes ccAnimationRotateKeyframes 
+{
+  0%
+  { 
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+     transform: rotate(0deg);
+  }
+  50% 
+  { 
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+     transform: rotate(180deg);
+  }
+  100%
+  { 
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+     transform: rotate(360deg);
+  }
+}
+
+/* DUMMY */
+.greenbackground
+{
+    background-color: #2e642e;
+    background: -ms-linear-gradient(top,#718a71 0,#2e642e 100%);
+    background: -webkit-gradient(linear,right top,right bottom,color-stop(0,#718a71), color-stop(1,#2e642e));
+    background: -webkit-linear-gradient(top,#718a71 0,#2e642e 100%);
+    background: linear-gradient( to bottom, #718a71, #2e642e);
+    xxbackground: linear-gradient(top,#718a71 0,#2e642e 100%)
+}

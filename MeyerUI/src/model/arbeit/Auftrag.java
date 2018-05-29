@@ -2,10 +2,13 @@ package model.arbeit;
 
 import java.util.List;
 
+import javax.persistence.Entity;
+
 import model.common.ValueObject;
 import model.ort.Einsatzort;
-import model.person.Disponent;
+import ui.model.Disponent;
 
+@Entity
 public class Auftrag extends ValueObject {
 
 	private Long tsNummer;
@@ -14,7 +17,6 @@ public class Auftrag extends ValueObject {
 	private boolean abgeschlossen;
 	private Disponent disponent;
 	private boolean garantieAntrag;
-	private List<Einsatz> listeEinsatz;
 	private List<WeitererEinsatz> listeWeitereEinsätze;
 	
 	public Long getTsNummer() {
@@ -50,15 +52,7 @@ public class Auftrag extends ValueObject {
 	public boolean isGarantieAntrag() {
 		return garantieAntrag;
 	}
-	public void setGarantieAntrag(boolean garantieAntrag) {
-		this.garantieAntrag = garantieAntrag;
-	}
-	public List<Einsatz> getListeEinsatz() {
-		return listeEinsatz;
-	}
-	public void setListeEinsatz(List<Einsatz> listeEinsatz) {
-		this.listeEinsatz = listeEinsatz;
-	}
+
 	public List<WeitererEinsatz> getListeWeitereEinsätze() {
 		return listeWeitereEinsätze;
 	}

@@ -1,7 +1,10 @@
 package model.ort;
 
+import javax.persistence.Entity;
+
 import model.common.ConstantValueObject;
 
+@Entity
 public class Gebiet extends ConstantValueObject {
 
 	private String gebietsname;

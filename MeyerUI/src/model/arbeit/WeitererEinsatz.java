@@ -1,19 +1,23 @@
 package model.arbeit;
 
-import model.common.ValueObject;
+import javax.persistence.Entity;
 
+import model.common.ValueObject;
+import ui.model.ZusatzEinsatz;
+
+@Entity
 public class WeitererEinsatz extends ValueObject {
 
-	private Materialbestellung materialbestellung;
+	private ZusatzEinsatz materialbestellung;
 	private boolean geraetLaueft;
 	private boolean zweiMann;
 	private Double zeitaufwand;
 	private boolean kva;
 	
-	public Materialbestellung getMaterialbestellung() {
+	public ZusatzEinsatz getMaterialbestellung() {
 		return materialbestellung;
 	}
-	public void setMaterialbestellung(Materialbestellung materialbestellung) {
+	public void setMaterialbestellung(ZusatzEinsatz materialbestellung) {
 		this.materialbestellung = materialbestellung;
 	}
 	public boolean isGeraetLaueft() {

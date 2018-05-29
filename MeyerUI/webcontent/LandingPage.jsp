@@ -29,13 +29,13 @@
 <t:label id="g_15" font="weight:bold" text="Benutzer" />
 </t:row>
 <t:row id="g_16" >
-<t:field id="g_17" bgpaint="mandatory()" width="100%" />
+<t:field id="g_17" bgpaint="mandatory()" text="#{d.LandingPageUI.benutzername}" width="100%" />
 </t:row>
 <t:row id="g_18" >
 <t:label id="g_19" font="weight:bold" text="Passwort" />
 </t:row>
 <t:row id="g_20" >
-<t:password id="g_21" bgpaint="mandatory()" encryption="SHA512" width="100%" />
+<t:password id="g_21" bgpaint="mandatory()" encryption="SHA512" text="#{d.LandingPageUI.passwort}" width="100%" />
 </t:row>
 <t:rowdistance id="g_22" height="10" />
 <t:row id="g_23" >

@@ -68,6 +68,21 @@ public class DesktopContentWindowUI extends ContentWindowUI {
 		wpsi.setOpenMultipleInstances(false);
 		WorkpageStarterFactory.getWorkpageStarter().startWorkpage(wpd, wpc, wpsi);
 	}
+	
+	
+	public void onOpenAdmin(javax.faces.event.ActionEvent event) {
+		IWorkpageDispatcher wpd = (IWorkpageDispatcher) getOwningDispatcher().getTopOwner();
+		IWorkpageContainer wpc = getWorkpageContainer();
+		WorkpageStartInfo wpsi = new WorkpageStartInfo();
+		wpsi.setJspPage("/pages/AdminUI.jsp");
+		wpsi.setText("Passwort ändern");
+		wpsi.setSelectorTitle("Passwort ändern");
+		// wpsi.setWindowTitle("GZ 1234: Schwarzbrot - Verbreitung und
+		// Vermarktung");
+		wpsi.setOpenMultipleInstances(false);
+		WorkpageStarterFactory.getWorkpageStarter().startWorkpage(wpd, wpc, wpsi);
+	}
+
 
 	// ------------------------------------------------------------------------
 	// private usage

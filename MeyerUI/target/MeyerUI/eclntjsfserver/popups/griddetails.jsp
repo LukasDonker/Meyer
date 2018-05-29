@@ -15,16 +15,17 @@
 
 				<t:row id="g_2">
 
-					<t:pane id="g_3" actionListener="#{eclntdefscr.gridDetails.onLeft}"
-						dropreceive="rights" height="100%" padding="10" width="100%">
+					<t:pane id="g_3" 
+						height="100%" padding="10" width="100%">
 
 						<t:row id="g_4">
-
+                            <t:pane id="g_aa1" width="40%" height="100%" dropreceive="rights" actionListener="#{eclntdefscr.gridDetails.onLeft}">
+                            <t:row id="g_aa2">
 							<t:fixgrid id="g_5" background="#E0E0E0" bordercolor="#00000030"
 								borderheight="1" borderwidth="1" height="100%"
 								multiselect="true"
 								objectbinding="#{eclntdefscr.gridDetails.lefts}"
-								sbvisibleamount="25" width="40%" rowheight="16">
+								sbvisibleamount="25" width="100%" rowheight="16" >
 
 								<t:gridcol id="g_6" text="#{eclnti18n.GRID_availableColumns}"
 									width="100%" sortenabled="false" columnresizingenabled="false">
@@ -33,6 +34,8 @@
 								</t:gridcol>
 
 							</t:fixgrid>
+							</t:row>
+							</t:pane>
 
 							<t:coldistance id="g_8" width="10" />
 							<t:pane id="g_9">

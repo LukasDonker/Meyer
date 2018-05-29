@@ -1,21 +1,17 @@
 package model.ort;
 
+import javax.persistence.Entity;
+
 import model.common.ValueObject;
 
+@Entity
 public class Anschrift extends ValueObject {
 
-	private String name;
 	private String adresse;
 	private Integer plz;
 	private String ort;
 	private Gebiet gebiet;
 	
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
 	public String getAdresse() {
 		return adresse;
 	}
@@ -39,6 +35,12 @@ public class Anschrift extends ValueObject {
 	}
 	public void setGebiet(Gebiet gebiet) {
 		this.gebiet = gebiet;
+	}
+	
+	@Override
+	public String toString() {
+		String result = adresse + "\n" + plz + " " + ort;
+		return result;
 	}
 	
 }

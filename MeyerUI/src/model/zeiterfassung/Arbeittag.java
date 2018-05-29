@@ -3,7 +3,7 @@ package model.zeiterfassung;
 import java.util.List;
 
 import model.common.ValueObject;
-import model.person.Techniker;
+import ui.model.Techniker;
 
 public class Arbeittag extends ValueObject {
 

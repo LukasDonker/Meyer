@@ -11,7 +11,6 @@
 <f:view>
 <h:form>
 <f:subview id="pages_dialog_UnterschriftDialogg_sv">
-<t:rowtitlebar id="g_1" text="Unterschrift" />
 <t:rowbodypane id="g_2" padding="left:10;right:10;top:10;bottom:10" >
 <t:row id="g_3" >
 <t:label id="g_4" font="weight:bold" text="Name" />

@@ -2,8 +2,12 @@ package model.material;
 
 import java.util.List;
 
-import model.person.Techniker;
+import javax.persistence.Entity;
 
+import ui.model.Artikel;
+import ui.model.Techniker;
+
+@Entity
 public class Auto {
 
 	private Techniker techniker;

@@ -1,0 +1,1450 @@
+.risc
+/*{RISC
+defaultFont: new RISCFont("Trebuchet MS",12);
+backgroundModifierDisabled: "linear-gradient(to bottom, rgba(0,0,0,0.07),rgba(0,0,0,0.07))";
+backgroundModifierGridSelection: "linear-gradient(to bottom, rgba(255,128,0,0.4),rgba(255,128,0,0.4))";
+replaceImageNames: true;
+RISC}*/
+{
+}
+
+.riscdefault
+/*{RISC
+    font: "Trebuchet MS" 12;
+    border: 0 0 0 0;
+    inset: 0 0 0 0;
+RISC}*/
+{
+}
+
+
+.riscbody
+{
+}
+
+.riscbodyuserselectnonecursordragdrop
+{
+    -webkit-touch-callout: none !important; /* iOS Safari */
+    -webkit-user-select: none !important;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none !important;    /* Konqueror */
+    -moz-user-select: none !important;      /* Firefox */
+    -ms-user-select: none !important;       /* IE/Edge */
+    user-select: none !important;  
+    cursor: crosshair !important;
+}
+.riscbodyuserselectnonecursordragdrop *
+{
+    -webkit-touch-callout: none !important; /* iOS Safari */
+    -webkit-user-select: none !important;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none !important;    /* Konqueror */
+    -moz-user-select: none !important;      /* Firefox */
+    -ms-user-select: none !important;       /* IE/Edge */
+    user-select: none !important;  
+    cursor: crosshair !important;
+}
+.riscbodyuserselectnone
+{
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none !important;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none !important;    /* Konqueror */
+    -moz-user-select: none !important;      /* Firefox */
+    -ms-user-select: none !important;       /* IE/Edge */
+    user-select: none !important;  
+}
+.riscbodyuserselectnone *
+{
+    -webkit-touch-callout: none !important; /* iOS Safari */
+    -webkit-user-select: none !important;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none !important;    /* Konqueror */
+    -moz-user-select: none !important;      /* Firefox */
+    -ms-user-select: none !important;       /* IE/Edge */
+    user-select: none !important;  
+}
+
+.risccanvas
+{
+    font-family: Trebuchet MS;
+    font-size: 12px;
+}
+
+.riscelement
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    cursor: default;
+}
+
+.riscpage
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    border: 0px;
+    font-family: Trebuchet MS;font-size: 12px;
+    cursor: default;
+}
+
+
+/* -----------------------------------------------------------------------------
+ * Animation
+ * ----------------------------------------------------------------------------- */
+.riscanimation_darkshade_prepare
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: rgba(0,0,0,0.2);
+    height: 100%;
+    width: 100%;
+}
+.riscanimation_darkshade_execute
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: rgba(0,0,0,0.0);  
+    height: 0;
+    width: 100%;
+    transition: background-color 0.4s, height 0.01s 0.5s;
+}
+
+/* -----------------------------------------------------------------------------
+ * Drag & Drop
+ * ----------------------------------------------------------------------------- */
+.riscdragoverontop
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: rgba(255,255,0,0.1);
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: 100% 100%;
+}
+.riscdragoverontoppart
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+}
+.riscdragoverontoppart_rollover
+{
+    background-color: rgba(255,255,0,0.2);
+}
+
+.riscdragblock
+{
+    background-color: #FF8080;
+}
+
+/* -----------------------------------------------------------------------------
+ * SCHEDULE / SCHEDULEITEM
+ * ----------------------------------------------------------------------------- */
+.riscschedule
+/*{RISC    
+    border: 1 1 1 1;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    border: 1px solid #c0c0c0;
+    background-color: #FFFFFF;
+}
+
+.riscschedule_blockline
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: #c0c0c0;
+}
+
+.riscscheduleitem
+/*{RISC    
+    border: 1 1 1 1;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    border: 1px solid #c0c0c0;
+    background-color: #F0F0F0;
+}
+
+/* -----------------------------------------------------------------------------
+ * SUBPAGE / BROWSER
+ * ----------------------------------------------------------------------------- */
+
+.riscsubpage_container
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    border: 0px;
+}
+
+.browser_container
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    border: 0px;
+}
+
+/* -----------------------------------------------------------------------------
+ * DIALOGs
+ * ----------------------------------------------------------------------------- */
+.riscdialog_base
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: #34495e;
+}
+
+.riscdialog_popup
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+/* -----------------------------------------------------------------------------
+ * IMAGE
+ * ----------------------------------------------------------------------------- */
+.riscimage
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+}
+ 
+/* -----------------------------------------------------------------------------
+ * RISCFLEX* / adaptive containers
+ * ----------------------------------------------------------------------------- */
+.riscflexarrangementcontainer
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+}
+
+/* -----------------------------------------------------------------------------
+ * CHECKBOX / TOGGLE
+ * ----------------------------------------------------------------------------- */
+.risccheckbox
+/*{RISC    
+font: "Trebuchet MS" 12;
+border: 0 0 0 0;
+inset: 4 4 4 4;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    cursor: pointer; 
+}
+
+.toggle_image
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    cursor: pointer; 
+    font-family: Trebuchet MS;font-size: 12px;
+    background-repeat: no-repeat; background-position: center; 
+}
+.toggle_image.true { background-image: url(../../../eclntjsfserver/images/checkbox/plainmarked.png);  }
+.toggle_image.false {}
+.toggle_image.null { background-image: url(../../../eclntjsfserver/images/checkbox/plainmarkedundefined.png); }
+.risccheckbox_image
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    border: 1px solid #C0C0C0;
+    cursor: pointer; 
+    font-family: Trebuchet MS;font-size: 12px;
+    background-repeat: no-repeat; background-position: center; 
+}
+.risccheckbox_image.true { background-image: url(../../../eclntjsfserver/images/checkbox/plainmarked.png);  }
+.risccheckbox_image.false {}
+.risccheckbox_image.null { background-image: url(../../../eclntjsfserver/images/checkbox/plainmarkedundefined.png); }
+
+.risccheckbox_text
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    cursor: pointer; white-space: nowrap;
+}
+ 
+/* -----------------------------------------------------------------------------
+ * RADIOBUTTON
+ * ----------------------------------------------------------------------------- */
+.riscradiobutton
+/*{RISC    
+    inset: 4 4 4 4;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    cursor: pointer; 
+}
+
+.riscradiobutton_image
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    border: 1px solid #C0C0C0; border-radius: 10px;
+    cursor: pointer; 
+    font-family: Trebuchet MS;font-size: 12px;
+}
+
+.riscradiobutton_text
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    cursor: pointer; white-space: nowrap;
+}
+ 
+/* -----------------------------------------------------------------------------
+ * LONGTEXTFIELD
+ * ----------------------------------------------------------------------------- */
+.risclongtextfield_textarea
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    border: 1px solid #C0C0C0;
+    font-family: Trebuchet MS;font-size: 12px;
+}
+
+/* -----------------------------------------------------------------------------
+ * DATESELECTION
+ * ----------------------------------------------------------------------------- */
+.riscdateselection
+/*{RISC    
+    font: "Trebuchet MS" 12 bold;
+    border: 1 1 1 1;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    border: 1px solid #C0C0C0;
+}
+.riscdateselection_datebutton
+/*{RISC    
+    font: "Trebuchet MS" 12 bold;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    border: 0px solid #C0C0C0;
+    cursor: pointer;
+    font-family: Trebuchet MS;font-size: 12px;
+}
+.riscdateselection_datebutton > *
+{
+    cursor: pointer;
+}
+
+.riscdateselection_datebutton.monthprev { background-color: #E0E0E0; background-image: url(../../../eclntjsfserver/images/control_playbackwards.png); background-repeat: no-repeat; background-position: center; }
+.riscdateselection_datebutton.month { background-color: #E0E0E0; }
+.riscdateselection_datebutton.monthnext { background-color: #E0E0E0; background-image: url(../../../eclntjsfserver/images/control_play.png); background-repeat: no-repeat; background-position: center; }
+.riscdateselection_datebutton.workdayheadline { background-color: #F0F0F0; }
+.riscdateselection_datebutton.weekenddayheadline { background-color: #C0C0C0; }
+.riscdateselection_datebutton.workday { background-color: #FFFFFF; }
+.riscdateselection_datebutton.weekendday { background-color: #D0D0D0; }
+.riscdateselection_datebutton.workday.selected { background-color: #FFFFC0; }
+.riscdateselection_datebutton.weekendday.selected { background-color: #FFFFC0; }
+.riscdateselection_datebutton.today { background-color: #E0E0E0; }
+.riscdateselection_datebutton.yearprev { background-color: #E0E0E0; background-image: url(../../../eclntjsfserver/images/control_playbackwards.png); background-repeat: no-repeat; background-position: center; }
+.riscdateselection_datebutton.year { background-color: #E0E0E0; }
+.riscdateselection_datebutton.yearnext { background-color: #E0E0E0; background-image: url(../../../eclntjsfserver/images/control_play.png); background-repeat: no-repeat; background-position: center; }
+
+
+/* -----------------------------------------------------------------------------
+ * GRID
+ * ----------------------------------------------------------------------------- */
+.riscflexgrid
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    background-color: #F8F8F8;
+}
+
+.riscflexgridrow
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+}
+.riscflexgridrow:hover { background-color: rgba(0,0,0,0.1); }
+.riscflexgridrow_selected
+{
+	-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    background-color: #FFC0A0;
+}
+.riscflexgridrow_selected:hover { background-color: rgba(0,0,0,0.1); }
+
+.riscflexgrid_line
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+	background-color: #C0C0C0;
+}
+
+/* -----------------------------------------------------------------------------
+ * COLSYNCHEDPANE
+ * ----------------------------------------------------------------------------- */
+.risccolsynchedpane
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    cursor: default;
+}
+
+/* -----------------------------------------------------------------------------
+ * LAYERS
+ * ----------------------------------------------------------------------------- */
+
+.risclayer
+{
+	-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+}
+.risclayerblocker
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    background-color: #000000;opacity: 0.2;
+    cursor: not-allowed;
+}
+.risclayerallblocker
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    background-color: #FFFFFF;opacity: 0.4;
+    cursor: wait;
+}
+
+.riscrow
+{
+	-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+}
+
+/* -----------------------------------------------------------------------------
+ * DRAG & DROP
+ * ----------------------------------------------------------------------------- */
+ .riscdrag
+ {
+     border: #FF0000 3px solid !important;
+ }
+
+/* -----------------------------------------------------------------------------
+ * FIELD
+ * ----------------------------------------------------------------------------- */
+
+.riscfield
+/*{RISC    
+    background: transparent;
+    inset: 4 0 4 0;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    border: 0px solid #C0C0C0;
+    padding-left: 5px;
+    padding-right: 5px;
+	resize:none;
+    background-color: transparent;
+}
+.riscfield:disabled { background-color: transparent; }
+
+.riscfieldcontainer
+/*{RISC    
+    background: #FFFFFF;
+    border: 1 1 1 1;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: #FFFFFF;
+    border: 1px solid #A0A0A0;
+}
+
+/* -----------------------------------------------------------------------------
+ * COMBOFIELD
+ * ----------------------------------------------------------------------------- */
+.risccombofieldcontainer
+/*{RISC    
+    background: #FFFFFF;
+    border: 1 1 1 1;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: #FFFFFF;
+    border: 1px solid #A0A0A0;
+}
+.risccombofield_icon
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: #F0F0F0;
+    border-left-width: 0px;
+    background-image: url(../../../eclntjsfserver/images/combobox/comboselector.png); background-repeat: no-repeat; background-position: center;
+    cursor: pointer;
+}
+
+.risccombofield_field
+/*{RISC    
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: transparent;
+    border: 0px;
+}
+.risccombofield_field > .riscfield { background-color: transparent; }
+
+/* -----------------------------------------------------------------------------
+ * SPINNER
+ * ----------------------------------------------------------------------------- */
+.riscspinnercontainer
+/*{RISC   
+    background: #FFFFFF;
+    border: 1 1 1 1;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: #FFFFFF;
+    border: 1px solid #A0A0A0;
+}
+.riscspinner_iconup
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: #F0F0F0;
+    border-left-width: 0px;
+    background-image: url(../../../eclntjsfserver/images/spinner/spinnericonup.png); background-repeat: no-repeat; background-position: center;
+    cursor: pointer;
+}
+.riscspinner_icondown
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: #F0F0F0;
+    border-left-width: 0px;
+    background-image: url(../../../eclntjsfserver/images/spinner/spinnericondown.png); background-repeat: no-repeat; background-position: center;
+    cursor: pointer;
+}
+
+.riscspinner_field
+/*{RISC    
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: transparent;
+    border: 0px;
+}
+.riscspinner_field > .riscfield { background-color: transparent; }
+
+/* -----------------------------------------------------------------------------
+ * COMBOBOX
+ * ----------------------------------------------------------------------------- */
+.risccombobox_listscrollpane
+/*{RISC    
+    border: 1 1 1 1;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: #ffffff;
+    border: 1px solid #808080;	
+}
+
+.risccombobox_list
+/*{RISC    
+    inset: 2 2 2 2;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: #ffffff;
+}
+
+.risccomboboxitem_button
+/*{RISC    
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    cursor: pointer;
+    white-space: nowrap;
+    padding-left: 6px; padding-right: 6px; padding-top: 3px; padding-bottom: 3px;
+}
+.risccomboboxitem_button:hover { background-color: rgba(0,0,0,0.1); }
+.risccomboboxitem_button:focus { background-color: rgba(0,0,0,0.3); }
+
+.risccomboboxitem
+/*{RISC    
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+}
+.risccomboboxitem.selected
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: #FFC0A0;
+}
+
+.risccomboboxitem_label
+/*{RISC    
+    border: 0 0 1 0;
+    inset: 1 2 1 16;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 10px;
+    white-space: nowrap;
+    border-bottom: 1px solid #c0c0c0;
+}
+.risccomboboxitem_label > *
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 10px;
+    white-space: nowrap;
+}
+
+/* -----------------------------------------------------------------------------
+ * DIALOGDECORATION
+ * ----------------------------------------------------------------------------- */
+.riscdialogdecoration
+/*{RISC    
+    border: 1 1 1 1;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: #FFFFFF;
+    border: 1px solid #808080;
+}
+.riscdialogdecotration_toppane
+/*{RISC    
+    inset: 4 4 4 4;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: #d44b27;
+}
+
+.riscdialogdecoration_toplabel
+/*{RISC    
+    font: "Trebuchet MS" 16 bold;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    color: #FFFFFF;
+    font-family: Trebuchet MS; font-size: 16px; font-weight: bold;
+    white-space: nowrap;
+}
+.riscdialogdecoration_toplabel *
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    color: #FFFFFF;
+    font-family: Trebuchet MS; font-size: 16px; font-weight: bold;
+    white-space: nowrap;
+}
+.riscdialogdecoration_edgesizer
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: transparent;
+    cursor: move;
+}
+
+/* -----------------------------------------------------------------------------
+ * TREENODE
+ * ----------------------------------------------------------------------------- */
+.riscsingletreenode
+/*{RISC    
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    white-space: nowrap;
+}
+/* .riscsingletreenode:hover { background-color: #e0e0e0; } */
+/* .riscsingletreenode:focus { background-color: #000000; } */
+
+.riscsingletreenode_text
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    white-space: nowrap;
+}
+
+.riscsingletreenode_toggleimage
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    cursor: pointer;
+}
+
+/* -----------------------------------------------------------------------------
+ * SIZEABLEPANE
+ * ----------------------------------------------------------------------------- */
+.riscsizeablepanehorizontal
+/*{RISC    
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+}
+.riscsizeablepanevertical
+/*{RISC    
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+}
+
+.riscsizeablepane_stretcher
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+}
+.riscsizeablepanehorizontal > .riscsizeablepane_stretcher
+{
+	cursor: e-resize;
+}
+.riscsizeablepanevertical > .riscsizeablepane_stretcher
+{
+    cursor: n-resize;
+}
+
+/* -----------------------------------------------------------------------------
+ * OUTLOOKBAR
+ * ----------------------------------------------------------------------------- */
+.riscoutlookbar
+/*{RISC    
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    border: 0px;
+}
+
+.riscoutlookbar_button
+/*{RISC    
+    font: "Trebuchet MS" 16;
+    border: 1 0 0 0;
+    inset: 8 8 8 8;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: #2980b9;
+    border: 0px solid #808080; border-bottom: 1px solid #3990c9; 
+    white-space: nowrap;
+    cursor: pointer;
+}
+.riscoutlookbar_button:hover { background-color: #1970a9; }
+.riscoutlookbar_button:active { background-color: #F8F8F8; }
+.riscoutlookbar_button:focus { background-color: #d0d0d0; }
+.riscoutlookbar_button:active:focus { background-color: #F8F8F8; }
+.riscoutlookbar_button > *
+{
+    font-family: Trebuchet MS; font-size: 16px;
+    color: #FFFFFF;
+}
+
+.riscoutlookbar_button_selected
+/*{RISC    
+    font: "Trebuchet MS" 16 bold;
+    border: 1 0 0 0;
+    inset: 8 8 8 8;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 16px;
+    background-color: #2980b9;
+    border: 0px solid #808080; border-bottom: 1px solid #3990c9; 
+    white-space: nowrap;
+    cursor: pointer;
+}
+.riscoutlookbar_button_selected:hover { background-color: #1970a9; }
+.riscoutlookbar_button_selected:active { background-color: #F8F8F8; }
+.riscoutlookbar_button_selected:focus { background-color: #59B0e9; }
+.riscoutlookbar_button_selected:active:focus { background-color: #F8F8F8; }
+.riscoutlookbar_button_selected > *
+{
+    font-family: Trebuchet MS; font-size: 16px; font-weight: bold;
+    color: #FFFFFF;
+}
+
+.riscselector_button
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    background-color: #f0f0f0;
+    border: 0px solid #808080;
+    white-space: nowrap;
+    cursor: pointer;
+}
+.riscselector_button:hover { background-color: #e0e0e0; }
+.riscselector_button:active { background-color: #F8F8F8; }
+.riscselector_button:focus { background-color: #d0d0d0; }
+.riscselector_button:active:focus { background-color: #F8F8F8; }
+
+.riscoutlookbar_shade_false
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: rgba(0,0,0,0.1);
+    transition: height 0.3s;
+}
+.riscoutlookbar_shade_true
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: rgba(0,0,0,0.1);
+    transition: height 0.1s;
+}
+
+/* -----------------------------------------------------------------------------
+ * BUTTON
+ * ----------------------------------------------------------------------------- */
+.riscbutton
+/*{RISC
+    border: 1 1 1 1;
+    inset: 4 10 4 10;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    background-color: #f0f0f0;
+    border: 1px solid #c0c0c0;
+    cursor: pointer;
+    white-space: nowrap;
+}
+.riscbutton:hover { background-color: #e0e0e0; }
+.riscbutton:active { background-color: #F8F8F8; }
+.riscbutton:focus { background-color: #d0d0d0; }
+.riscbutton:active:focus { background-color: #F8F8F8; }
+
+.riscbutton.nofill
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: transparent;
+    border: 0px solid #c0c0c0;
+}
+.riscbutton.nofill:hover { background-color: #e0e0e0; }
+.riscbutton.nofill:active { background-color: #F8F8F8; }
+.riscbutton.nofill:focus { background-color: #d0d0d0; }
+.riscbutton.nofill:active:focus { background-color: #F8F8F8; }
+
+.riscbutton > *
+{
+    cursor: pointer;
+}
+
+/* -----------------------------------------------------------------------------
+ * ICON
+ * ----------------------------------------------------------------------------- */
+.riscicon
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    background-color: transparent;
+    border: 0px solid #808080;
+    cursor: pointer;
+}
+.riscicon:hover { background-color: #e0e0e0; }
+.riscicon:active { background-color: #F8F8F8; }
+.riscicon:focus { background-color: #d0d0d0; }
+.riscicon:active:focus { background-color: #F8F8F8; }
+
+.riscicon > *
+{
+    cursor: pointer;
+}
+
+.riscicon.close
+{
+    background-image: url(../../../eclntjsfserver/images/window_close_metro.png);
+    background-repeat: no-repeat; background-position: center; 
+    opacity: 0.5;
+}
+.riscicon.close:hover
+{
+    background-image: url(../../../eclntjsfserver/images/window_close_metro.png);
+    background-repeat: no-repeat; background-position: center; 
+    opacity: 1;
+}
+
+/* -----------------------------------------------------------------------------
+ * BUTTONMENU
+ * ----------------------------------------------------------------------------- */
+.riscbuttonmenu_separator
+/*{RISC    
+    border: 0 0 0 1;
+    inset: 0 0 0 4;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: transparent;
+    border-left: 1px solid #808080; 
+    cursor: pointer;
+    background-image: url(../../../eclntjsfserver/images/combobox/comboselector.png);
+    background-repeat: no-repeat; background-position: center; 
+    opacity: 0.5;
+}
+.riscbuttonmenu_separator:hover { opacity: 1; }
+.riscbuttonmenu_separator > * { cursor: pointer; }
+
+/* -----------------------------------------------------------------------------
+ * ICON
+ * ----------------------------------------------------------------------------- */
+.riscicon
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    background-color: transparent;
+    border: 0px solid #808080;
+    cursor: pointer;
+}
+.riscicon:hover { background-color: #e0e0e0; }
+.riscicon:active { background-color: #F8F8F8; }
+.riscicon:focus { background-color: #d0d0d0; }
+.riscicon:active:focus { background-color: #F8F8F8; }
+
+.riscicon > *
+{
+    cursor: pointer;
+}
+
+/* -----------------------------------------------------------------------------
+ * FLEXGRIDROWSELECTOR
+ * ----------------------------------------------------------------------------- */
+.riscflexgridrowselector
+/*{RISC    
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    background-color: #f0f0f0;
+    border: 0px solid #808080;
+    cursor: pointer;
+}
+.riscflexgridrowselector:hover { background-color: #e0e0e0; }
+.riscflexgridrowselector:active { background-color: #F8F8F8; }
+.riscflexgridrowselector:focus { background-color: #d0d0d0; }
+.riscflexgridrowselector:active:focus { background-color: #F8F8F8; }
+
+.riscflexgridrowselector > *
+{
+    cursor: pointer;
+}
+
+.risclink > *
+{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* -----------------------------------------------------------------------------
+ * TEXTPANE
+ * ----------------------------------------------------------------------------- */
+.risctextpane
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+}
+.risctextpane_text
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+}
+
+/* -----------------------------------------------------------------------------
+ * Userhint
+ * ----------------------------------------------------------------------------- */
+.riscuserhint_textpane
+/*{RISC    
+    background: #FFFFC0;
+    font: "Trebuchet MS" 10;
+    border: 1 1 1 1;
+    inset: 5 5 5 5;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 10px;
+    background-color: #FFFFC0;
+    border: 1px #C0C0C0 solid;
+}
+.riscuserhint_textpane > .risctextpane_text
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 10px;
+}
+
+
+/* -----------------------------------------------------------------------------
+ * TABBEDLINE
+ * ----------------------------------------------------------------------------- */
+.risctabbedline
+/*{RISC    
+    font: "Trebuchet MS" 16;
+    inset: 0 20 0 20;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 16px;
+    background-color: #16a085;
+    border: 0px solid #808080;
+}
+
+.risctabbedline_content
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 16px;
+    background-color: #16a085;
+    border: 0px solid #808080;
+}
+
+.risctabbedline_menuicon
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    background-color: transparent;
+    border: 0px solid #808080;
+    cursor: pointer;
+    background-image: url(../../../eclntjsfserver/images/tabbedline_icon.png); background-repeat: no-repeat; background-position: center;
+}
+
+.risctabbedline_button
+/*{RISC    
+    font: "Trebuchet MS" 16;
+    border: 0 1 0 0;
+    inset: 6 6 6 6;
+RISC}*/
+{
+	-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 16px;
+    background-color: #16a085;
+    border: 0px solid #808080; border-right: 1px solid #46d0b5; 
+    padding: 6px;
+    cursor: pointer;
+}
+.risctabbedline_button:hover { background-color: #e0e0e0; }
+.risctabbedline_button:active { background-color: #F8F8F8; }
+.risctabbedline_button:focus { background-color: #d0d0d0; }
+.risctabbedline_button:active:focus { background-color: #F8F8F8; }
+.risctabbedline_button > *
+{
+    font-family: Trebuchet MS; font-size: 16px;
+    color: #FFFFFF;
+}
+
+.risctabbedline_button_selected
+/*{RISC    
+    font: "Trebuchet MS" 16 bold;
+    border: 0 1 0 0;
+    inset: 6 6 6 6;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 16px;font-weight: bold;
+    background-color: #16a085;
+    border: 0px solid #808080; border-right: 1px solid #46d0b5;
+    padding: 6px;
+    cursor: pointer;
+}
+.risctabbedline_button_selected:hover { background-color: #FFC0A0; }
+.risctabbedline_button_selected:active { background-color: #FFC0A0; }
+.risctabbedline_button_selected:focus { background-color: #FFC0A0; }
+.risctabbedline_button_selected:active:focus { background-color: #FFC0A0; }
+.risctabbedline_button_selected > *
+{
+    font-family: Trebuchet MS; font-size: 16px; font-weight: bold;
+    color: #FFFFFF;
+}
+
+/* -----------------------------------------------------------------------------
+ * TABBEDPANE / TABBEDLINECONTAINER
+ * ----------------------------------------------------------------------------- */
+.risctabbedpane
+/*{RISC    
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    border: 0px;
+}
+.risctabbedpane_content
+/*{RISC    
+    border: 0 1 1 1;
+    inset: 10 10 10 10;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    border: 1px solid #808080; border-top: 0px solid #808080;
+    background-color: #F4F4F4;
+}
+
+/* -----------------------------------------------------------------------------
+ * TABBELDINECONTAINER - cctl03
+ * ----------------------------------------------------------------------------- */
+.cctl03
+/*{RISC    
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+}
+.cctl03_content
+/*{RISC    
+    border: 0 1 1 1;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    border: 1px solid #808080; border-top: 0px solid #808080;
+    background-color: #F4F4F4;
+}
+.cctl03_risctabbedline
+/*{RISC    
+    font: "Trebuchet MS" 16;
+    border: 0 1 1 1;
+    inset: 0 20 0 20;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 16px;
+    background-color: #16a085;
+    border: 0px solid #808080;
+}
+
+/* -----------------------------------------------------------------------------
+ * LABEL
+ * ----------------------------------------------------------------------------- */
+.risclabel
+/*{RISC    
+RISC}*/
+{
+	-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+	font-family: Trebuchet MS;font-size: 12px;
+	white-space: nowrap;
+}
+
+/* -----------------------------------------------------------------------------
+ * HEADERLABEL
+ * ----------------------------------------------------------------------------- */
+.rischeaderlabel
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    background-color: #F0F0F0;
+}
+.rischeaderlabel_text
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;font-weight:bold;
+}
+
+/* -----------------------------------------------------------------------------
+ * FOLDABLEPANE
+ * ----------------------------------------------------------------------------- */
+.riscfoldablepane
+/*{RISC    
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    border: 0px solid #C0C0C0;
+} 
+.riscfoldablepane_toppane
+/*{RISC    
+    inset: 4 4 4 20;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    border: 0px solid #808080;
+    background-color: #16a085
+} 
+.riscfoldablepane_titlebutton
+/*{RISC    
+    font: "Trebuchet MS" 16 bold;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS; font-size: 16px; font-weight: bold;
+    color: #FFFFFF;
+}
+.riscfoldablepane_titlebutton *
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS; font-size: 16px; font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.riscfoldablepane_contentpane
+/*{RISC    
+    border: 0 1 1 1;
+    inset: 10 10 10 10;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS; font-size: 16px;
+    border: 1px solid #C0C0C0; border-top-width: 0px;
+}
+.riscfoldableverticalpane_toppane
+/*{RISC    
+    inset: 10 4 10 4;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    border: 0px solid #808080;
+    background-color: #16a085
+} 
+.riscfoldableverticalpane_titlebutton
+/*{RISC    
+    font: "Trebuchet MS" 16 bold;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS; font-size: 16px; font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.riscfoldableverticalpane_titlebutton *
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS; font-size: 16px; font-weight: bold;
+    color: #FFFFFF;
+    cursor: pointer;
+}
+.riscfoldableverticalpane_contentpane
+/*{RISC    
+    border: 1 1 1 0;
+    inset: 10 10 10 10;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS; font-size: 16px;
+    border: 1px solid #C0C0C0; border-left-width: 0px;
+}
+
+/* -----------------------------------------------------------------------------
+ * MENU
+ * ----------------------------------------------------------------------------- */
+ 
+.riscmenubar
+/*{RISC    
+    inset: 3 3 3 8;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: #F0F0F0;
+    border: 0px solid #808080;
+} 
+.riscmenu
+/*{RISC    
+    border: 1 1 1 1;
+    inset: 3 3 3 3;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: #FFFFE0;
+    border: 1px solid #808080;
+    padding: 3px;
+}
+.riscmenubaritem
+/*{RISC    
+    inset: 2 8 2 0;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    padding: 1px;
+}
+ .riscmenuitem
+/*{RISC    
+    inset: 2 15 2 1;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    padding: 1px;
+}
+ .riscmenuitem:hover { background-color: rgba(0,0,0,0.1); }
+ .riscmenuitem.menubelow    
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: #FFFFB0;
+    background-image: url(../../../eclntjsfserver/images/tree_closed.png); background-repeat: no-repeat; background-position: right;
+    font-family: Trebuchet MS;font-size: 12px;
+    padding: 1px;
+}
+ .riscmenuitem.menubelow:hover { background-color: rgba(0,0,0,0.1); }
+
+/* -----------------------------------------------------------------------------
+ * SPLITPANE
+ * ----------------------------------------------------------------------------- */
+.riscsplitpane
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+}
+
+.riscsplitpane_divider
+{
+    cursor: move;
+}
+
+.riscsplitpane_split
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+}
+
+/* -----------------------------------------------------------------------------
+ * SCROLLAREA
+ * ----------------------------------------------------------------------------- */
+.riscscrollcontainer
+/*{RISC    
+    border: 1 1 1 1;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    border: 1px solid #808080;
+}
+
+/* -----------------------------------------------------------------------------
+ * PROGRESSBAR
+ * ----------------------------------------------------------------------------- */
+.riscprogressbar
+/*{RISC    
+    border: 1 1 1 1;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    background-color: #f4f4f4;
+    border: 1px solid #c0c0c0;
+}
+.riscprogressbar_left
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    background-color: #2980b9;
+}
+.riscprogressbar_right
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    background-color: transparent;
+}
+.riscprogressbar_label
+/*{RISC    
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    background-color: transparent;
+    color: rga(0,0,0,0.5);
+}
+.riscprogressbar_label > *
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    background-color: transparent;
+    white-space: nowrap;
+    color: rga(0,0,0,0.5);
+}
+
+/* -----------------------------------------------------------------------------
+ * SLIDER
+ * ----------------------------------------------------------------------------- */
+.riscslider
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    background-color: #f4f4f4;
+}
+.riscslider_line
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    background-color: #A0A0A0;
+}
+.riscslider_grab
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    border: 1px solid #808080;  border-radius: 10px;
+    background-color: #C0C0C0;
+    cursor:pointer;
+}
+.riscslider_tick_major
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    background-color: #800000;
+}
+.riscslider_tick_minor
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    background-color: #808080;
+}
+.riscslider_text
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 10px;
+    color: #808080;
+    text-align: center;
+}
+
+/* -----------------------------------------------------------------------------
+ * SCROLLBAR
+ * ----------------------------------------------------------------------------- */
+.riscscrollbar
+/*{RISC    
+    inset: 0 0 0 1;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family: Trebuchet MS;font-size: 12px;
+    background-color: #f4f4f4;
+}
+.riscscrollbar_button_scroller
+/*{RISC    
+RISC}*/
+{	
+    background-color: transparent;
+    border: 0px solid #808080;
+    padding: 0 0 0 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    cursor: pointer;
+}
+.riscscrollbar_button_scroller.top { background-image: url(../../../eclntjsfserver/images/scroll_lineup.png); }
+.riscscrollbar_button_scroller.bottom { background-image: url(../../../eclntjsfserver/images/scroll_linedown.png); }
+
+.riscscrollbar_button_pagescroller
+{   
+    background-color: transparent;
+    border: 0px solid #808080;
+    padding: 0 0 0 0;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.riscscrollbar_button_pagescroller.top {}
+.riscscrollbar_button_pagescroller.bottom {}
+
+.riscscrollbar_slider
+/*{RISC    
+    inset: 1 1 1 1;
+RISC}*/
+{
+	-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+	background-color: #F0F0F0;
+    cursor: pointer;
+    border: 1px solid #C0C0C0;
+}
+
+.riscpane
+{
+	-moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+	background-color: #FFFFFF;
+}
+.riscpane:hover { background-color: #E0E0E0; }
+
+
+
+
+/* -----------------------------------------------------------------------------
+ * CC
+ * ----------------------------------------------------------------------------- */
+.cc_rowbodypane
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    border: 1px solid #808080;
+    background-color: #FFFFFF;
+}
+
+.cc_statusbar
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: #f4f4f4;
+    border: 0px solid #808080;
+}
+
+/* -----------------------------------------------------------------------------
+ * TITLEBAR
+ * ----------------------------------------------------------------------------- */
+
+.cc_pane_titlebar
+/*{RISC    
+    inset: 8 8 8 8;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    background-color: #2980b9;
+    border: 0px solid #808080;
+}
+
+.cc_label_titlebar
+/*{RISC    
+    font: "Trebuchet MS" 16;
+RISC}*/
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+}
+
+.cc_label_titlebar > .riscelement
+{
+    -moz-box-sizing: border-box;-webkit-box-sizing: border-box;box-sizing: border-box;
+    font-family:Trebuchet MS;font-size: 16px;font-weight:bold;
+    color: #FFFFFF;
+}
+ 

@@ -1,6 +1,7 @@
 managedbeans\StartHistorieUI$IListener.class
 model\common\ValueObject.class
 managedbeans\AntragKerndatenUI$IListener.class
+managedbeans\UnterschriftDialogUI.class
 managedbeans\StartFavoritenUI.class
 model\zeiterfassung\ZeitTyp.class
 managedbeans\StartAmpelnUI.class
@@ -11,7 +12,9 @@ model\person\Techniker.class
 managedbeans\AuftragsboxUI.class
 managedbeans\Tree$MyRow.class
 model\zeiterfassung\EinsatzZeit.class
+managedbeans\AntragKerndatenUI$Arbeitszeiten.class
 managedbeans\AuftragsboxUI$AuftragstreeNode.class
+managedbeans\UnterschriftDialogUI$IListener.class
 model\material\Hersteller.class
 managedbeans\SucheUI$NavigationTreeNode.class
 model\arbeit\WeitererEinsatz.class
@@ -28,6 +31,7 @@ model\material\Teil.class
 model\material\Artikel.class
 managedbeans\Dispatcher.class
 model\person\Disponent.class
+managedbeans\AntragKerndatenUI$1.class
 managedbeans\AuftragsboxUI$IListener.class
 managedbeans\DesktopContentWindowUI.class
 managedbeans\MobileContentWindowUI.class
@@ -51,11 +55,15 @@ model\ort\Anschrift.class
 managedbeans\StartListUI.class
 model\arbeit\Stoerung.class
 model\material\TypModell.class
+managedbeans\AntragKerndatenUI$TeileUndPauschalarbeiten.class
 model\arbeit\ArtikelPosition.class
 model\common\ConstantValueObject.class
 model\person\Spezialisierung.class
 model\zeiterfassung\Arbeittag.class
 model\material\Auto.class
+managedbeans\AntragKerndatenUI$Arbeiten.class
+managedbeans\TeileUndPauschalarbeitenDialogUI$IListener.class
+managedbeans\TeileUndPauschalarbeitenDialogUI.class
 managedbeans\ContentWindowUI$AutoFillCompleteProvider.class
 managedbeans\SucheUI$AntragSearchItem.class
 model\material\Lager.class

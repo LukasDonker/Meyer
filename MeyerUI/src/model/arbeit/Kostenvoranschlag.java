@@ -3,11 +3,14 @@ package model.arbeit;
 import java.sql.Blob;
 import java.util.Date;
 
-import model.common.ValueObject;
-import model.material.Geraet;
-import model.person.Ansprechpartner;
-import model.person.Techniker;
+import javax.persistence.Entity;
 
+import model.common.ValueObject;
+import ui.model.Ansprechpartner;
+import ui.model.Geraet;
+import ui.model.Techniker;
+
+@Entity
 public class Kostenvoranschlag extends ValueObject {
 
 	private Blob foto;

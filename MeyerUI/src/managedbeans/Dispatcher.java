@@ -10,6 +10,7 @@ import org.eclnt.workplace.WorkpageDispatcher;
  */
 public class Dispatcher extends WorkpageDispatcher
 {
+	
     /**
      * This method needs to be implemented if you want to extend the page bean browser tool.
      */

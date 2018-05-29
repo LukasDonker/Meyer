@@ -28,6 +28,9 @@ public class UnterschriftDialogUI
     
     private IListener m_listener;
     
+    private String m_klartext;
+    private String m_pixelValues;
+    
     // ------------------------------------------------------------------------
     // constructors & initialization
     // ------------------------------------------------------------------------
@@ -52,6 +55,22 @@ public class UnterschriftDialogUI
     {
         m_listener = listener;
     }
+
+	public String getKlartext() {
+		return m_klartext;
+	}
+
+	public void setKlartext(String klartext) {
+		m_klartext = klartext;
+	}
+
+	public String getPixelValues() {
+		return m_pixelValues;
+	}
+
+	public void setPixelValues(String pixelValues) {
+		m_pixelValues = pixelValues;
+	}
 
     // ------------------------------------------------------------------------
     // private usage
