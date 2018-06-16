@@ -2,6 +2,8 @@ package ui.ejb;
 
 import javax.ejb.Remote;
 
+import ui.model.Anschrift;
+import ui.model.Ansprechpartner;
 import ui.model.Kunde;
 import ui.model.KundenGeraet;
 
@@ -30,4 +32,28 @@ public interface KundenManager {
 	
 	public void deleteKundenGeraet(KundenGeraet value);
 	
+	
+	//CRUD Ansprechpartner
+	public Ansprechpartner findAnsprechpartner(long id);
+	
+	public Ansprechpartner updateAnsprechpartner(Ansprechpartner value);
+	
+	public Ansprechpartner createAnsprechpartner(Ansprechpartner value);
+	
+	public void deleteAnsprechpartner(Ansprechpartner value);
+	
+	//Queries
+	public Ansprechpartner findAnsprechpartnerByName(String value);
+
+	
+	//Anschrift
+	public Anschrift findAnschrift(Long anschrift);
+	
+	public Anschrift updateAnschrift(Anschrift value);
+	
+	public Anschrift createAnschrift(Anschrift value);
+	
+	public void deleteAnschrift(Anschrift value);
+	
+
 }

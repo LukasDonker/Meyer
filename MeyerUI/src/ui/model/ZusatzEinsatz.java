@@ -3,17 +3,29 @@ package ui.model;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 import model.common.ValueObject;
 
 @Entity
 public class ZusatzEinsatz extends ValueObject{
 
-	private Einsatzbericht m_vorgaenger;
-	private Einsatzbericht m_nachfolger;
+	@Id
+	@GeneratedValue
+	@Column(name = "id", updatable = false, nullable = false)
+	@Override
+	public Long getId() {
+		return super.getId();
+	}
 	
-	private Kunde m_kunde;
+	private Long m_vorgaenger;
+	private Long m_nachfolger;
+	
+	private Long m_kunde;
 	private String m_tanummer;
 	
 	private Date m_datum;
@@ -26,32 +38,30 @@ public class ZusatzEinsatz extends ValueObject{
 	
 	private String m_infos;
 	
-	private List<MaterialBestellung> m_listMaterialBestellung;
-	private List<Angebot> m_listAngebot;
+	private List<Long> m_listMaterialBestellung;
+	private List<Long> m_listAngebot;
+	private List<Long> m_listArbeiten;
+	private List<Long> m_listImages;
 	
-	private List<Arbeiten> m_listArbeiten;
+	private Long m_techniker;
+	private Long m_disponent;
 	
-	private List<MyFile> m_listImages;
-	
-	private Techniker m_techniker;
-	private Disponent m_disponent;
-	
-	public Einsatzbericht getVorgaenger() {
+	public Long getVorgaenger() {
 		return m_vorgaenger;
 	}
-	public void setVorgaenger(Einsatzbericht m_vorgaenger) {
+	public void setVorgaenger(Long m_vorgaenger) {
 		this.m_vorgaenger = m_vorgaenger;
 	}
-	public Einsatzbericht getNachfolger() {
+	public Long getNachfolger() {
 		return m_nachfolger;
 	}
-	public void setNachfolger(Einsatzbericht m_nachfolger) {
+	public void setNachfolger(Long m_nachfolger) {
 		this.m_nachfolger = m_nachfolger;
 	}
-	public Kunde getKunde() {
+	public Long getKunde() {
 		return m_kunde;
 	}
-	public void setKunde(Kunde m_kunde) {
+	public void setKunde(Long m_kunde) {
 		this.m_kunde = m_kunde;
 	}
 	public String getTanummer() {
@@ -102,40 +112,50 @@ public class ZusatzEinsatz extends ValueObject{
 	public void setInfos(String m_infos) {
 		this.m_infos = m_infos;
 	}
-	public List<MaterialBestellung> getListMaterialBestellung() {
+	
+	@ElementCollection(targetClass=Long.class)
+	public List<Long> getListMaterialBestellung() {
 		return m_listMaterialBestellung;
 	}
-	public void setListMaterialBestellung(List<MaterialBestellung> m_listMaterialBestellung) {
+	public void setListMaterialBestellung(List<Long> m_listMaterialBestellung) {
 		this.m_listMaterialBestellung = m_listMaterialBestellung;
 	}
-	public List<Angebot> getListAngebot() {
+	
+	@ElementCollection(targetClass=Long.class)
+	public List<Long> getListAngebot() {
 		return m_listAngebot;
 	}
-	public void setListAngebot(List<Angebot> m_listAngebot) {
+	public void setListAngebot(List<Long> m_listAngebot) {
 		this.m_listAngebot = m_listAngebot;
 	}
-	public List<Arbeiten> getListArbeiten() {
+	
+	@ElementCollection(targetClass=Long.class)
+	public List<Long> getListArbeiten() {
 		return m_listArbeiten;
 	}
-	public void setListArbeiten(List<Arbeiten> m_listArbeiten) {
+	public void setListArbeiten(List<Long> m_listArbeiten) {
 		this.m_listArbeiten = m_listArbeiten;
 	}
-	public List<MyFile> getListImages() {
+	
+	@ElementCollection(targetClass=Long.class)
+	public List<Long> getListImages() {
 		return m_listImages;
 	}
-	public void setListImages(List<MyFile> m_listImages) {
+	
+	@ElementCollection(targetClass=Long.class)
+	public void setListImages(List<Long> m_listImages) {
 		this.m_listImages = m_listImages;
 	}
-	public Techniker getTechniker() {
+	public Long getTechniker() {
 		return m_techniker;
 	}
-	public void setTechniker(Techniker m_techniker) {
+	public void setTechniker(Long m_techniker) {
 		this.m_techniker = m_techniker;
 	}
-	public Disponent getDisponent() {
+	public Long getDisponent() {
 		return m_disponent;
 	}
-	public void setDisponent(Disponent m_disponent) {
+	public void setDisponent(Long m_disponent) {
 		this.m_disponent = m_disponent;
 	}
 }

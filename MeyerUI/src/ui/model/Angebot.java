@@ -1,18 +1,29 @@
 package ui.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 import model.common.ValueObject;
 
 @Entity
 public class Angebot extends ValueObject{
+	
+	@Id
+	@GeneratedValue
+	@Column(name = "id", updatable = false, nullable = false)
+	@Override
+	public Long getId() {
+		return super.getId();
+	}
 
-	private ZusatzEinsatz m_zusatzEinsatz;
+	private Long m_zusatzEinsatz;
 	
 	private AngebotPer m_angebotPer = AngebotPer.MAIL;
 	
-	private Hersteller m_hersteller;
-	private TypModell m_typModell;
+	private Long  m_hersteller;
+	private Long m_typModell;
 	private Integer m_hoehe;
 	private Integer m_breite;
 	private Integer m_tiefe;
@@ -27,10 +38,10 @@ public class Angebot extends ValueObject{
 	private boolean m_wasserenthaertung;
 	private boolean m_altgeraeteentsorung;
 	
-	public ZusatzEinsatz getZusatzEinsatz() {
+	public Long getZusatzEinsatz() {
 		return m_zusatzEinsatz;
 	}
-	public void setZusatzEinsatz(ZusatzEinsatz zusatzEinsatz) {
+	public void setZusatzEinsatz(Long zusatzEinsatz) {
 		m_zusatzEinsatz = zusatzEinsatz;
 	}
 	public AngebotPer getAngebotPer() {
@@ -39,16 +50,16 @@ public class Angebot extends ValueObject{
 	public void setAngebotPer(AngebotPer angebotPer) {
 		m_angebotPer = angebotPer;
 	}
-	public Hersteller getHersteller() {
+	public Long getHersteller() {
 		return m_hersteller;
 	}
-	public void setHersteller(Hersteller hersteller) {
+	public void setHersteller(Long hersteller) {
 		m_hersteller = hersteller;
 	}
-	public TypModell getTypModell() {
+	public Long getTypModell() {
 		return m_typModell;
 	}
-	public void setTypModell(TypModell typModell) {
+	public void setTypModell(Long typModell) {
 		m_typModell = typModell;
 	}
 	public int getHoehe() {

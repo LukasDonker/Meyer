@@ -1,7 +1,5 @@
 <stylesheet>
 
-    <var n="@placeholderColor@" v="#B0B0B0"/>
-    
     <var n= "@backgroundModifierDisabled@" v="linear-gradient(to bottom, rgba(0,0,0,0.2),rgba(0,0,0,0.2))"/>
 
     <var n="@ccWorkplaceBackground@" v="linear-gradient(to bottom,#606060,#202020)"/>
@@ -63,8 +61,4 @@
         <risc n="_imageendnode" v="eclntjsfserver/images/treenode/endnode_light.png"/>
     </class>
 
-    <class n="riscdialogdecoration">
-        <style n="background" v="#303030"/>
-    </class>
-    
 </stylesheet>

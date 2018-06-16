@@ -2,7 +2,10 @@ package ui.model;
 
 import java.util.Collection;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 import model.common.ConstantListHolder;
 import model.common.ConstantValueObject;
@@ -14,6 +17,14 @@ import model.common.ConstantValueObject;
  */
 @Entity
 public class Artikel extends ConstantValueObject {
+	
+	@Id
+	@GeneratedValue
+	@Column(name = "id", updatable = false, nullable = false)
+	@Override
+	public Long getId() {
+		return super.getId();
+	}
 
 	private String bezeichung;
 	private Long sachnummer;

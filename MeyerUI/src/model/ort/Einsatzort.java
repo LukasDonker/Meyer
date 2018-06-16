@@ -1,11 +1,10 @@
 package model.ort;
 
-import javax.persistence.Entity;
-
 import model.common.ValueObject;
+import ui.model.Anschrift;
 import ui.model.Kunde;
 
-@Entity
+
 public class Einsatzort extends ValueObject {
 
 	private String bezeichnung;

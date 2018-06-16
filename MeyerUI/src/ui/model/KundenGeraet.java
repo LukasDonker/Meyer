@@ -1,12 +1,23 @@
 package ui.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
 public class KundenGeraet extends Geraet{
 	
+	@Id
+	@GeneratedValue
+	@Column(name = "id", updatable = false, nullable = false)
+	@Override
+	public Long getId() {
+		return super.getId();
+	}
+	
 	private long m_meyerNummer;
-	private Kunde m_kunde;
+	private Long m_kunde;
 	private String m_bemerkungen;
 	
 	public long getMeyerNummer() {
@@ -15,10 +26,10 @@ public class KundenGeraet extends Geraet{
 	public void setMeyerNummer(long m_meyerNummer) {
 		this.m_meyerNummer = m_meyerNummer;
 	}
-	public Kunde getKunde() {
+	public Long getKunde() {
 		return m_kunde;
 	}
-	public void setKunde(Kunde m_kunde) {
+	public void setKunde(Long m_kunde) {
 		this.m_kunde = m_kunde;
 	}
 	public String getBemerkungen() {

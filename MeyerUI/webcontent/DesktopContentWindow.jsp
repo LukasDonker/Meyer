@@ -19,7 +19,7 @@
 <t:coldistance id="g_6" width="10" />
 <t:link id="g_7" foreground="#ffffff" text="erweiterte Suche" />
 <t:coldistance id="g_8" width="100%" />
-<t:icon id="g_9" background="FF" image="/awesomefont(f085,#FFFFFF,30)" />
+<t:icon id="g_9" actionListener="#{d.DesktopContentWindowUI.onOpenAdmin}" background="FF" image="/awesomefont(f085,#FFFFFF,30)" />
 </t:row>
 </t:pane>
 </t:rowtitlebar>
@@ -38,7 +38,7 @@
 <t:coldistance id="g_22" rendered="false" />
 <t:colline id="g_23" background="#000000" height="100%" width="2" />
 <t:coldistance id="g_24" />
-<t:link id="g_25" font="weight:bold" foreground="#ffffff" text="Neue Gerätebestellung / KVA" />
+<t:link id="g_25" actionListener="#{d.DesktopContentWindowUI.onNeuZusatzEinsatz}" font="weight:bold" foreground="#ffffff" text="Neue Gerätebestellung / KVA" />
 <t:coldistance id="g_26" />
 <t:colline id="g_27" background="#000000" height="100%" width="2" />
 <t:coldistance id="g_28" width="100%" />

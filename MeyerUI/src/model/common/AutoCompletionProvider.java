@@ -1,7 +1,6 @@
 package model.common;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 import org.eclnt.jsfserver.util.IAutoCompleteProvider2.AutoCompleteItem;
@@ -34,7 +33,7 @@ public class AutoCompletionProvider {
 		}
 		
 		for(TypModell typModell : TypModell.getValues()) {
-			AutoCompleteItem item = new AutoCompleteItem(typModell.getBezeichnung(), typModell.getId()+"", typModell.getHersteller().getBezeichnung());
+			AutoCompleteItem item = new AutoCompleteItem(typModell.getBezeichnung(), typModell.getId()+"", Hersteller.getHerstellerById(typModell.getHersteller()+"").getBezeichnung());
 			m_ListTypModell.add(item);
 		}
 		

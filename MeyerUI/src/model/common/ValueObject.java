@@ -1,8 +1,9 @@
 package model.common;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class ValueObject {
+public class ValueObject  implements Serializable{
 
 	private Long id;
 	private String changeusr;

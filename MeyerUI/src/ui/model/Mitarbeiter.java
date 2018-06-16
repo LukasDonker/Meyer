@@ -1,29 +1,36 @@
 package ui.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 import model.common.ValueObject;
 
 @Entity
 public class Mitarbeiter extends ValueObject {
 	
-	private Long mitarbeiternummer;
+	@Id
+	@GeneratedValue
+	@Column(name = "id", updatable = false, nullable = false)
+	@Override
+	public Long getId() {
+		return super.getId();
+	}
+	
+	private String spezialisierung;
+	private String gebiet;
 	private String name;
 	private String vorname;
 	private String passwort;
 	private boolean admin;
+	private boolean disponent;
 	
 	public boolean isAdmin() {
 		return admin;
 	}
 	public void setAdmin(boolean admin) {
 		this.admin = admin;
-	}
-	public Long getMitarbeiternummer() {
-		return mitarbeiternummer;
-	}
-	public void setMitarbeiternummer(Long mitarbeiternummer) {
-		this.mitarbeiternummer = mitarbeiternummer;
 	}
 	public String getName() {
 		return name;
@@ -43,4 +50,24 @@ public class Mitarbeiter extends ValueObject {
 	public void setPasswort(String value) {
 		passwort = value;
 	}
+	
+	public String getSpezialisierung() {
+		return spezialisierung;
+	}
+	public void setSpezialisierung(String spezialisierung) {
+		this.spezialisierung = spezialisierung;
+	}
+	public String getGebiet() {
+		return gebiet;
+	}
+	public void setGebiet(String gebiet) {
+		this.gebiet = gebiet;
+	}
+	public boolean isDisponent() {
+		return disponent;
+	}
+	public void setDisponent(boolean disponent) {
+		this.disponent = disponent;
+	}
+	
 }

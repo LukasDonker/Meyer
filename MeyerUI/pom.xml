@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>de.meyer</groupId>
@@ -7,12 +8,24 @@
 	<packaging>war</packaging>
 	<name>MeyerUI</name>
 	<description>Oberfläche des Projekts MeyerZukunft</description>
-    
-    
+
+
 	<repositories>
 		<repository>
 			<id>org.eclnt</id>
 			<url>http://www.captaincasademo.com/mavenrepository</url>
+		</repository>
+		<repository>
+			<id>central.maven.org</id>
+			<url>http://central.maven.org/maven2/</url>
+		</repository>
+		<repository>
+			<id>mvnrepository.com</id>
+			<url>https://mvnrepository.com/repos/central</url>
+		</repository>
+		<repository>
+			<id>org.outerj</id>
+			<url>https://maven.atlassian.com/3rdparty/</url>
 		</repository>
 	</repositories>
 	<dependencies>
@@ -20,7 +33,6 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>3.1.0</version>
-			<scope>provided</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.eclnt</groupId>
@@ -32,19 +44,22 @@
 			<artifactId>eclntpbc</artifactId>
 			<version>20180108</version>
 		</dependency>
-		<dependency>
-			<groupId>javax.faces</groupId>
+		<dependency> <!-- JSF -->
+			<groupId>com.sun.faces</groupId>
 			<artifactId>jsf-api</artifactId>
-			<version>2.0</version>
-			<scope>provided</scope>
+			<version>2.2.14</version>
 		</dependency>
-		<dependency>
-			<groupId>org.glassfish</groupId>
-			<artifactId>javax.faces</artifactId>
-			<version>2.0.11</version>
-			<scope>provided</scope>
+		<dependency> <!-- JSF -->
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-impl</artifactId>
+			<version>2.2.14</version>			
 		</dependency>
-		
+		<dependency> <!-- JSF dependency -->
+			<groupId>javax.servlet.jsp.jstl</groupId>
+			<artifactId>jstl-api</artifactId>
+			<version>1.2</version>
+		</dependency>
+
 		<!-- Hibernate und EJB -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -63,12 +78,14 @@
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>5.2.6.Final</version>
+			 <scope>provided</scope>
 		</dependency>
 
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-annotations</artifactId>
 			<version>3.5.6-Final</version>
+			 <scope>provided</scope>
 		</dependency>
 
 		<dependency>
@@ -76,10 +93,22 @@
 			<artifactId>javax.ejb-api</artifactId>
 			<version>3.2</version>
 		</dependency>
-		
+
+		<dependency>
+			<groupId>org.wildfly</groupId>
+			<artifactId>wildfly-ejb-client-bom</artifactId>
+			<version>8.0.0.Final</version>
+			<type>pom</type>
+		</dependency>
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>1.4.193</version>
+		</dependency>
+
 	</dependencies>
-	
-	
+
+
 	<build>
 		<finalName>MeyerUI</finalName>
 		<sourceDirectory>src</sourceDirectory>
@@ -119,6 +148,8 @@
 									<artifactId>eclntwebappaddonsRISC</artifactId>
 									<version>20170522</version>
 									<outputDirectory>webcontent</outputDirectory>
+									<!-- Do not copy the libraries! -->
+									<excludes>WEB-INF/lib/**.*</excludes>
 								</artifactItem>
 							</artifactItems>
 						</configuration>
@@ -131,12 +162,17 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>2.6</version>
 				<configuration>
-				<webXml>webcontent/WEB-INF/web.xml</webXml>
+					<webXml>webcontent/WEB-INF/web.xml</webXml>
 					<webResources>
 						<resource>
-					       <directory>webcontent</directory>	
+							<directory>webcontent</directory>
 						</resource>
 					</webResources>
+					<archive>
+						 <manifestEntries>
+<!-- IMPORTANT: All dependencies in te same line -->                            <Dependencies>org.jboss.logging:main services, org.apache.xerces:main services, org.hibernate:main services, org.jboss.as.naming:main services, org.javassist:main services</Dependencies>
+                        </manifestEntries>
+					</archive>
 				</configuration>
 			</plugin>
 		</plugins>

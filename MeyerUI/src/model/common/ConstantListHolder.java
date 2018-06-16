@@ -46,7 +46,7 @@ public class ConstantListHolder {
 			List<TypModell> valueList = new ArrayList<TypModell>();
 			for(long y = Integer.parseInt(i + "0"); y <= Integer.parseInt(i + "20") ; y++) {
 				TypModell typModell = new TypModell();
-				typModell.setHersteller(hersteller);
+				typModell.setHersteller(hersteller.getId());
 				typModell.setId(y);
 				typModell.setKey("TTM" + y);
 				if(i % 2 == 0) {

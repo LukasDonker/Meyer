@@ -3,6 +3,7 @@ package managedbeans;
 import org.eclnt.editor.annotations.CCGenClass;
 import org.eclnt.workplace.IWorkpageContainer;
 import org.eclnt.workplace.IWorkpageDispatcher;
+import org.eclnt.workplace.WorkpageByPageBean;
 import org.eclnt.workplace.WorkpageStartInfo;
 import org.eclnt.workplace.WorkpageStarterFactory;
 
@@ -69,12 +70,26 @@ public class DesktopContentWindowUI extends ContentWindowUI {
 		WorkpageStarterFactory.getWorkpageStarter().startWorkpage(wpd, wpc, wpsi);
 	}
 	
+	public void onNeuZusatzEinsatz(javax.faces.event.ActionEvent event) {
+		IWorkpageDispatcher wpd = (IWorkpageDispatcher) getOwningDispatcher().getTopOwner();
+		IWorkpageContainer wpc = getWorkpageContainer();
+		WorkpageStartInfo wpsi = new WorkpageStartInfo();
+		wpsi.setJspPage("/pages/ZusatzEinsatz.jsp");
+		wpsi.setImage("/awesomefont(f016,#FFFFFF,12)");
+		wpsi.setText("ZusatzEinsatz, Einsatzbericht N/A");
+		wpsi.setSelectorTitle("ZusatzEinsatz Neu");
+		// wpsi.setWindowTitle("GZ 1234: Schwarzbrot - Verbreitung und
+		// Vermarktung");
+		wpsi.setOpenMultipleInstances(false);
+		WorkpageStarterFactory.getWorkpageStarter().startWorkpage(wpd, wpc, wpsi);
+		
+	}
 	
 	public void onOpenAdmin(javax.faces.event.ActionEvent event) {
 		IWorkpageDispatcher wpd = (IWorkpageDispatcher) getOwningDispatcher().getTopOwner();
 		IWorkpageContainer wpc = getWorkpageContainer();
 		WorkpageStartInfo wpsi = new WorkpageStartInfo();
-		wpsi.setJspPage("/pages/AdminUI.jsp");
+		wpsi.setJspPage("/pages/Admin.jsp");
 		wpsi.setText("Passwort ändern");
 		wpsi.setSelectorTitle("Passwort ändern");
 		// wpsi.setWindowTitle("GZ 1234: Schwarzbrot - Verbreitung und

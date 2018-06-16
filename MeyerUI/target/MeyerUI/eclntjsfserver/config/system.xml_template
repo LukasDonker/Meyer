@@ -6,17 +6,6 @@
 
     <!--
       *************************************************************************
-      Configuration of RISCStarter - the servlet thar is responding on .risc
-      request.
-      *************************************************************************
-     <riscstarter
-        pageicon="eclnt/images/icon.png"
-        title="CaptainCasa Enterprise Client - RISC-HTML"
-     />
-     -->
-
-    <!--
-      *************************************************************************
       Name of SAXParserFactory that is used internally for all SAXParsing.
       If not specified then a default SAX Parser will be selected (crimson).
       If using CaptainCasa together with other frameworks (e.g. Spring)
@@ -51,7 +40,6 @@
     <starttemplates 
         ccapplet="org/eclnt/jsfserver/starter/applettemplate.html"
         ccwebstart="org/eclnt/jsfserver/starter/webstarttemplate.jnlp"
-        ccrisc="org/eclnt/jsfserver/starter/risctemplate.html"
     />
      -->
      
@@ -83,7 +71,7 @@
      
     <!--
       *************************************************************************
-      Configuration of stream store persistency.
+      Configuration of so called stream store.
       *************************************************************************
      -->
     <!--
@@ -207,8 +195,8 @@
 	 Memory optimization in server side component management.
 	 
 	 storeoriginaltagattributes - By default original attribute values are kept
-	 in a map, so that they can be accessed later on using the method
-	 "getOriginalAttributeString". This is typically only required if you
+	 in a map, so that they can be accessed lated on using the method
+	 "getOriginalAttributeString". This is tpyically only required if you
 	 have own components that for some reason need to access the original 
 	 value of an expression before it is converted due to workplace or page
 	 bean management.
@@ -251,20 +239,11 @@
     <!--
     <checkinboundandoutboundvalues name="...className..."/>
      -->
-
-    <!--
-     **************************************************************************
-     Security filter configuration
-     The security filter can be extended by implementing the interface
-     SecurityFilter.IExtension. The extension class can be defined here.
-     The class must provide a constructor without parameters.
-     **************************************************************************
-    <securityfilter extensionclassname="yourclassname"/>
-     -->     
+     
      
     <!--
      **************************************************************************
-     Configuration for servlets and filters
+     Configruation for servlets and filters
      **************************************************************************
      -->     
      
@@ -281,42 +260,4 @@
     <servletconfiguration classname="org.eclnt.jsfserver.util.SessionInvalidationServlet" blockget="false"/> 
     <filterconfiguration classname="org.eclnt.jsfserver.util.ThreadingFilter" blockget="false"/>
     -->
-    
-    <!--
-     **************************************************************************
-     SECURITY configuration: File Manager access, allowed directories
-     All access inside the CaptainCasa server processing is done through the
-     FileManager class. This class allows the configuration of directories that
-     are defined for write/read access (write access includes read access).
-     
-     There are the following variables available:
-     ${temp} => File temp directory
-     ${servlettemp} => Temp directory provided by the servlet container
-     ${servletwebapp} => Directory of the deployed web application (only available
-                         with certain application servers!)
-                         
-     The File Manager security is switched on, if at least one definition is
-     done. 
-     **************************************************************************
-     -->
-     
-     <!--
-        Access required by CaptainCasa processing:
-      -->
-     <!-- 
-     <filemanagerreadaccess directory="${servletwebapp}"/>
-     <filemanagerwriteaccess directory="${temp}"/>
-     <filemanagerwriteaccess directory="${servlettemp}"/>
-     -->
-     
-     <!--
-        Own definitions (examples):
-      -->
-     <!--
-     <filemanagerreadaccess directory="c:\temp"/>
-     <filemanagerreadaccess directory="d:\temp"/>
-     <filemanagerreadaccess directory="/temp/myapp"/>
-     <filemanagerwriteaccess directory="/temp/myapp/write"/>
-     -->
-    
 </system>

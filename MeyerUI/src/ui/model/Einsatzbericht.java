@@ -4,18 +4,30 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 import model.common.ValueObject;
 
 @Entity
 public class Einsatzbericht extends ValueObject{
+	
+	@Id
+	@GeneratedValue
+	@Column(name = "id", updatable = false, nullable = false)
+	@Override
+	public Long getId() {
+		return super.getId();
+	}
 
 	private String m_servicenummer;
 	private String m_tsnummer;
 	private String m_tanummer;
-	private Kunde m_kunde;
-	private Ansprechpartner m_ansprechpartner;
+	private Long m_kunde;
+	private Long m_ansprechpartner;
 
 	private Date m_termin;
 	
@@ -24,21 +36,22 @@ public class Einsatzbericht extends ValueObject{
 	private boolean m_notdienstpauschale;
 	private boolean m_dinueberprueft;
 	private boolean m_garantieAntrag;
-	private ZusatzEinsatz m_zusatzEinsatz;
+	private Long m_zusatzEinsatz;
 	
 	private String m_unterschriftKunde;
 	private String m_unterschriftTechniker;
 	private String m_unterschriftNameKunde;
 	private String m_unterschriftNameTechniker;
 	
-	private Disponent m_disponent;
+	private Long m_disponent;
 	
-	List<Techniker> m_listTechniker = new ArrayList<Techniker>();
-	List<Unterschrift> m_listUnterschriften = new ArrayList<Unterschrift>();
+	List<Long> m_listTechniker = new ArrayList<Long>();
+	List<Long> m_listUnterschriften = new ArrayList<Long>();
 	
-	private List<AuszufuehrendeArbeiten> m_auszufuehrendeArbeitenList = new ArrayList<>();
-	private List<Arbeiten> m_arbeitenList = new ArrayList<Arbeiten>();
-	private List<TeileUndPauschalarbeiten> m_teileUndPauschalarbeitenList = new ArrayList<TeileUndPauschalarbeiten>();
+	
+	private List<Long> m_auszufuehrendeArbeitenList = new ArrayList<>();
+	private List<Long> m_arbeitenList = new ArrayList<>();
+	private List<Long> m_teileUndPauschalarbeitenList = new ArrayList<>();
 	
 	
 	/*
@@ -62,16 +75,16 @@ public class Einsatzbericht extends ValueObject{
 	public void setTanummer(String tanummer) {
 		m_tanummer = tanummer;
 	}
-	public Kunde getKunde() {
+	public Long getKunde() {
 		return m_kunde;
 	}
-	public void setKunde(Kunde kunde) {
+	public void setKunde(Long kunde) {
 		m_kunde = kunde;
 	}
-	public Ansprechpartner getAnsprechpartner() {
+	public Long getAnsprechpartner() {
 		return m_ansprechpartner;
 	}
-	public void setAnsprechpartner(Ansprechpartner ansprechpartner) {
+	public void setAnsprechpartner(Long ansprechpartner) {
 		m_ansprechpartner = ansprechpartner;
 	}
 	public Date getTermin() {
@@ -104,46 +117,56 @@ public class Einsatzbericht extends ValueObject{
 	public void setGarantieAntrag(boolean garantieAntrag) {
 		m_garantieAntrag = garantieAntrag;
 	}
-	public ZusatzEinsatz getZusatzEinsatz() {
+	public Long getZusatzEinsatz() {
 		return m_zusatzEinsatz;
 	}
-	public void setZusatzEinsatz(ZusatzEinsatz materialbestellung) {
+	public void setZusatzEinsatz(Long materialbestellung) {
 		m_zusatzEinsatz = materialbestellung;
 	}
-	public List<Techniker> getListTechniker() {
+	
+	@ElementCollection(targetClass=Long.class)
+	public List<Long> getListTechniker() {
 		return m_listTechniker;
 	}
-	public void setListTechniker(List<Techniker> listTechniker) {
+	public void setListTechniker(List<Long> listTechniker) {
 		m_listTechniker = listTechniker;
 	}
-	public List<AuszufuehrendeArbeiten> getAuszufuehrendeArbeitenList() {
+	
+	@ElementCollection(targetClass=Long.class)
+	public List<Long> getAuszufuehrendeArbeitenList() {
 		return m_auszufuehrendeArbeitenList;
 	}
-	public void setAuszufuehrendeArbeitenList(List<AuszufuehrendeArbeiten> auszufuehrendeArbeitenList) {
+	public void setAuszufuehrendeArbeitenList(List<Long> auszufuehrendeArbeitenList) {
 		m_auszufuehrendeArbeitenList = auszufuehrendeArbeitenList;
 	}
-	public List<Arbeiten> getArbeitenList() {
+	
+	@ElementCollection(targetClass=Long.class)
+	public List<Long> getArbeitenList() {
 		return m_arbeitenList;
 	}
-	public void setArbeitenList(List<Arbeiten> arbeitenList) {
+	public void setArbeitenList(List<Long> arbeitenList) {
 		m_arbeitenList = arbeitenList;
 	}
-	public List<TeileUndPauschalarbeiten> getTeileUndPauschalarbeitenList() {
+	
+	@ElementCollection(targetClass=Long.class)
+	public List<Long> getTeileUndPauschalarbeitenList() {
 		return m_teileUndPauschalarbeitenList;
 	}
-	public void setTeileUndPauschalarbeitenList(List<TeileUndPauschalarbeiten> teileUndPauschalarbeitenList) {
+	public void setTeileUndPauschalarbeitenList(List<Long> teileUndPauschalarbeitenList) {
 		m_teileUndPauschalarbeitenList = teileUndPauschalarbeitenList;
 	}
-	public Disponent getDisponent() {
+	public Long getDisponent() {
 		return m_disponent;
 	}
-	public void setDisponent(Disponent disponent) {
+	public void setDisponent(Long disponent) {
 		m_disponent = disponent;
 	}
-	public List<Unterschrift> getListUnterschriften() {
+	
+	@ElementCollection(targetClass=Long.class)
+	public List<Long> getListUnterschriften() {
 		return m_listUnterschriften;
 	}
-	public void setListUnterschriften(List<Unterschrift> listUnterschriften) {
+	public void setListUnterschriften(List<Long> listUnterschriften) {
 		m_listUnterschriften = listUnterschriften;
 	}
 	public String getUnterschriftKunde() {

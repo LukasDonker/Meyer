@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.ejb.EJB;
 import javax.faces.event.ActionEvent;
 
 import org.eclnt.editor.annotations.CCGenClass;
@@ -21,6 +22,15 @@ import model.common.AutoCompletionProvider;
 import model.common.ConstantListHolder;
 import model.common.HerstellerAutoFillCompleteProvider;
 import model.common.TypModellAutoFillCompleteProvider;
+import ui.ejb.BenutzerManager;
+import ui.ejb.BenutzerManagerEJB;
+import ui.ejb.BestellungManager;
+import ui.ejb.BestellungManagerEJB;
+import ui.ejb.EinsatzberichtManager;
+import ui.ejb.EinsatzberichtManagerEJB;
+import ui.ejb.JNDIConnect;
+import ui.ejb.KundenManager;
+import ui.ejb.KundenManagerEJB;
 import ui.model.Angebot;
 import ui.model.AngebotPer;
 import ui.model.Arbeiten;
@@ -53,6 +63,14 @@ public class ZusatzEinsatzUI extends WorkpageDispatchedPageBean implements Seria
 	// ------------------------------------------------------------------------
 	// members
 	// ------------------------------------------------------------------------
+	private KundenManager m_kundenManager = JNDIConnect.getInstance().getKundenManager();
+
+	private EinsatzberichtManager m_berichtManager = JNDIConnect.getInstance().getEinsatzberichtManager();
+
+	private BestellungManager m_bestellungManager = JNDIConnect.getInstance().getBestellungManager();
+
+	private BenutzerManager m_benutzerManager = JNDIConnect.getInstance().getBenutzerManager();
+	
 	private ZusatzEinsatz reference;
 
 	private String m_kunde;
@@ -133,7 +151,7 @@ public class ZusatzEinsatzUI extends WorkpageDispatchedPageBean implements Seria
 		m_listMaterialBestellung.clear();
 		m_listAngebot.clear();
 
-		m_kunde = zusatzEinsatz.getKunde().getKundennummer() + "";
+		m_kunde = zusatzEinsatz.getKunde() + "";
 		m_taNummer = zusatzEinsatz.getTanummer();
 		m_date = zusatzEinsatz.getDatum();
 		m_bisWann = zusatzEinsatz.getBisWann();
@@ -144,17 +162,21 @@ public class ZusatzEinsatzUI extends WorkpageDispatchedPageBean implements Seria
 
 		m_infos = zusatzEinsatz.getInfos();
 
-		for (Arbeiten arbeit : zusatzEinsatz.getListArbeiten()) {
-			m_arbeitenList.getItems().add(new ArbeitenUI(arbeit));
+		for (Long arbeit : zusatzEinsatz.getListArbeiten()) {
+			Arbeiten value = m_berichtManager.findArbeiten(arbeit);
+			m_arbeitenList.getItems().add(new ArbeitenUI(value));
 		}
-		for (MaterialBestellung bestellung : zusatzEinsatz.getListMaterialBestellung()) {
-			m_listMaterialBestellung.add(new MaterialBestellungUI(bestellung));
+		for (Long bestellung : zusatzEinsatz.getListMaterialBestellung()) {
+			MaterialBestellung value = m_berichtManager.findMaterialBestellung(bestellung);
+			m_listMaterialBestellung.add(new MaterialBestellungUI(value));
 		}
-		for (Angebot angebot : zusatzEinsatz.getListAngebot()) {
-			m_listAngebot.add(new AngebotUI(angebot));
+		for (Long angebot : zusatzEinsatz.getListAngebot()) {
+			Angebot value = m_berichtManager.findAngebot(angebot);
+			m_listAngebot.add(new AngebotUI(value));
 		}
-		for (MyFile image : zusatzEinsatz.getListImages()) {
-			m_files.add(image);
+		for (Long image : zusatzEinsatz.getListImages()) {
+			MyFile value = m_berichtManager.findMyFile(image);
+			m_files.add(value);
 		}
 
 		if (m_listMaterialBestellung.size() == 0) {
@@ -195,6 +217,10 @@ public class ZusatzEinsatzUI extends WorkpageDispatchedPageBean implements Seria
 			m_files.add(file);
 			aktualisiereImageShaker();
 		}
+	}
+	
+	public void onSave(ActionEvent event) {
+		m_berichtManager.createZusatzEinsatz(reference);
 	}
 
 	public void onDeletePicture(ActionEvent event) {
@@ -317,7 +343,7 @@ public class ZusatzEinsatzUI extends WorkpageDispatchedPageBean implements Seria
 		}
 
 		public String getTechniker() {
-			return myValues.getTechniker().getName();
+			return m_benutzerManager.findMitarbeiter(myValues.getTechniker()).getName();
 		}
 
 		public String getArbeitsstunden() {
@@ -336,20 +362,22 @@ public class ZusatzEinsatzUI extends WorkpageDispatchedPageBean implements Seria
 
 	public class MaterialBestellungUI {
 		private MaterialBestellung myValue;
+		private KundenGeraet kundengeraet;
 
 		private FIXGRIDListBinding<TeileUI> m_teile = new FIXGRIDListBinding<>(true);
 
 		public MaterialBestellungUI(MaterialBestellung bestellung) {
 			myValue = bestellung;
-			for(Teil teil : myValue.getListTeil()) {
-				m_teile.getItems().add(new TeileUI(teil));
+			for(Long teil : myValue.getListTeil()) {
+				Teil value = m_bestellungManager.findTeil(teil);
+				m_teile.getItems().add(new TeileUI(value));
 			}
 		}
 
 		public MaterialBestellungUI() {
 			myValue = new MaterialBestellung();
-			myValue.setKundengeraet(new KundenGeraet());
-			myValue.getKundengeraet().setKunde(reference.getKunde());
+			kundengeraet = new KundenGeraet();
+			kundengeraet.setKunde(reference.getKunde());
 			m_teile.getItems().add(new TeileUI());
 		}
 
@@ -358,71 +386,72 @@ public class ZusatzEinsatzUI extends WorkpageDispatchedPageBean implements Seria
 		}
 
 		public Long getMeyernummer() {
-			return myValue.getKundengeraet().getMeyerNummer(); // TODO Find Kundengerät anhand von Meyernummer
+			return kundengeraet.getMeyerNummer(); 
 		}
 
 		public void setMeyernummer(Long meyernummer) {
-			myValue.getKundengeraet().setMeyerNummer(meyernummer);
+			kundengeraet = m_kundenManager.findKundenGeraet(meyernummer);
+//			myValue.getKundengeraet().setMeyerNummer(meyernummer);
 		}
 
 		public String getHersteller() {
-			return myValue.getKundengeraet().getHersteller() != null
-					? myValue.getKundengeraet().getHersteller().getBezeichnung()
+			return kundengeraet.getHersteller() != null
+					? Hersteller.getHerstellerById(kundengeraet.getHersteller()+"").getBezeichnung()
 					: null;
 		}
 		
 		public void setHersteller(String value) {/*Ignore*/}
 		
 		public String getHerstellerValueId() {
-			return myValue.getKundengeraet().getHersteller() != null
-					? myValue.getKundengeraet().getHersteller().getId() + ""
+			return kundengeraet.getHersteller() != null
+					? kundengeraet.getHersteller() + ""
 					: null;
 		}
 
 		public void setHerstellerValueId(String string) {
-			myValue.getKundengeraet().setHersteller(Hersteller.getHerstellerById(string));
+			kundengeraet.setHersteller(Hersteller.getHerstellerById(string).getId());
 		}
 
 		public String getTypModell() {
-			return myValue.getKundengeraet().getTypModell() != null
-					? myValue.getKundengeraet().getTypModell().getBezeichnung()
+			return kundengeraet.getTypModell() != null
+					? TypModell.getTypModellById(kundengeraet.getTypModell()+"").getBezeichnung()
 					: null;
 		}
 
 		public void setTypModell(String value) {/*Ignore*/}
 		
 		public String getTypValueId() {
-			return myValue.getKundengeraet().getTypModell() != null
-					? myValue.getKundengeraet().getTypModell().getId() + ""
+			return kundengeraet.getTypModell() != null
+					? kundengeraet.getTypModell() + ""
 					: null;
 		}
 
 		public void setTypValueId(String string) {
-			myValue.getKundengeraet().setTypModell(TypModell.getTypModellById(string));
+			kundengeraet.setTypModell(TypModell.getTypModellById(string).getId());
 		}
 
 		public String getSeriennummer() {
-			return myValue.getKundengeraet().getSeriennummer();
+			return kundengeraet.getSeriennummer();
 		}
 
 		public void setSeriennummer(String seriennummer) {
-			myValue.getKundengeraet().setSeriennummer(seriennummer);
+			kundengeraet.setSeriennummer(seriennummer);
 		}
 
 		public Integer getBaujahr() {
-			return myValue.getKundengeraet().getBaujahr();
+			return kundengeraet.getBaujahr();
 		}
 
 		public void setBaujahr(Integer baujahr) {
-			myValue.getKundengeraet().setBaujahr(baujahr);
+			kundengeraet.setBaujahr(baujahr);
 		}
 
 		public String getSonstiges() {
-			return myValue.getKundengeraet().getBemerkungen();
+			return kundengeraet.getBemerkungen();
 		}
 
 		public void setSonstiges(String sonstiges) {
-			myValue.getKundengeraet().setBemerkungen(sonstiges);
+			kundengeraet.setBemerkungen(sonstiges);
 		}
 
 		public FIXGRIDListBinding<TeileUI> getTeile() {
@@ -436,7 +465,7 @@ public class ZusatzEinsatzUI extends WorkpageDispatchedPageBean implements Seria
 		public MaterialBestellung getValue() {
 			myValue.getListTeil().clear();
 			for(TeileUI teil : m_teile.getItems()) {
-				myValue.getListTeil().add(teil.getValue());
+				myValue.getListTeil().add(teil.getValue().getId());
 			}
 			return myValue;
 		}
@@ -486,17 +515,17 @@ public class ZusatzEinsatzUI extends WorkpageDispatchedPageBean implements Seria
 			}
 
 			public String getHersteller() {
-				return myValue.getHersteller() != null ? myValue.getHersteller().getBezeichnung() : null;
+				return myValue.getHersteller() != null ? Hersteller.getHerstellerById(myValue.getHersteller()+"").getBezeichnung() : null;
 			}
 			
 			public void setHersteller(String value) {/*Ignore*/}
 
 			public String getHerstellerValueId() {
-				return myValue.getHersteller() != null ? myValue.getHersteller().getId() + "" : null;
+				return myValue.getHersteller() != null ? myValue.getHersteller() + "" : null;
 			}
 
 			public void setHerstellerValueId(String string) {
-				myValue.setHersteller(Hersteller.getHerstellerById(string));
+				myValue.setHersteller(Hersteller.getHerstellerById(string).getId());
 			}
 			
 			public Teil getValue() {
@@ -531,31 +560,31 @@ public class ZusatzEinsatzUI extends WorkpageDispatchedPageBean implements Seria
 		}
 
 		public String getHersteller() {
-			return myValue.getHersteller() != null ? myValue.getHersteller().getBezeichnung() : null;
+			return myValue.getHersteller() != null ? Hersteller.getHerstellerById(myValue.getHersteller()+"").getBezeichnung() : null;
 		}
 		
 		public void setHersteller(String value) {/*Ignore*/}
 
 		public String getHerstellerValueId() {
-			return myValue.getHersteller() != null ? myValue.getHersteller().getId() + "" : null;
+			return myValue.getHersteller() != null ? myValue.getHersteller()+ "" : null;
 		}
 
 		public void setHerstellerValueId(String string) {
-			myValue.setHersteller(Hersteller.getHerstellerById(string));
+			myValue.setHersteller(Hersteller.getHerstellerById(string).getId());
 		}
 
 		public String getTyp() {
-			return myValue.getTypModell() != null ? myValue.getTypModell().getBezeichnung() : null;
+			return myValue.getTypModell() != null ? TypModell.getTypModellById(myValue.getTypModell() + "").getBezeichnung() : null;
 		}
 
 		public void setTyp(String value) {/*Ignore*/}
 		
 		public String getTypValueId() {
-			return myValue.getTypModell() != null ? myValue.getTypModell().getId() + "" : null;
+			return myValue.getTypModell() != null ? myValue.getTypModell() + "" : null;
 		}
 
 		public void setTypValueId(String string) {
-			myValue.setTypModell(TypModell.getTypModellById(string));
+			myValue.setTypModell(TypModell.getTypModellById(string).getId());
 		}
 
 		public Integer getHoehe() {

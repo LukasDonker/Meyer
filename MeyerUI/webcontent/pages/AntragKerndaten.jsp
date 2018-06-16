@@ -13,7 +13,7 @@
 <f:subview id="pages_AntragKerndateng_sv">
 <t:rowheader id="g_1" >
 <t:adaptivetoolbar id="g_2" width="100%" >
-<t:button id="g_3" image="/awesomefont(f0c7,#FFFFFF,15)" stylevariant="successButton" text="Speichern" />
+<t:button id="g_3" actionListener="#{d.AntragKerndatenUI.onSave}" image="/awesomefont(f0c7,#FFFFFF,15)" stylevariant="successButton" text="Speichern" />
 <t:coldistance id="g_4" />
 <t:button id="g_5" image="/awesomefont(f00d,#FFFFFF,15)" stylevariant="dangerButton" text="Abbrechen" />
 <t:coldistance id="g_6" width="100%" />

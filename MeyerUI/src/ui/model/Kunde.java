@@ -2,18 +2,29 @@ package ui.model;
 
 import java.util.List;
 
+import javax.persistence.Column;
+import javax.persistence.ElementCollection;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 import model.common.ValueObject;
-import model.ort.Anschrift;
 
 @Entity
 public class Kunde extends ValueObject {
 	
+	@Id
+	@GeneratedValue
+	@Column(name = "id", updatable = false, nullable = false)
+	@Override
+	public Long getId() {
+		return super.getId();
+	}
+	
 	
 	private Long Kundennummer;
-	private Anschrift rechnungsempfänger;
-	private List<Ansprechpartner> listAnsprechpartner;
+	private Long rechnungsempfänger;
+	private List<Long> listAnsprechpartner;
 	private String name;
 	
 	
@@ -23,16 +34,18 @@ public class Kunde extends ValueObject {
 	public void setKundennummer(Long kundennummer) {
 		Kundennummer = kundennummer;
 	}
-	public Anschrift getRechnungsempfänger() {
+	public Long getRechnungsempfänger() {
 		return rechnungsempfänger;
 	}
-	public void setRechnungsempfänger(Anschrift rechnungsempfänger) {
+	public void setRechnungsempfänger(Long rechnungsempfänger) {
 		this.rechnungsempfänger = rechnungsempfänger;
 	}
-	public List<Ansprechpartner> getListAnsprechpartner() {
+	
+	@ElementCollection(targetClass=Long.class)
+	public List<Long> getListAnsprechpartner() {
 		return listAnsprechpartner;
 	}
-	public void setListAnsprechpartner(List<Ansprechpartner> listAnsprechpartner) {
+	public void setListAnsprechpartner(List<Long> listAnsprechpartner) {
 		this.listAnsprechpartner = listAnsprechpartner;
 	}
 	public String getName() {

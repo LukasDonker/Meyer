@@ -19,15 +19,20 @@ import org.eclnt.jsfserver.managedbean.IDispatcher;
 import org.eclnt.workplace.IWorkpageDispatcher;
 import org.eclnt.workplace.WorkpageByPageBean;
 
+import ui.common.MySecurityManager;
+import ui.ejb.BenutzerManager;
+import ui.ejb.EinsatzberichtManager;
+import ui.ejb.JNDIConnect;
+import ui.ejb.KundenManager;
+import ui.model.Ansprechpartner;
 import ui.model.Arbeiten;
 import ui.model.AuszufuehrendeArbeiten;
 import ui.model.Einsatzbericht;
-import ui.model.Techniker;
+import ui.model.Mitarbeiter;
 import ui.model.TeileUndPauschalarbeiten;
 import ui.model.ZusatzEinsatz;
 
 @CCGenClass(expressionBase = "#{d.AntragKerndatenUI}")
-
 public class AntragKerndatenUI extends DefaultDispatchedPageBean implements Serializable {
 
 	/**
@@ -42,6 +47,13 @@ public class AntragKerndatenUI extends DefaultDispatchedPageBean implements Seri
 	// ------------------------------------------------------------------------
 	// members
 	// ------------------------------------------------------------------------
+	BenutzerManager m_benutzermanager = JNDIConnect.getInstance().getBenutzerManager();
+	
+	EinsatzberichtManager m_berichtmanager = JNDIConnect.getInstance().getEinsatzberichtManager();
+	
+	KundenManager m_kundenManager = JNDIConnect.getInstance().getKundenManager();
+	MySecurityManager securityManager = MySecurityManager.getInstance();
+	
 	private Einsatzbericht reference;
 	
 	private String m_servicenummer;
@@ -64,6 +76,9 @@ public class AntragKerndatenUI extends DefaultDispatchedPageBean implements Seri
 
 	private double m_ueberstunden;
 
+	private Ansprechpartner m_ansprechpartnerObj;
+	private Mitarbeiter m_disponentObj;
+	
 	private boolean m_notdienstpauschale = false;
 	private boolean m_weitererEinsatz = false;
 	private boolean m_dinueberprueft = false;
@@ -74,7 +89,7 @@ public class AntragKerndatenUI extends DefaultDispatchedPageBean implements Seri
 
 	private IListener m_listener;
 
-	Map<String, Techniker> m_listTechniker = new HashMap<String, Techniker>();
+	Map<String, Mitarbeiter> m_listTechniker = new HashMap<String, Mitarbeiter>();
 	ValidValuesBinding cmb_techniker = new ValidValuesBinding();
 
 	private FIXGRIDListBinding<AuszufuehrendeArbeitenUI> m_auszufuehrendeArbeitenList = new FIXGRIDListBinding<>(true);
@@ -88,12 +103,16 @@ public class AntragKerndatenUI extends DefaultDispatchedPageBean implements Seri
 	public AntragKerndatenUI(IDispatcher dispatcher) {
 		super(dispatcher);
 		init();
-		// TODO Auto-generated constructor stub
 	}
 
 	public void init() {
 		m_newEinsatzbericht = true;
-		m_servicenummer = "12345679";// TODO neue Servicenummer generieren;
+		Einsatzbericht bericht = new Einsatzbericht();
+		bericht.setDisponent(securityManager.getAngemeldeterBenutzer().getId());
+		reference = m_berichtmanager.createEinsatzbericht(bericht);
+		m_servicenummer = reference.getId()+"";
+		m_tsnummer = reference.getId()+"";
+		m_tanummer = reference.getId()+"";
 	}
 
 	public void init(Einsatzbericht einsatzbericht) {
@@ -101,16 +120,20 @@ public class AntragKerndatenUI extends DefaultDispatchedPageBean implements Seri
 
 		reference = einsatzbericht;
 		
+		m_ansprechpartnerObj = m_kundenManager.findAnsprechpartner(einsatzbericht.getAnsprechpartner());
+		m_disponentObj = m_benutzermanager.findMitarbeiter(einsatzbericht.getDisponent());
+		
 		m_servicenummer = einsatzbericht.getServicenummer();
 		m_tsnummer = einsatzbericht.getTsnummer();
 		m_tanummer = einsatzbericht.getTanummer();
-		m_kundennummer = einsatzbericht.getKunde().getId() + "";
-		m_ansprechpartner = einsatzbericht.getAnsprechpartner().getName();
-		m_disponent = einsatzbericht.getDisponent().getName();
+		m_kundennummer = einsatzbericht.getKunde() + "";
+		m_ansprechpartner = m_ansprechpartnerObj.getName();
+		m_disponent = m_disponentObj.getName();
 
 		m_techniker = null;
 		int i = 0;
-		for (Techniker techniker : einsatzbericht.getListTechniker()) {
+		for (Long technikerId : einsatzbericht.getListTechniker()) {
+			Mitarbeiter techniker = m_benutzermanager.findMitarbeiter(technikerId);
 			if (i == 0) {
 				m_techniker = techniker.getName();
 			} else {
@@ -125,8 +148,8 @@ public class AntragKerndatenUI extends DefaultDispatchedPageBean implements Seri
 		m_unterschriftNameTechniker = einsatzbericht.getUnterschriftNameTechniker();
 
 
-		m_einsatzort = einsatzbericht.getAnsprechpartner().getEinsatzort();
-		m_ansprechpartnerDaten = einsatzbericht.getAnsprechpartner().getAnsprechpartnerDaten();
+		m_einsatzort = ermittleEinsatzort();
+		m_ansprechpartnerDaten = m_ansprechpartnerObj.getAnsprechpartnerDaten();
 
 		m_termin = einsatzbericht.getTermin();
 
@@ -138,16 +161,19 @@ public class AntragKerndatenUI extends DefaultDispatchedPageBean implements Seri
 		m_dinueberprueft = einsatzbericht.isDinueberprueft();
 		m_garantieAntrag = einsatzbericht.isGarantieAntrag();
 
-		for (AuszufuehrendeArbeiten value : einsatzbericht.getAuszufuehrendeArbeitenList()) {
-			m_auszufuehrendeArbeitenList.getItems().add(new AuszufuehrendeArbeitenUI(value));
+		for (Long value : einsatzbericht.getAuszufuehrendeArbeitenList()) {
+			AuszufuehrendeArbeiten arbeit = m_berichtmanager.findAuszufuehrendeArbeiten(value);
+			m_auszufuehrendeArbeitenList.getItems().add(new AuszufuehrendeArbeitenUI(arbeit));
 		}
 
-		for (Arbeiten value : einsatzbericht.getArbeitenList()) {
-			m_arbeitenList.getItems().add(new ArbeitenUI(value));
+		for (Long value : einsatzbericht.getArbeitenList()) {
+			Arbeiten arbeit = m_berichtmanager.findArbeiten(value);
+			m_arbeitenList.getItems().add(new ArbeitenUI(arbeit));
 		}
 
-		for (TeileUndPauschalarbeiten value : einsatzbericht.getTeileUndPauschalarbeitenList()) {
-			m_TundPaList.getItems().add(new TeileUndPauschalarbeitenUI(value));
+		for (Long value : einsatzbericht.getTeileUndPauschalarbeitenList()) {
+			TeileUndPauschalarbeiten arbeit = m_berichtmanager.findTeileUndPauschalarbeiten(value);
+			m_TundPaList.getItems().add(new TeileUndPauschalarbeitenUI(arbeit));
 		}
 
 	}
@@ -171,9 +197,13 @@ public class AntragKerndatenUI extends DefaultDispatchedPageBean implements Seri
 	 * scenario.
 	 */
 	
+	private String ermittleEinsatzort() {
+		return m_kundenManager.findKunde(m_ansprechpartnerObj.getKunde()) + "\n" + m_kundenManager.findAnschrift(m_ansprechpartnerObj.getAnschrift()).toString();
+	}
+	
 	public void onSave(ActionEvent ae) {
 		aktualisiereReference();
-		//TODO Save to Database
+		m_berichtmanager.createEinsatzbericht(reference);
 	}
 
 	private void aktualisiereReference() {
@@ -184,16 +214,21 @@ public class AntragKerndatenUI extends DefaultDispatchedPageBean implements Seri
 			einsatzbericht = reference;
 		}
 		
+		m_ansprechpartnerObj = m_kundenManager.findAnsprechpartner(einsatzbericht.getAnsprechpartner());
+		
 		einsatzbericht.setServicenummer(m_servicenummer);
 		einsatzbericht.setTsnummer(m_tsnummer);
 		einsatzbericht.setTanummer(m_tanummer);
-//		einsatzbericht.setDisponent(disponent); //TODO DIsponent anhand des Namens suchen
-//		einsatzbericht.setKunde(m_kundennummer) //TODO Kunde anhand Kundennummer suchen;
-//		einsatzbericht.setAnsprechpartner(m_ansprechpartner); //TODO Ansprechpartner anhand namen suchen;
-//		m_einsatzort = einsatzbericht.getAnsprechpartner().getEinsatzort();
-//		m_ansprechpartnerDaten = einsatzbericht.getAnsprechpartner().getAnsprechpartnerDaten();
+		einsatzbericht.setDisponent(m_benutzermanager.findMitarbeiterByName(m_disponent).getId()); 
+		einsatzbericht.setKunde(m_kundenManager.findKunde(Long.parseLong(m_kundennummer)).getId());
+		einsatzbericht.setAnsprechpartner(m_kundenManager.findAnsprechpartnerByName(m_ansprechpartner).getId());
+		m_einsatzort = ermittleEinsatzort();
+		m_ansprechpartnerDaten = m_ansprechpartnerObj.getAnsprechpartnerDaten();
 		
-		einsatzbericht.setListTechniker((List<Techniker>) m_listTechniker.values());
+		einsatzbericht.getListTechniker().clear();
+		for(Mitarbeiter value : m_listTechniker.values()) {
+			einsatzbericht.getListTechniker().add(value.getId());
+		}
 
 		
 		einsatzbericht.setUnterschriftKunde(m_unterschriftKunde);
@@ -212,29 +247,29 @@ public class AntragKerndatenUI extends DefaultDispatchedPageBean implements Seri
 		einsatzbericht.setDinueberprueft(m_dinueberprueft);
 		einsatzbericht.setGarantieAntrag(m_garantieAntrag);
 		
-		List<AuszufuehrendeArbeiten> auszufuehrendeArbeitenValueList = new ArrayList<AuszufuehrendeArbeiten>();
+		List<Long> auszufuehrendeArbeitenValueList = new ArrayList<Long>();
 		for (AuszufuehrendeArbeitenUI value : m_auszufuehrendeArbeitenList.getItems()) {
-			auszufuehrendeArbeitenValueList.add(value.getValue());
+			auszufuehrendeArbeitenValueList.add(value.getValue().getId());
 		}
 		einsatzbericht.setAuszufuehrendeArbeitenList(auszufuehrendeArbeitenValueList);
 		
-		List<Arbeiten> arbeitenValueList = new ArrayList<Arbeiten>();
+		List<Long> arbeitenValueList = new ArrayList<Long>();
 		for (ArbeitenUI value : m_arbeitenList.getItems()) {
-			arbeitenValueList.add(value.getValue());
+			arbeitenValueList.add(value.getValue().getId());
 		}
 		einsatzbericht.setArbeitenList(arbeitenValueList);
 
 		
-		List<TeileUndPauschalarbeiten> teileUndPauschalarbeitenValueList = new ArrayList<TeileUndPauschalarbeiten>();
+		List<Long> teileUndPauschalarbeitenValueList = new ArrayList<Long>();
 		for (TeileUndPauschalarbeitenUI value : m_TundPaList.getItems()) {
-			teileUndPauschalarbeitenValueList.add(value.getValue());
+			teileUndPauschalarbeitenValueList.add(value.getValue().getId());
 		}
 		einsatzbericht.setTeileUndPauschalarbeitenList(teileUndPauschalarbeitenValueList);		
 
 		reference = einsatzbericht;
 	}
 
-	private void createZusatzEinsatz() {
+	private ZusatzEinsatz createZusatzEinsatz() {
 		aktualisiereReference();
 		ZusatzEinsatz zusatzEinsatz = new ZusatzEinsatz();
 		zusatzEinsatz.setDatum(new Date());
@@ -244,15 +279,15 @@ public class AntragKerndatenUI extends DefaultDispatchedPageBean implements Seri
 		zusatzEinsatz.setListArbeiten(reference.getArbeitenList());
 		zusatzEinsatz.setTechniker(reference.getListTechniker().get(0));
 		
+		return zusatzEinsatz;
 	}
 	
 	public void aktualisiereTechniker() {
 		cmb_techniker.clear();
 		String[] values = m_techniker.split(", ");
 		for (String value : values) {
-			// TODO Finde den Techniker heraus.
-			Techniker techniker = new Techniker();
-			techniker.setName(value);
+
+			Mitarbeiter techniker = m_benutzermanager.findMitarbeiterByName(value);
 
 			m_listTechniker.put(value.toLowerCase(), techniker);
 			cmb_techniker.addValidValue(value.toLowerCase(), techniker.getName());
@@ -260,7 +295,7 @@ public class AntragKerndatenUI extends DefaultDispatchedPageBean implements Seri
 
 		m_techniker = null;
 		int i = 0;
-		for (Techniker techniker : m_listTechniker.values()) {
+		for (Mitarbeiter techniker : m_listTechniker.values()) {
 			if (i == 0) {
 				m_techniker = techniker.getName();
 			} else {
@@ -285,11 +320,13 @@ public class AntragKerndatenUI extends DefaultDispatchedPageBean implements Seri
 	}
 	
 	public void onOpenZusatzEinsatz(ActionEvent ae) {
-		createZusatzEinsatz();
+		ZusatzEinsatz zeinsatz = createZusatzEinsatz();
+		zeinsatz = m_berichtmanager.createZusatzEinsatz(zeinsatz);
+		reference.setZusatzEinsatz(zeinsatz.getId());
 		
 		 // create page bean
 		ZusatzEinsatzUI zusatzEinsatz = new ZusatzEinsatzUI((IWorkpageDispatcher) getOwningDispatcher());
-		zusatzEinsatz.init(reference.getZusatzEinsatz());
+		zusatzEinsatz.init(m_berichtmanager.findZusatzEinsatz(reference.getZusatzEinsatz()));
         // open new workpage
         WorkpageByPageBean wp = new WorkpageByPageBean((IWorkpageDispatcher) getOwningDispatcher(),zusatzEinsatz,"ZusatzEinsatz " + m_tanummer,"ZusatzEinsatz, Einsatzbericht" + m_tanummer,null,true);
         ((IWorkpageDispatcher) getOwningDispatcher()).getWorkpageContainer().addWorkpage(wp);
@@ -421,10 +458,11 @@ public class AntragKerndatenUI extends DefaultDispatchedPageBean implements Seri
 	}
 
 	public void setWeitererEinsatz(boolean weitererEinsatz) {
-		if(reference.getZusatzEinsatz() == null && weitererEinsatz) {
+		this.m_weitererEinsatz = weitererEinsatz;
+		if((reference.getZusatzEinsatz() == null || reference.getZusatzEinsatz()<=0L) && weitererEinsatz) {
 			createZusatzEinsatz();
 		}
-		this.m_weitererEinsatz = weitererEinsatz;
+		
 	}
 
 	public boolean isGarantieAntrag() {
@@ -599,11 +637,11 @@ public class AntragKerndatenUI extends DefaultDispatchedPageBean implements Seri
 		}
 
 		public String getTechniker() {
-			return myValues.getTechniker().getName();
+			return m_benutzermanager.findMitarbeiter(myValues.getTechniker()).getName();
 		}
 
 		public void setTechniker(String techniker) {
-			myValues.setTechniker(m_listTechniker.get(techniker));
+			myValues.setTechniker(m_listTechniker.get(techniker).getId());
 		}
 		
 		public AuszufuehrendeArbeiten getValue() {
@@ -637,11 +675,11 @@ public class AntragKerndatenUI extends DefaultDispatchedPageBean implements Seri
 		}
 
 		public String getTechniker() {
-			return myValues.getTechniker().getName();
+			return m_benutzermanager.findMitarbeiter(myValues.getTechniker()).getName();
 		}
 
 		public void setTechniker(String techniker) {
-			myValues.setTechniker(m_listTechniker.get(techniker));
+			myValues.setTechniker(m_listTechniker.get(techniker).getId());
 		}
 
 		public String getArbeitsstunden() {

@@ -10,14 +10,14 @@ import ui.model.Mitarbeiter;
 public interface BenutzerManager {
 
 	public List<Mitarbeiter> findAllMitarbeiter();
-	
-	public Mitarbeiter findMitarbeiter(Long mitarbeiternummer);
+		
+	public Mitarbeiter findMitarbeiter(Long mitarbeiter);
 	
 	public Mitarbeiter findMitarbeiterByName(String name);
 	
-	public Mitarbeiter updateMitarbeiter(Mitarbeiter mitarbeiter);
+	public Mitarbeiter updateMitarbeiter(Mitarbeiter dispo);
 	
-	public void deleteMitarbeiter(Mitarbeiter mitarbeiter);
+	public void deleteMitarbeiter(Mitarbeiter dispo);
 	
 	public Mitarbeiter createMitarbeiter(Mitarbeiter mitarbeiter);
 	

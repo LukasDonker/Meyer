@@ -6,7 +6,7 @@ import javax.ejb.Remote;
 
 import ui.model.Einsatzbericht;
 import ui.model.MaterialBestellung;
-import ui.model.Techniker;
+import ui.model.Mitarbeiter;
 import ui.model.Teil;
 import ui.model.ZusatzEinsatz;
 
@@ -29,7 +29,7 @@ public interface BestellungManager {
 	
 	public List<MaterialBestellung> findMaterialBestellungByEinsatzbericht(Einsatzbericht value);
 	
-	public List<MaterialBestellung> findMaterialBestellungByTechniker(Techniker techniker);
+	public List<MaterialBestellung> findMaterialBestellungByTechniker(Mitarbeiter techniker);
 	
 	//CRUD Teile
 	public Teil findTeil(long id);

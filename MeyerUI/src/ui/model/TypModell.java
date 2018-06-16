@@ -2,16 +2,27 @@ package ui.model;
 
 import java.util.Collection;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 import model.common.ConstantListHolder;
 import model.common.ConstantValueObject;
 
 @Entity
 public class TypModell extends ConstantValueObject {
+	
+	@Id
+	@GeneratedValue
+	@Column(name = "id", updatable = false, nullable = false)
+	@Override
+	public Long getId() {
+		return super.getId();
+	}
 
 	private String m_bezeichnung;
-	private Hersteller m_hersteller;
+	private Long m_hersteller;
 	private GeraeteTyp m_geraeteTyp;
 
 	public String getBezeichnung() {
@@ -22,11 +33,11 @@ public class TypModell extends ConstantValueObject {
 		this.m_bezeichnung = bezeichnung;
 	}
 
-	public Hersteller getHersteller() {
+	public Long getHersteller() {
 		return m_hersteller;
 	}
 
-	public void setHersteller(Hersteller hersteller) {
+	public void setHersteller(Long hersteller) {
 		m_hersteller = hersteller;
 	}
 	

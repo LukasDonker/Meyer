@@ -1,18 +1,29 @@
 package ui.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.Transient;
 
 import model.common.ValueObject;
-import model.ort.Anschrift;
 
 @Entity
 public class Ansprechpartner extends ValueObject {
 
-	private Kunde kunde;
+	@Id
+	@GeneratedValue
+	@Column(name = "id", updatable = false, nullable = false)
+	@Override
+	public Long getId() {
+		return super.getId();
+	}	
+	
+	private Long kunde;
 	private String name;
 	private String telefonnummer;
 	private String eMailAdresse;
-	private Anschrift anschrift;
+	private Long anschrift;
 	
 	public String getName() {
 		return name;
@@ -32,24 +43,21 @@ public class Ansprechpartner extends ValueObject {
 	public void seteMailAdresse(String eMailAdresse) {
 		this.eMailAdresse = eMailAdresse;
 	}
-	public Kunde getKunde() {
+	public Long getKunde() {
 		return kunde;
 	}
-	public void setKunde(Kunde kunde) {
+	public void setKunde(Long kunde) {
 		this.kunde = kunde;
 	}
 	
-	public Anschrift getAnschrift() {
+	public Long getAnschrift() {
 		return anschrift;
 	}
-	public void setAnschrift(Anschrift anschrift) {
+	public void setAnschrift(Long anschrift) {
 		this.anschrift = anschrift;
 	}
-	
-	public String getEinsatzort() {
-		return kunde.getName() + "\n" + anschrift.toString();
-	}
-	
+
+	@Transient
 	public String getAnsprechpartnerDaten() {
 		return "Tel.: "+ telefonnummer + "\n" + "Email: " +  eMailAdresse;
 	}

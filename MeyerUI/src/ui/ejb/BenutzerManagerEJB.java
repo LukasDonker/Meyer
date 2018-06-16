@@ -1,61 +1,44 @@
 package ui.ejb;
 
+import java.util.ArrayList;
 import java.util.List;
 
-import javax.ejb.Remote;
 import javax.ejb.Stateless;
 import javax.ejb.TransactionManagement;
 import javax.ejb.TransactionManagementType;
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceUnit;
+import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
-import javax.persistence.TypedQuery;
 
 import ui.model.Mitarbeiter;
 
 @Stateless
-@Remote(PersonenManager.class)
 @TransactionManagement(TransactionManagementType.CONTAINER)
 public class BenutzerManagerEJB implements BenutzerManager{
 
-	@PersistenceUnit
+//	private static BenutzerManager instance;
+//	
+//	public static BenutzerManager getInstance() {
+//		if(instance == null) {
+//			instance = new BenutzerManagerEJB();
+//		}
+//		return instance;
+//	}
+//
+//	private BenutzerManagerEJB() {}
+//	
+	
+	@PersistenceContext(unitName="ExampleDS")
 	private EntityManager m_em;
 	
 	@Override
 	public List<Mitarbeiter> findAllMitarbeiter() {
+		List<Mitarbeiter> result = new ArrayList<Mitarbeiter>();
 		Query query = m_em.createQuery("FROM Mitarbeiter");
-		return (List<Mitarbeiter>) query.getResultList();
-	}
-
-	@Override
-	public Mitarbeiter findMitarbeiter(Long mitarbeiternummer) {
-		return m_em.find(Mitarbeiter.class, mitarbeiternummer);
-	}
-
-	@Override
-	public Mitarbeiter findMitarbeiterByName(String name) {
-		Query query = m_em.createQuery("FROM Mitarbeiter WHERE name like :name");
-		query.setParameter("name", name);
-		return (Mitarbeiter) query.getResultList().get(0);
-	}
-
-	@Override
-	public Mitarbeiter updateMitarbeiter(Mitarbeiter mitarbeiter) {
-		Mitarbeiter result = m_em.merge(mitarbeiter);
+		result.addAll((List<Mitarbeiter>) query.getResultList());
 		return result;
 	}
-
-	@Override
-	public void deleteMitarbeiter(Mitarbeiter mitarbeiter) {
-		m_em.remove(mitarbeiter);
-		
-	}
-
-	@Override
-	public Mitarbeiter createMitarbeiter(Mitarbeiter mitarbeiter) {
-		m_em.persist(mitarbeiter);
-		return mitarbeiter;
-	}
+	
 
 	@Override
 	public Mitarbeiter passwortAbfrage(String mitarbeiternummer, String passwort) {
@@ -77,6 +60,37 @@ public class BenutzerManagerEJB implements BenutzerManager{
 		return null;
 	}
 
+
+
+	@Override
+	public Mitarbeiter findMitarbeiter(Long mitarbeiter) {
+		return m_em.find(Mitarbeiter.class, mitarbeiter);
+	}
+
+	@Override
+	public Mitarbeiter findMitarbeiterByName(String name) {
+		Query query = m_em.createQuery("FROM Disponent WHERE techniker.name = :name");
+		query.setParameter("name", name);
+		return (Mitarbeiter) query.getResultList().get(0);
+	}
+
+	@Override
+	public Mitarbeiter updateMitarbeiter(Mitarbeiter dispo) {
+		return m_em.merge(dispo);
+	}
+
+	@Override
+	public void deleteMitarbeiter(Mitarbeiter dispo) {
+		m_em.remove(dispo);
+	}
+
+	@Override
+	public Mitarbeiter createMitarbeiter(Mitarbeiter mitarbeiter) {
+		m_em.persist(mitarbeiter);
+		return mitarbeiter; 
+	}
+
+	
 	
 	
 }

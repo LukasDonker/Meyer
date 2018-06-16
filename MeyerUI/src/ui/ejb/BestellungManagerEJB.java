@@ -7,23 +7,35 @@ import javax.ejb.Stateless;
 import javax.ejb.TransactionManagement;
 import javax.ejb.TransactionManagementType;
 import javax.persistence.EntityManager;
-import javax.persistence.PersistenceUnit;
+import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
 
 import ui.model.Einsatzbericht;
 import ui.model.MaterialBestellung;
-import ui.model.Techniker;
+import ui.model.Mitarbeiter;
 import ui.model.Teil;
 import ui.model.ZusatzEinsatz;
 
 @Stateless
 @Remote(BestellungManager.class)
 @TransactionManagement(TransactionManagementType.CONTAINER)
-public class BestellungManagerEJB implements BestellungManager{
+public class BestellungManagerEJB implements BestellungManager {
 
-	@PersistenceUnit
+//	private static BestellungManager instance;
+//
+//	public static BestellungManager getInstance() {
+//		if (instance == null) {
+//			instance = new BestellungManagerEJB();
+//		}
+//		return instance;
+//	}
+//
+//	private BestellungManagerEJB() {
+//	}
+
+	@PersistenceContext(unitName = "ExampleDS")
 	private EntityManager m_em;
-	
+
 	@Override
 	public MaterialBestellung findMaterialBestellung(long id) {
 		return m_em.find(MaterialBestellung.class, id);
@@ -63,14 +75,15 @@ public class BestellungManagerEJB implements BestellungManager{
 
 	@Override
 	public List<MaterialBestellung> findMaterialBestellungByEinsatzbericht(Einsatzbericht value) {
-		Query query = m_em.createQuery("FROM MaterialBestellung mb WHERE mb.zusatzEinsatz.vorgaenger = :einsatzBericht");
+		Query query = m_em
+				.createQuery("FROM MaterialBestellung mb WHERE mb.zusatzEinsatz.vorgaenger = :einsatzBericht");
 		query.setParameter("einsatzBericht", value);
 		List<MaterialBestellung> result = (List<MaterialBestellung>) query.getResultList();
 		return result;
 	}
 
 	@Override
-	public List<MaterialBestellung> findMaterialBestellungByTechniker(Techniker techniker) {
+	public List<MaterialBestellung> findMaterialBestellungByTechniker(Mitarbeiter techniker) {
 		Query query = m_em.createQuery("FROM MaterialBestellung mb WHERE mb.zusatzEinsatz.techniker = :techniker");
 		query.setParameter("techniker", techniker);
 		List<MaterialBestellung> result = (List<MaterialBestellung>) query.getResultList();
@@ -97,7 +110,7 @@ public class BestellungManagerEJB implements BestellungManager{
 	@Override
 	public void deleteTeil(Teil teil) {
 		m_em.remove(teil);
-		
+
 	}
 
 }

@@ -1,22 +1,43 @@
 package ui.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 import model.common.ValueObject;
 
 @Entity
 public class Arbeiten extends ValueObject{
 
-	private Techniker m_techniker;
+	@Id
+	@GeneratedValue
+	@Column(name = "id", updatable = false, nullable = false)
+	@Override
+	public Long getId() {
+		return super.getId();
+	}
+	
+	private Long m_techniker;
 	private String m_arbeitsstunden;
 	private String m_geraeteNummer;
 	private String m_arbeitsbericht;
 	
-	public Techniker getTechniker() {
+	private Long m_einsatzbericht;
+	
+	public Long getEinsatzbericht() {
+		return m_einsatzbericht;
+	}
+
+	public void setEinsatzbericht(Long m_einsatzbericht) {
+		this.m_einsatzbericht = m_einsatzbericht;
+	}
+	
+	public Long getTechniker() {
 		return m_techniker;
 	}
 
-	public void setTechniker(Techniker m_techniker) {
+	public void setTechniker(Long m_techniker) {
 		this.m_techniker = m_techniker;
 	}
 
